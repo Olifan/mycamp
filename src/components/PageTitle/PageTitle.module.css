@@ -1,1 +1,4 @@
-.PageTitle {}
+.PageTitle {
+    display: flex;
+    flex-direction: row;
+}
