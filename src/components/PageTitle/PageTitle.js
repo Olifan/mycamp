@@ -4,7 +4,8 @@ import styles from './PageTitle.module.css';
 
 const PageTitle = () => (
   <div className={styles.PageTitle}>
-    PageTitle Component
+    <img src='logo192.png'/>
+    <h1>mycamp</h1>
   </div>
 );
 
