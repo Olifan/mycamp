@@ -3,15 +3,17 @@ import PropTypes from 'prop-types';
 import styles from './PalaroidPhoto.module.css';
 
 const PalaroidPhoto = () => (
-  <div class="wraper">
-    <div class="item">
-      <div class="polaroid">
-        <img src='logo192.png'/>
-        <div class="caption">
-          Summer 2022
-        </div>
-      </div>  
-    </div> 
+  <div className={styles.PalaroidPhoto}>
+    <div className={styles.wrapper}>
+      <div className={styles.item}>
+        <div className={styles.polaroid}>
+          <img src='testPhoto.jpeg'/>
+          <div className={styles.caption}>
+            Summer 2022
+          </div>
+        </div>  
+      </div> 
+    </div>
   </div>
 );
 
