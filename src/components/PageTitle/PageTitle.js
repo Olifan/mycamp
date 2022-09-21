@@ -11,8 +11,8 @@ const PageTitle = () => (
     
     <div>
       <img src='logo192.png'/>
-      <h1>mycamp</h1>
-      <h6>Дитячий табір в Карпатах та Європі</h6>
+      <h1 className={styles.title}>mycamp</h1>
+      <h6 className={styles.description}>Дитячий табір в Карпатах та Європі</h6>
     </div>
     
     <div>
