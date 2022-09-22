@@ -7,7 +7,7 @@ const PageTitle = () => (
   <div className={styles.PageTitle}> 
     <div>
       <img src={mycampLogo} alt='logo'/>
-      <h1 className={styles.title}>mycamp</h1>
+      <h1 className={styles.title}>mycamp.</h1>
       <h6 className={styles.description}>Дитячий табір в Карпатах та Європі</h6>
     </div> 
   </div>
