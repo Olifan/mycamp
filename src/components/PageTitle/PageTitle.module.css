@@ -5,6 +5,20 @@
     padding: 10vh 8% 5vh;
 }
 
+.logo{
+    border-radius: 50%;
+    animation: 1s rotateLogo;
+}
+
+@keyframes rotateLogo{
+    0%{
+        transform: rotateZ(-720deg);
+    }
+    100%{
+        transform: rotateZ(0deg);
+    }
+}
+
 .title{
     font-size: 4.5em;
     margin-top: 0em;
