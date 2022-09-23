@@ -3,11 +3,14 @@
     flex-direction: row;
     justify-content: center;
     padding: 10vh 8% 5vh;
+    font-family: Inter;
 }
 
 .logo{
     border-radius: 50%;
     animation: 1s rotateLogo;
+    height: 6em;
+    width: 6em;
 }
 
 @keyframes rotateLogo{
@@ -33,4 +36,5 @@
     padding-top: 0.5em;
     color: #555;
     font-weight: 300;
+    letter-spacing: 0.05em;
 }
