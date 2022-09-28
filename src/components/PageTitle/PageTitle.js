@@ -1,29 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './PageTitle.module.css';
-import PalaroidPhoto from '../PalaroidPhoto/PalaroidPhoto';
+import mycampLogo from '../../images/mycampLogo.jpg';
 
-const PageTitle = () => (
-  <div className={styles.PageTitle}>
+const PageTitle = ({title, description}) => (
+  <div className={styles.PageTitle}> 
     <div>
-      <PalaroidPhoto/>
-    </div>
-    
-    <div>
-      <img src='logo192.png'/>
-      <h1 className={styles.title}>mycamp</h1>
-      <h6 className={styles.description}>Дитячий табір в Карпатах та Європі</h6>
-    </div>
-    
-    <div>
-      <PalaroidPhoto/>
-    </div>
-    
+      <img className={styles.logo} src={mycampLogo} alt='logo'/>
+      <h1 className={styles.title}>{title}</h1>
+      <h6 className={styles.description}>{description}</h6>
+    </div> 
   </div>
 );
 
 PageTitle.propTypes = {};
 
-PageTitle.defaultProps = {};
+PageTitle.defaultProps = {
+  title: "mycamp.",
+  description: "Дитячий табір в Карпатах та Європі"
+};
 
 export default PageTitle;
