@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import PageTitle from './components/PageTitle/PageTitle';
 import PalaroidPhoto from './components/PalaroidPhoto/PalaroidPhoto';
+import Registration from './components/Registration/Registration';
 
 function App() {
   return (
@@ -11,6 +12,9 @@ function App() {
       </div>
       <div>
         <PalaroidPhoto/>
+      </div>
+      <div>
+        <Registration/>
       </div>
     </div>
   );
