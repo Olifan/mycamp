@@ -3,6 +3,7 @@ body {
   font-family: Inter, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f7f7;
 }
 
 code {
@@ -15,8 +16,23 @@ code {
   src: url(./fonts/Inter-Regular.ttf);
 }
 
-h5{
+h4{
+  margin-top: 0em;
+  margin-bottom: 0em;
   font-size: 1em;
+  font-weight: 500;
+}
+
+h5{
+  font-size: 1.2em;
   font-weight: 400;
   margin: auto 0em;
+}
+
+.Program{
+  position: relative;
+  display: flex;
+  padding-bottom: 8vh;
+  flex-direction: column;
+  align-items: center;
 }

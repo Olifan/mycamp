@@ -3,6 +3,7 @@ import './App.css';
 import PageTitle from './components/PageTitle/PageTitle';
 import PalaroidPhoto from './components/PalaroidPhoto/PalaroidPhoto';
 import Registration from './components/Registration/Registration';
+import CardOfProgram from './components/CardOfProgram/CardOfProgram';
 
 function App() {
   return (
@@ -15,6 +16,11 @@ function App() {
       </div>
       <div>
         <Registration/>
+      </div>
+      <div className="Program">
+        <div>
+          <CardOfProgram/>
+        </div>
       </div>
     </div>
   );

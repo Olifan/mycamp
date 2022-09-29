@@ -1,1 +1,35 @@
-.CardOfProgram {}
+.CardOfProgram {
+    display: flex;
+    width: 35em;
+    padding: 1em;
+    align-items: center;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 0.5em;
+    border-color: rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+}
+
+.CardOfProgram:hover{
+    background-color: #ecf1ff;
+}
+
+.programTime{
+    min-width: 3.6em;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    border-radius: 0.25em;
+    background-color: #ecf1ff;
+    color: #4b70d5;
+    line-height: 1;
+    text-align: center;
+}
+
+.programTitle{
+    min-width: 8em;
+}
+
+.programDescription{
+    color: #777;
+    font-size: 0.8em;
+}
