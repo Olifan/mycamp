@@ -18,10 +18,6 @@ const Registration = ({registrationDate, registrationOpen, registrationSeason}) 
 
 Registration.propTypes = {};
 
-Registration.defaultProps = {
-  registrationDate: "21-29 грудня",
-  registrationOpen: "Реєстрація відкрита",
-  registrationSeason: "Зима 2023"
-};
+Registration.defaultProps = {};
 
 export default Registration;
