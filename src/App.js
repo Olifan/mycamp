@@ -36,6 +36,7 @@ function App() {
         </div>
         <div>
           <CardNavigation
+            size="wide"
             linkTitle="Camp program"
             linkDescription="From wake-up to sleep"
             linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8ea7a1e7c87282c7450b6_streamlinehq-interface-content-book-open-interface-essential-250.SVG"

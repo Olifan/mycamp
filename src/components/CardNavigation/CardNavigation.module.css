@@ -1,1 +1,39 @@
-.CardNavigation {}
+.CardNavigation {
+    display: flex;
+    padding: 1.2em 1.5em 1.5em;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 1.5em;
+    background-color: #fff;
+    box-shadow: 0 10px 30px -30px rgba(0, 0, 0, 0.5);
+    color: #444;
+    text-decoration: none;
+    transition: transform 300ms ease;
+}
+
+.CardNavigation:hover{
+    transform: scale(1.2);   
+}
+
+.linkIcon{
+    width: 3em;
+    height: 3em;
+}
+
+.linkContent{
+    font-size: 1.4em;
+}
+
+.linkDescription{
+    color: #888;
+}
+
+.wide{
+    flex-direction: row;
+    align-items: center;
+    border-radius: 10em;
+    padding-top: 1.5em;
+    padding-right: 4em;
+    padding-left: 4em;
+}
