@@ -15,9 +15,6 @@ const PageTitle = ({title, description}) => (
 
 PageTitle.propTypes = {};
 
-PageTitle.defaultProps = {
-  title: "mycamp.",
-  description: "Дитячий табір в Карпатах та Європі"
-};
+PageTitle.defaultProps = {};
 
 export default PageTitle;

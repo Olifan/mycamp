@@ -18,10 +18,6 @@ const CardOfProgram = ({programTime, programTitle, programDescription}) => (
 
 CardOfProgram.propTypes = {};
 
-CardOfProgram.defaultProps = {
-  programTime: "8:00",
-  programTitle: "Підйом",
-  programDescription: "Може бути і пізніше"
-};
+CardOfProgram.defaultProps = {};
 
 export default CardOfProgram;

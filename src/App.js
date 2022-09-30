@@ -9,17 +9,29 @@ function App() {
   return (
     <div className="App">
       <div>
-        <PageTitle/>
+        <PageTitle 
+          title="mycamp."
+          description="Дитячий табір в Карпатах та Європі"/>
       </div>
       <div>
-        <PalaroidPhoto/>
+        <PalaroidPhoto 
+          caption="Summer 2022"
+          turn="turnLeft"
+          size="middleImg"
+          srcImg="testPhoto.jpeg"/>
       </div>
       <div>
-        <Registration/>
+        <Registration
+          registrationDate="21-29 грудня"
+          registrationOpen="Реєстрація відкрита"
+          registrationSeason="Зима 2023"/>
       </div>
       <div className="Program">
         <div>
-          <CardOfProgram/>
+          <CardOfProgram 
+            programTime="8:00" 
+            programTitle="Підйом" 
+            programDescription="Може бути і пізніше"/>
         </div>
       </div>
     </div>

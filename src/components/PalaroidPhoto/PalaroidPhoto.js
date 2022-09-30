@@ -13,11 +13,6 @@ const PalaroidPhoto = ({caption, turn, size, srcImg}) => (
 
 PalaroidPhoto.propTypes = {};
 
-PalaroidPhoto.defaultProps = {
-  caption: "Summer 2022",
-  turn: "turnLeft",
-  size: "middleImg",
-  srcImg: "testPhoto.jpeg"
-};
+PalaroidPhoto.defaultProps = {};
 
 export default PalaroidPhoto;
