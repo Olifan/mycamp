@@ -24,10 +24,6 @@
     transform: rotate(-7.5deg);
   }
 
-  .turnOff{
-    transform: rotate(0deg);
-  }
-
   .largeImg{
     width: 18em;
     height: 14em;
