@@ -2,23 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './PalaroidPhoto.module.css';
 
-const PalaroidPhoto = () => (
-  <div className={styles.PalaroidPhoto}>
-    <div className={styles.wrapper}>
-      <div className={styles.item}>
-        <div className={styles.polaroid}>
-          <img src='testPhoto.jpeg'/>
+const PalaroidPhoto = ({caption, turn, size, srcImg}) => (
+        <div className={`${styles.polaroid} ${styles[turn]}`}>
+          <img className={`${styles[size]}`} src={srcImg}/>
           <div className={styles.caption}>
-            Summer 2022
+            {caption}
           </div>
         </div>  
-      </div> 
-    </div>
-  </div>
 );
 
 PalaroidPhoto.propTypes = {};
 
-PalaroidPhoto.defaultProps = {};
+PalaroidPhoto.defaultProps = {
+  caption: "Summer 2022",
+  turn: "turnLeft",
+  size: "middleImg",
+  srcImg: "testPhoto.jpeg"
+};
 
 export default PalaroidPhoto;
