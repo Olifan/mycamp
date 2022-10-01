@@ -1,4 +1,4 @@
-.CardNavigation {
+.cardNavigation {
     display: flex;
     padding: 1.2em 1.5em 1.5em;
     margin: 1.5em;
@@ -13,7 +13,7 @@
     transition: transform 300ms ease;
 }
 
-.CardNavigation:hover{
+.cardNavigation:hover{
     transform: scale(1.2);   
 }
 
