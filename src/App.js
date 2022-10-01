@@ -27,7 +27,7 @@ function App() {
           registrationOpen="Реєстрація відкрита"
           registrationSeason="Зима 2023"/>
       </div>
-      <div className="Program">
+      <div className="program">
         <div>
           <CardOfProgram 
             programTime="8:00" 

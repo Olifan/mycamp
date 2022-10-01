@@ -18,12 +18,12 @@
 }
 
 .linkIcon{
-    width: 3em;
-    height: 3em;
+    width: 2em;
+    height: 2em;
 }
 
 .linkContent{
-    font-size: 1.4em;
+    font-size: 1.2em;
 }
 
 .linkTitle{
@@ -35,6 +35,7 @@
     color: #888;
     margin-top: 0;
     margin-bottom: 0;
+    font-size: 0.6em;
 }
 
 .wide{
@@ -42,12 +43,12 @@
     align-items: center;
     border-radius: 10em;
     padding-top: 1.5em;
-    padding-right: 4em;
-    padding-left: 4em;
+    padding-right: 2em;
+    padding-left: 2em;
 }
 
 .wide .linkIcon{
-    padding-right: 2em;
+    padding-right: 0.7em;
 }
 
 

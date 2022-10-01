@@ -1,12 +1,14 @@
-.Registration {
+.registration {
     display: flex;
     justify-content: center;
-    padding: 5% 8% ;
+    padding: 5vh 8% ;
 }
 
 .registrationDate{
     color: #71788b;
     text-align: center;
+    font-size: 0.7em;
+    font-weight: 400;
 }
  .registrationButton{
     display: flex;
@@ -17,7 +19,7 @@
     border-width: 2px;
     border-color: #154de7;
     border-radius: 10em;
-    font-size: 1.4em;
+    font-size: 0.9em;
     color: #154de7;
     margin: 0 3%;
  }

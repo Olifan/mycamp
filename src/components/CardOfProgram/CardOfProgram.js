@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './CardOfProgram.module.css';
 
 const CardOfProgram = ({programTime, programTitle, programDescription}) => (
-  <div className={styles.CardOfProgram}>
+  <div className={styles.cardOfProgram}>
     <h4 className={styles.programTime}>
       {programTime}
     </h4>
