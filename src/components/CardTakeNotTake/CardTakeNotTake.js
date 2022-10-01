@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './CardTakeNotTake.module.css';
 
 const CardTakeNotTake = () => (
-  <div className={styles.CardTakeNotTake}>
+  <div className={styles.cardTakeNotTake}>
     CardTakeNotTake Component
   </div>
 );

@@ -1,4 +1,4 @@
-.PageTitle {
+.pageTitle {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -9,8 +9,8 @@
 .logo{
     border-radius: 50%;
     animation: 1s rotateLogo;
-    height: 6em;
-    width: 6em;
+    height: 3em;
+    width: 3em;
 }
 
 @keyframes rotateLogo{
