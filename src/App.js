@@ -36,6 +36,7 @@ function App() {
         </div>
         <div>
           <CardNavigation
+            url="#"
             size="wide"
             linkTitle="Camp program"
             linkDescription="From wake-up to sleep"
