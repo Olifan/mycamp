@@ -4,6 +4,7 @@ import PageTitle from './components/PageTitle/PageTitle';
 import PalaroidPhoto from './components/PalaroidPhoto/PalaroidPhoto';
 import Registration from './components/Registration/Registration';
 import CardOfProgram from './components/CardOfProgram/CardOfProgram';
+import CardNavigation from './components/CardNavigation/CardNavigation';
 
 function App() {
   return (
@@ -32,6 +33,15 @@ function App() {
             programTime="8:00" 
             programTitle="Підйом" 
             programDescription="Може бути і пізніше"/>
+        </div>
+        <div>
+          <CardNavigation
+            url="#"
+            size="wide"
+            linkTitle="Camp program"
+            linkDescription="From wake-up to sleep"
+            linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8ea7a1e7c87282c7450b6_streamlinehq-interface-content-book-open-interface-essential-250.SVG"
+          />
         </div>
       </div>
     </div>

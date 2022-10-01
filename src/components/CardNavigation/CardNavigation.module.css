@@ -1,1 +1,69 @@
-.CardNavigation {}
+.cardNavigation {
+    display: flex;
+    padding: 1.2em 1.5em 1.5em;
+    margin: 1.5em;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 1.5em;
+    background-color: #fff;
+    box-shadow: 0 10px 30px -30px rgba(0, 0, 0, 0.5);
+    color: #444;
+    text-decoration: none;
+    transition: transform 300ms ease;
+}
+
+.cardNavigation:hover{
+    transform: scale(1.2);   
+}
+
+.linkIcon{
+    width: 3em;
+    height: 3em;
+}
+
+.linkContent{
+    font-size: 1.4em;
+}
+
+.linkTitle{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.linkDescription{
+    color: #888;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.wide{
+    flex-direction: row;
+    align-items: center;
+    border-radius: 10em;
+    padding-top: 1.5em;
+    padding-right: 4em;
+    padding-left: 4em;
+}
+
+.wide .linkIcon{
+    padding-right: 2em;
+}
+
+
+.large{
+    padding-top: 1.5em;
+    padding-right: 2.5em;
+    padding-left: 2.5em;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.circle{
+    min-width: 19em;
+    padding: 6em 0.5em;
+    align-items: center;
+    text-align: center;
+    border-radius: 50%;
+}
