@@ -46,6 +46,10 @@
     padding-left: 4em;
 }
 
+.wide .linkIcon{
+    padding-right: 2em;
+}
+
 
 .large{
     padding-top: 1.5em;
