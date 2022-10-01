@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './CardTakeNotTake.module.css';
 
-const CardTakeNotTake = () => (
+const CardTakeNotTake = ({icon, title}) => (
   <div className={styles.cardTakeNotTake}>
-    CardTakeNotTake Component
+    <img className={styles.iconToTake} src={icon} loading="lazy" alt=''/>
+    <p>{title}</p>
   </div>
 );
 
