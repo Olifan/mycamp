@@ -5,9 +5,9 @@ import styles from './PalaroidPhoto.module.css';
 const PalaroidPhoto = ({caption, turn, size, srcImg}) => (
         <div className={`${styles.polaroid} ${styles[turn]}`}>
           <img className={`${styles[size]}`} src={srcImg}/>
-          <div className={styles.caption}>
+          <h5 className={styles.caption}>
             {caption}
-          </div>
+          </h5>
         </div>  
 );
 

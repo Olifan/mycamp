@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './Registration.module.css';
 
 const Registration = ({registrationDate, registrationOpen, registrationSeason}) => (
-  <div className={styles.Registration}>
+  <div className={styles.registration}>
     <h5 className={styles.registrationDate}>
       {registrationDate}
     </h5>
