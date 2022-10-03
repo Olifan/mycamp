@@ -1,1 +1,26 @@
-.CardWithText {}
+.cardWithText {
+    max-width: 18em;
+    padding: 1.25em 1.5em;
+    margin: 1.5em;
+    width: 100%;
+    border-radius: 0.5em;
+    background-color: #fff;
+    box-shadow: 0 10px 30px -30px rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+.icon{
+    width: 2em;
+    display: inline-block;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.textBlock h2{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.textBlock p{
+    margin-bottom: 1em;
+}
