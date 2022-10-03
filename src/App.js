@@ -6,6 +6,7 @@ import Registration from './components/Registration/Registration';
 import CardOfProgram from './components/CardOfProgram/CardOfProgram';
 import CardNavigation from './components/CardNavigation/CardNavigation';
 import CardTakeNotTake from './components/CardTakeNotTake/CardTakeNotTake';
+import RegistrationForm from './components/RegistrationForm/RegistrationForm';
 
 function App() {
   return (
@@ -50,6 +51,11 @@ function App() {
             title="Towel"
           />
         </div>
+      </div>
+      <div className="section">
+        <RegistrationForm
+
+        />
       </div>
     </div>
   );

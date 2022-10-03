@@ -1,1 +1,73 @@
-.RegistrationForm {}
+.registrationForm {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em 0em;
+    width: 100%;
+    align-items: center;
+    grid-row-gap: 1em;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.1);
+    border-radius: 0.5em;
+    background-color: #fff;
+}
+
+.icon{
+    width: 2em;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.form{
+    margin: 0 0 15px;
+}
+
+.input{
+    margin: 0em;
+    display: block;
+    width: 100%;
+    padding: 8px 0px;
+    font-size: 14px;
+    color: #333333;
+    background-color: #ffffff;
+    border-radius: 10em;
+    border: 1px solid #cccccc;
+}
+
+.button{
+    display: flex;
+    flex-direction: row;
+    padding: 0.7em 1.8em;
+    justify-content: center;
+    align-items: center;
+    border-color: #154de7;
+    border-radius: 10em;
+    border-style: solid;
+    background-color: transparent;
+    color: #154de7;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.button:hover{
+    transition: color 300ms ease, background-color 300ms ease;
+    background-color: #154de7;
+    color: #e2e9fa;
+}
+
+form{
+    display: flex;
+    width: 20em;
+    flex-direction: column;
+    grid-row-gap: 1em;
+}
+
+label{
+    display: flex;
+    margin-left: 1.2em;
+    margin-bottom: 0.5em;
+    color: #777;
+    font-size: 0.65em;
+    line-height: 1;
+    font-weight: 500;
+}
