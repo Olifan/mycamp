@@ -6,16 +6,10 @@ import Registration from './components/Registration/Registration';
 import CardOfProgram from './components/CardOfProgram/CardOfProgram';
 import CardNavigation from './components/CardNavigation/CardNavigation';
 import CardTakeNotTake from './components/CardTakeNotTake/CardTakeNotTake';
-TeamMember
 import TeamMember from './components/TeamMember/TeamMember';
-
- RegistrationForm
 import RegistrationForm from './components/RegistrationForm/RegistrationForm';
-
 import CardWithText from './components/CardWithText/CardWithText';
 import Navigation from './components/Navigation/Navigation';
-master
- master
 
 function App() {
   return (
