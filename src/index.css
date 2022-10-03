@@ -57,6 +57,10 @@ h5{
   align-items: center;
 }
 
+RegistrationForm
+.section{
+  padding: 3vh 8% 8vh;
+
 .navigation {
   display: flex;
   padding: 5vh 8% 8vh;
@@ -67,4 +71,5 @@ h5{
   grid-column-gap: 1em;
   grid-row-gap: 1em;
   min-height: auto;
+ master
 }

@@ -6,8 +6,12 @@ import Registration from './components/Registration/Registration';
 import CardOfProgram from './components/CardOfProgram/CardOfProgram';
 import CardNavigation from './components/CardNavigation/CardNavigation';
 import CardTakeNotTake from './components/CardTakeNotTake/CardTakeNotTake';
+ RegistrationForm
+import RegistrationForm from './components/RegistrationForm/RegistrationForm';
+
 import CardWithText from './components/CardWithText/CardWithText';
 import Navigation from './components/Navigation/Navigation';
+master
 
 function App() {
   return (
@@ -69,6 +73,11 @@ function App() {
           icon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62ebb5e41c8d3583d5aae2c2_streamlinehq-interface-home-2-interface-essential-250.SVG"
           url="#"
           title="Home"
+        />
+      </div>
+      <div className="section">
+        <RegistrationForm
+
         />
       </div>
     </div>
