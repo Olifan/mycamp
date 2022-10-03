@@ -6,12 +6,16 @@ import Registration from './components/Registration/Registration';
 import CardOfProgram from './components/CardOfProgram/CardOfProgram';
 import CardNavigation from './components/CardNavigation/CardNavigation';
 import CardTakeNotTake from './components/CardTakeNotTake/CardTakeNotTake';
+TeamMember
+import TeamMember from './components/TeamMember/TeamMember';
+
  RegistrationForm
 import RegistrationForm from './components/RegistrationForm/RegistrationForm';
 
 import CardWithText from './components/CardWithText/CardWithText';
 import Navigation from './components/Navigation/Navigation';
 master
+ master
 
 function App() {
   return (
@@ -78,6 +82,14 @@ function App() {
       <div className="section">
         <RegistrationForm
 
+        />
+      </div>
+      <div>
+        <TeamMember
+          memberPhoto="testPhoto.jpeg"
+          memberName="Anton"
+          memberTitle="Web Developer"
+          stickerTapeSrc="https://assets.website-files.com/62e852b3b3432f63a22b8844/62fcbcc5bc7fe93e7ca976b6_st-3.png"
         />
       </div>
     </div>

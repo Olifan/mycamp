@@ -2,9 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './TeamMember.module.css';
 
-const TeamMember = () => (
-  <div className={styles.TeamMember}>
-    TeamMember Component
+const TeamMember = ({memberPhoto, memberName, memberTitle, stickerTapeSrc}) => (
+  <div className={styles.teamMember}>
+    <img className={styles.memberPhoto} src={memberPhoto} loading="lazy" alt="Photo"/>
+    <div className={styles.memberContent}>
+      <h4 className={styles.memberName}>
+        {memberName}
+      </h4>
+      <h5 className={styles.memberTitle}>
+        {memberTitle}
+      </h5>
+    </div>
+    <img className={styles.stickerTape} src={stickerTapeSrc} loading="lazy"/>
   </div>
 );
 

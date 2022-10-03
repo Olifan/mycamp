@@ -1,1 +1,48 @@
-.TeamMember {}
+.teamMember {
+    position: relative;
+    height: 100%;
+    max-width: 12em;
+    padding-top: 1em;
+    padding-right: 1em;
+    padding-left: 1em;
+    flex-direction: column;
+    align-items: center;
+    grid-row-gap: 1em;
+    border-radius: 1em;
+    background-color: transparent;
+    display: flex;
+}
+
+.memberPhoto{
+    position: relative;
+    width: 9em;
+    height: 12em;
+    border-style: solid;
+    border-width: 0.15em;
+    border-color: #fff;
+    border-radius: 0.4em;
+    background-color: #fff;
+    box-shadow: 0 10px 30px -20px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.memberContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    grid-row-gap: 0.5em;
+}
+
+.memberTitle{
+    color: #999;
+}
+
+.stickerTape{
+    position: absolute;
+    z-index: 10;
+    width: 5em;
+    opacity: 0.72;
+    top: 0em;
+}
