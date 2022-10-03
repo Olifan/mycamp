@@ -2,10 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Navigation.module.css';
 
-const Navigation = () => (
-  <div className={styles.Navigation}>
-    Navigation Component
-  </div>
+const Navigation = ({icon, url, title}) => (
+  
+    <a className={styles.navLink} href={url}>
+      <img className={styles.icon} src={icon}/>
+      <div>
+        {title}
+      </div>
+    </a>
+
 );
 
 Navigation.propTypes = {};
