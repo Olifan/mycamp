@@ -1,1 +1,17 @@
-.Footer {}
+.footer {
+    display: flex;
+    padding: 10vh 8%;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8em;
+}
+
+.footerLink{
+    display: flex;
+    font-size: 0.6em;
+    grid-column-gap: 2em;
+}
+
+a{
+    color: #858585;
+}
