@@ -74,9 +74,7 @@ function App() {
         />
       </div>
       <div className="section">
-        <RegistrationForm
-
-        />
+        <RegistrationForm/>
       </div>
       <div>
         <TeamMember

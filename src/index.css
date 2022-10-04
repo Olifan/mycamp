@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Inter, sans-serif;
@@ -57,7 +61,6 @@ h5{
   align-items: center;
 }
 
-RegistrationForm
 .section{
   padding: 3vh 8% 8vh;
 }
