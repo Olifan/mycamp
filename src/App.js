@@ -90,7 +90,11 @@ function App() {
         <Footer/>
       </div>
       <div>
-        <GalleryPrew/>
+        <GalleryPrew
+          title="Літо 2022"
+          linkToGallery="#"
+          coverImg="testPhoto.jpeg"
+        />
       </div>
     </div>
   );
