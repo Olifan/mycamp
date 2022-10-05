@@ -11,6 +11,7 @@ import RegistrationForm from './components/RegistrationForm/RegistrationForm';
 import CardWithText from './components/CardWithText/CardWithText';
 import Navigation from './components/Navigation/Navigation';
 import Footer from './components/Footer/Footer';
+import GalleryPrew from './components/GalleryPrew/GalleryPrew';
 
 function App() {
   return (
@@ -87,6 +88,9 @@ function App() {
       </div>
       <div>
         <Footer/>
+      </div>
+      <div>
+        <GalleryPrew/>
       </div>
     </div>
   );
