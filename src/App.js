@@ -10,6 +10,7 @@ import TeamMember from './components/TeamMember/TeamMember';
 import RegistrationForm from './components/RegistrationForm/RegistrationForm';
 import CardWithText from './components/CardWithText/CardWithText';
 import Navigation from './components/Navigation/Navigation';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -83,6 +84,9 @@ function App() {
           memberTitle="Web Developer"
           stickerTapeSrc="https://assets.website-files.com/62e852b3b3432f63a22b8844/62fcbcc5bc7fe93e7ca976b6_st-3.png"
         />
+      </div>
+      <div>
+        <Footer/>
       </div>
     </div>
   );
