@@ -24,8 +24,32 @@
     object-fit: cover;
 }
 
+.miniPrews{
+    display: flex;
+    margin-top: -1em;
+    margin-right: 1em;
+    margin-left: 1em;
+    justify-content: flex-end;
+}
+
+.miniPrewItem{
+    width: 2em;
+    height: 2em;
+    border-style: solid;
+    border-width: 0.1em;
+    border-color: #fff;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 h4{
     margin-bottom: 1em;
     margin-left: 1em;
     text-align: left;
+}
+
+img{
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
 }
