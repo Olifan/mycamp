@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './Gallery.module.css';
 
 const Gallery = () => (
-  <div className={styles.Gallery}>
+  <div className={styles.gallery}>
     Gallery Component
   </div>
 );
