@@ -100,7 +100,7 @@ function App() {
       </div>
       <div>
         <GalleryItem
-          galleryItem="testPhoto.jpeg"
+          galleryImage="testPhoto.jpeg"
         />
       </div>
     </div>
