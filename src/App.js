@@ -12,7 +12,7 @@ import CardWithText from './components/CardWithText/CardWithText';
 import Navigation from './components/Navigation/Navigation';
 import Footer from './components/Footer/Footer';
 import GalleryPrew from './components/GalleryPrew/GalleryPrew';
-import Gallery from './components/Gallery/Gallery';
+import GalleryItem from './components/GalleryItem/GalleryItem';
 
 function App() {
   return (
@@ -99,7 +99,7 @@ function App() {
         />
       </div>
       <div>
-        <Gallery
+        <GalleryItem
           galleryItem="testPhoto.jpeg"
         />
       </div>
