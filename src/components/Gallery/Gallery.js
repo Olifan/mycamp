@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Gallery.module.css';
 
-const Gallery = () => (
+const Gallery = ({galleryItem}) => (
   <div className={styles.gallery}>
-    Gallery Component
+    <img className={styles.galleryItem} src={galleryItem}/> 
   </div>
 );
 

@@ -12,6 +12,7 @@ import CardWithText from './components/CardWithText/CardWithText';
 import Navigation from './components/Navigation/Navigation';
 import Footer from './components/Footer/Footer';
 import GalleryPrew from './components/GalleryPrew/GalleryPrew';
+import Gallery from './components/Gallery/Gallery';
 
 function App() {
   return (
@@ -95,6 +96,11 @@ function App() {
           linkToGallery="#"
           coverImg="testPhoto.jpeg"
           miniPrewItems={["testPhoto.jpeg"]}
+        />
+      </div>
+      <div>
+        <Gallery
+          galleryItem="testPhoto.jpeg"
         />
       </div>
     </div>
