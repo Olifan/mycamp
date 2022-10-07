@@ -94,7 +94,7 @@ function App() {
           title="Літо 2022"
           linkToGallery="#"
           coverImg="testPhoto.jpeg"
-          miniPrewItem="testPhoto.jpeg"
+          miniPrewItems={["testPhoto.jpeg"]}
         />
       </div>
     </div>
