@@ -1,0 +1,19 @@
+.galleryItem {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 2em;
+    align-items: flex-start;
+    align-content: flex-start;
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
+}
+
+.galleryImage{
+    width: 12em;
+    border-style: solid;
+    border-width: 0.3em;
+    border-color: #fff;
+    border-radius: 0.5em;
+    box-shadow: 0 10px 30px -20px rgba(0, 0, 0, 0.5);
+    margin: 1em;
+}
