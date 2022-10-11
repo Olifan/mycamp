@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import PageTitle from './components/PageTitle/PageTitle';
 import PalaroidPhoto from './components/PalaroidPhoto/PalaroidPhoto';
 import Registration from './components/Registration/Registration';
