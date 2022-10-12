@@ -1,1 +1,24 @@
-.HomePage {}
+.homePage {
+
+}
+
+.header{
+    position: relative;
+    display: flex;
+    padding: 10vh 8% 5vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.blockAbsolute{
+    position: absolute;
+}
+
+.photoLeft{
+    left: 3em;
+}
+
+.photoRight{
+    right: 3em;
+}

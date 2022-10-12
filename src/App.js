@@ -20,11 +20,9 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <div>
-          <PageTitle 
-            title="mycamp."
-            description="Дитячий табір в Карпатах та Європі"/>
-        </div>
+        <Routes>
+          <Route exact path='/' element={< HomePage />}></Route>
+        </Routes>
         <div>
           <PalaroidPhoto 
             caption="Summer 2022"
@@ -106,9 +104,6 @@ function App() {
             galleryImage="testPhoto.jpeg"
           />
         </div>
-      <Routes>
-        <Route exact path='/' element={< HomePage />}></Route>
-      </Routes>
       </div>
     </Router>
   );
