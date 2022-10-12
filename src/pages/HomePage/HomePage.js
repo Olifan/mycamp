@@ -32,26 +32,124 @@ const HomePage = () => (
       </div>
     </div>
 
-
     <Registration
       registrationDate="21-29 грудня"
       registrationOpen="Реєстрація відкрита"
       registrationSeason="Зима 2023"
     />
-    <CardNavigation/>
-    <PalaroidPhoto/>
-    <CardNavigation/>
-    <PalaroidPhoto/>
-    <CardNavigation/>
-    <PalaroidPhoto/>
-    <CardNavigation/>
-    <PalaroidPhoto/>
-    <CardNavigation/>
-    <PalaroidPhoto/>
-    <CardNavigation/>
-    <PalaroidPhoto/>
-    <CardNavigation/>
-    <Registration/>
+
+    <div className={styles.main}>
+      {/* Row 1 */}  
+      <CardNavigation
+        url="#"
+        size="wide"
+        linkTitle="Camp program"
+        linkDescription="From wake-up to sleep"
+        linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8ea7a1e7c87282c7450b6_streamlinehq-interface-content-book-open-interface-essential-250.SVG"
+      />
+      <PalaroidPhoto
+        caption="Summer 2022"
+        turn="turnRight"
+        size="middleImg"
+        srcImg="testPhoto.jpeg"
+      />
+      <CardNavigation
+        url="#"
+        size="large"
+        linkTitle="Camp program"
+        linkDescription="From wake-up to sleep"
+        linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8ea7a1e7c87282c7450b6_streamlinehq-interface-content-book-open-interface-essential-250.SVG"
+      />
+      {/* Row 2 */} 
+      <PalaroidPhoto
+        caption="Summer 2022"
+        turn="turnRight"
+        size="middleImg"
+        srcImg="testPhoto.jpeg"
+      />
+      <CardNavigation
+        url="#"
+        size="large"
+        linkTitle="Camp program"
+        linkDescription="From wake-up to sleep"
+        linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8ea7a1e7c87282c7450b6_streamlinehq-interface-content-book-open-interface-essential-250.SVG"
+      />
+      <PalaroidPhoto
+        caption="Summer 2022"
+        turn="turnRight"
+        size="middleImg"
+        srcImg="testPhoto.jpeg"
+      />
+      {/* Row 3 */} 
+      <CardNavigation
+        url="#"
+        size="large"
+        linkTitle="Camp program"
+        linkDescription="From wake-up to sleep"
+        linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8ea7a1e7c87282c7450b6_streamlinehq-interface-content-book-open-interface-essential-250.SVG"
+      />
+      <PalaroidPhoto
+        caption="Summer 2022"
+        turn="turnRight"
+        size="middleImg"
+        srcImg="testPhoto.jpeg"
+      />
+      <CardNavigation
+        url="#"
+        size="circle"
+        linkTitle="Camp program"
+        linkDescription="From wake-up to sleep"
+        linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8ea7a1e7c87282c7450b6_streamlinehq-interface-content-book-open-interface-essential-250.SVG"
+      />
+      {/* Row 4 */} 
+      <PalaroidPhoto
+        caption="Summer 2022"
+        turn="turnRight"
+        size="middleImg"
+        srcImg="testPhoto.jpeg"
+      />
+      <CardNavigation
+        url="#"
+        size="large"
+        linkTitle="Camp program"
+        linkDescription="From wake-up to sleep"
+        linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8ea7a1e7c87282c7450b6_streamlinehq-interface-content-book-open-interface-essential-250.SVG"
+      />
+      <PalaroidPhoto
+        caption="Summer 2022"
+        turn="turnRight"
+        size="middleImg"
+        srcImg="testPhoto.jpeg"
+      />
+      {/* Row 5 */} 
+      <CardNavigation
+        url="#"
+        size="wide"
+        linkTitle="Camp program"
+        linkDescription="From wake-up to sleep"
+        linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8ea7a1e7c87282c7450b6_streamlinehq-interface-content-book-open-interface-essential-250.SVG"
+      />
+      <PalaroidPhoto
+        caption="Summer 2022"
+        turn="turnRight"
+        size="middleImg"
+        srcImg="testPhoto.jpeg"
+      />
+      <CardNavigation
+        url="#"
+        size="large"
+        linkTitle="Camp program"
+        linkDescription="From wake-up to sleep"
+        linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8ea7a1e7c87282c7450b6_streamlinehq-interface-content-book-open-interface-essential-250.SVG"
+      />
+    </div>
+
+    <Registration
+            registrationDate="21-29 грудня"
+            registrationOpen="Реєстрація відкрита"
+            registrationSeason="Зима 2023"
+    />
+
     <Footer/>
   </div>
 );

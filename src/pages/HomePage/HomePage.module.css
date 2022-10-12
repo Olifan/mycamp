@@ -22,3 +22,14 @@
 .photoRight{
     right: 3em;
 }
+
+.main{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: flex-start;
+    grid-column-gap: 3em;
+    grid-row-gap: 2em;
+    padding: 3vh 8% 8vh;
+}
