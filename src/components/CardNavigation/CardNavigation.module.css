@@ -1,15 +1,17 @@
 .cardNavigation {
     display: flex;
     padding: 1.2em 1.5em 1.5em;
-    margin: 1.5em;
     flex-direction: column;
     align-items: flex-start;
+    grid-row-gap: 1em;
+    grid-column-gap: 0.5em;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 1.5em;
     background-color: #fff;
     box-shadow: 0 10px 30px -30px rgba(0, 0, 0, 0.5);
     color: #444;
     text-decoration: none;
+    text-align: left;
     transition: transform 300ms ease;
 }
 
@@ -41,15 +43,13 @@
 .wide{
     flex-direction: row;
     align-items: center;
+    text-align: left;
     border-radius: 10em;
     padding-top: 1.5em;
     padding-right: 2em;
     padding-left: 2em;
 }
 
-.wide .linkIcon{
-    padding-right: 0.7em;
-}
 
 
 .large{
@@ -61,6 +61,13 @@
     text-align: center;
 }
 
+.iconRight{
+    margin-left: auto;
+}
+.iconLeft{
+    margin-right: auto;
+}
+
 .circle{
     min-width: 9em;
     padding: 2em 0.5em;
@@ -68,5 +75,5 @@
     text-align: center;
     border-radius: 50%;
     grid-row-gap: 0.5em;
-    
+
 }

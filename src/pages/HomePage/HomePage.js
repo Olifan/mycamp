@@ -43,8 +43,8 @@ const HomePage = () => (
       <CardNavigation
         url="#"
         size="wide"
-        linkTitle="Camp program"
-        linkDescription="From wake-up to sleep"
+        linkTitle="Програма табору"
+        linkDescription="З ранку до ночі"
         linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8ea7a1e7c87282c7450b6_streamlinehq-interface-content-book-open-interface-essential-250.SVG"
       />
       <PalaroidPhoto
@@ -53,12 +53,13 @@ const HomePage = () => (
         size="middleImg"
         srcImg="testPhoto.jpeg"
       />
-      <CardNavigation
+      <CardNavigation className={styles.iconRight}
         url="#"
-        size="large"
-        linkTitle="Camp program"
-        linkDescription="From wake-up to sleep"
-        linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8ea7a1e7c87282c7450b6_streamlinehq-interface-content-book-open-interface-essential-250.SVG"
+        
+        linkTitle="Про табір"
+        linkDescription="Наша місія"
+        iconLocation="iconRight"
+        linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8f1219bd3c443f28ba3f7_streamlinehq-interface-lighting-light-bulb-on-interface-essential-250-3.SVG"
       />
       {/* Row 2 */} 
       <PalaroidPhoto
@@ -70,9 +71,9 @@ const HomePage = () => (
       <CardNavigation
         url="#"
         size="large"
-        linkTitle="Camp program"
-        linkDescription="From wake-up to sleep"
-        linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8ea7a1e7c87282c7450b6_streamlinehq-interface-content-book-open-interface-essential-250.SVG"
+        linkTitle="Що брати з собою?"
+        linkDescription="і що не брати"
+        linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8fb91f9a283de58e0318d_streamlinehq-travel-airport-baggage-maps-travel-250-2.SVG"
       />
       <PalaroidPhoto
         caption="Summer 2022"
@@ -83,10 +84,10 @@ const HomePage = () => (
       {/* Row 3 */} 
       <CardNavigation
         url="#"
-        size="large"
-        linkTitle="Camp program"
-        linkDescription="From wake-up to sleep"
-        linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8ea7a1e7c87282c7450b6_streamlinehq-interface-content-book-open-interface-essential-250.SVG"
+        linkTitle="Розташування"
+        linkDescription="In the middle of..."
+        iconLocation="iconLeft"
+        linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e90516682d7c1ce06ca27b_streamlinehq-travel-map-maps-travel-250-3.SVG"
       />
       <PalaroidPhoto
         caption="Summer 2022"
@@ -97,9 +98,9 @@ const HomePage = () => (
       <CardNavigation
         url="#"
         size="circle"
-        linkTitle="Camp program"
-        linkDescription="From wake-up to sleep"
-        linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8ea7a1e7c87282c7450b6_streamlinehq-interface-content-book-open-interface-essential-250.SVG"
+        linkTitle="Команда"
+        linkDescription="Сім'я"
+        linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8fa9930bdfe5c8b4ef6ad_streamlinehq-interface-user-multiple-interface-essential-250.SVG"
       />
       {/* Row 4 */} 
       <PalaroidPhoto
@@ -111,9 +112,9 @@ const HomePage = () => (
       <CardNavigation
         url="#"
         size="large"
-        linkTitle="Camp program"
-        linkDescription="From wake-up to sleep"
-        linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8ea7a1e7c87282c7450b6_streamlinehq-interface-content-book-open-interface-essential-250.SVG"
+        linkTitle="Фото"
+        linkDescription="Цікаві моменти"
+        linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8f4544af443508a817eac_streamlinehq-image-camera-1-images-photography-250.SVG"
       />
       <PalaroidPhoto
         caption="Summer 2022"
@@ -125,9 +126,9 @@ const HomePage = () => (
       <CardNavigation
         url="#"
         size="wide"
-        linkTitle="Camp program"
-        linkDescription="From wake-up to sleep"
-        linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8ea7a1e7c87282c7450b6_streamlinehq-interface-content-book-open-interface-essential-250.SVG"
+        linkTitle="Контакти"
+        linkDescription="Майже цілодобово"
+        linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e9862e0dcf927adce2de5c_streamlinehq-phone-telephone-ringing-phone-250.SVG"
       />
       <PalaroidPhoto
         caption="Summer 2022"
@@ -137,10 +138,10 @@ const HomePage = () => (
       />
       <CardNavigation
         url="#"
-        size="large"
-        linkTitle="Camp program"
-        linkDescription="From wake-up to sleep"
-        linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8ea7a1e7c87282c7450b6_streamlinehq-interface-content-book-open-interface-essential-250.SVG"
+        linkTitle="Партнерам"
+        linkDescription="Допомога і підтримка"
+        iconLocation="iconRight"
+        linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8f3a6fcf13cc3390a727e_streamlinehq-shopping-cloth-accessories-tall-hat-money-shopping-250.SVG"
       />
     </div>
 
