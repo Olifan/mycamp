@@ -6,8 +6,15 @@ import PalaroidPhoto from '../../components/PalaroidPhoto/PalaroidPhoto';
 import Registration from '../../components/Registration/Registration';
 import CardNavigation from '../../components/CardNavigation/CardNavigation';
 import Footer from '../../components/Footer/Footer';
+import useFetch from '../../hooks/useFetch';
 
-const HomePage = () => (
+
+
+const HomePage = () => {
+
+  const {loading, error, data} = useFetch('http://localhost:1337/palaroid-photo');
+
+  return(
   <div className={styles.homePage}>
     <div className={styles.header}>
       <PageTitle
@@ -15,12 +22,15 @@ const HomePage = () => (
         description="Дитячий табір в Карпатах та Європі"
       />
       <div className={`${styles.blockAbsolute} ${styles.photoLeft}`}>
-        <PalaroidPhoto
-          caption="Summer 2022"
+        {data.map(palaroid => (
+          <PalaroidPhoto
+          caption={palaroid.title}
           turn="turnLeft"
           size="middleImg"
-          srcImg="testPhoto.jpeg"
+          srcImg={palaroid.photo}
         />
+        ))}
+        
       </div>
       <div className={`${styles.blockAbsolute} ${styles.photoRight}`}>
         <PalaroidPhoto
@@ -153,7 +163,8 @@ const HomePage = () => (
 
     <Footer/>
   </div>
-);
+  )
+};
 
 HomePage.propTypes = {};
 
