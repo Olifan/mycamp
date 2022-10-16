@@ -12,7 +12,7 @@ import useFetch from '../../hooks/useFetch';
 
 const HomePage = () => {
 
-  const {loading, error, data} = useFetch('http://localhost:1337/palaroid-photo');
+  const {loading, error, data} = useFetch('http://localhost:1337/api/palaroid-photos');
 
   return(
   <div className={styles.homePage}>
@@ -22,7 +22,8 @@ const HomePage = () => {
         description="Дитячий табір в Карпатах та Європі"
       />
       <div className={`${styles.blockAbsolute} ${styles.photoLeft}`}>
-        {data.map(palaroid => (
+        {!loading && 
+        data.map(palaroid => (
           <PalaroidPhoto
           caption={palaroid.title}
           turn="turnLeft"
