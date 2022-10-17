@@ -15,14 +15,13 @@ import Footer from './components/Footer/Footer';
 import GalleryPrew from './components/GalleryPrew/GalleryPrew';
 import GalleryItem from './components/GalleryItem/GalleryItem';
 import HomePage from './pages/HomePage/HomePage';
+import OurTeam from './pages/OurTeam/OurTeam';
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Routes>
-          <Route exact path='/' element={< HomePage />}></Route>
-        </Routes>
+        
         <div>
           <PalaroidPhoto 
             caption="Summer 2022"
@@ -104,6 +103,12 @@ function App() {
             galleryImage="testPhoto.jpeg"
           />
         </div>
+
+        <Routes>
+          <Route exact path='/' element={< HomePage />}></Route>
+          <Route exact path='/ourTeam' element={<OurTeam/>}></Route>
+        </Routes>
+
       </div>
     </Router>
   );

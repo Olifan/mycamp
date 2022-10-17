@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import styles from './OurTeam.module.css';
 import ContentService from '../../services/ContentService';
+import TeamMember from '../../components/TeamMember/TeamMember';
 
 const OurTeam = () => {
   const contentService = new ContentService();
