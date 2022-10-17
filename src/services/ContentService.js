@@ -38,7 +38,7 @@ export default class ContentService {
       {
         populate: {
           teamMember: {
-            fields: ["title", "subtitle"],
+            fields: ["name", "title"],
             populate: {
               photo: "*",
             },
