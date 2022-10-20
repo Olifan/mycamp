@@ -22,7 +22,7 @@ function App() {
     <Router>
       <div className="App">
         
-        <div>
+        {/* <div>
           <PalaroidPhoto 
             caption="Summer 2022"
             turn="turnLeft"
@@ -102,7 +102,7 @@ function App() {
           <GalleryItem
             galleryImage="testPhoto.jpeg"
           />
-        </div>
+        </div> */}
 
         <Routes>
           <Route exact path='/' element={< HomePage />}></Route>

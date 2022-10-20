@@ -43,6 +43,12 @@ export default class ContentService {
               photo: "*",
             },
           },
+          teamMember2: {
+            fields: ["name", "title"],
+            populate: {
+              photo: "*",
+            },
+          },
         },
       },
       {
