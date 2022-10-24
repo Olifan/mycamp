@@ -37,13 +37,7 @@ export default class ContentService {
     const query = stringify(
       {
         populate: {
-          teamMember: {
-            fields: ["name", "title"],
-            populate: {
-              photo: "*",
-            },
-          },
-          teamMember2: {
+          team_members: {
             fields: ["name", "title"],
             populate: {
               photo: "*",

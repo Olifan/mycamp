@@ -4,6 +4,7 @@
     padding-top: 6vh;
     justify-content: center;
     align-items: stretch;
+    align-content: flex-start;
     grid-column-gap: 1.5em;
     grid-row-gap: 1.5em;
 }

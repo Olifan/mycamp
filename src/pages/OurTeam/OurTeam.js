@@ -15,31 +15,19 @@ const OurTeam = () => {
     });
   }, [] );
 
+   console.log(data)
+
   return(
     <div className={styles.ourTeam}>
-      <div>
-        {data && (
+        {data && data.data.attributes.team_members.data.map((teamMember) => 
           <TeamMember
-            memberPhoto={data.data.attributes.teamMember.photo.data.attributes.url}
-            memberName={data.data.attributes.teamMember.name}
-            memberTitle={data.data.attributes.teamMember.title}
+            memberPhoto={teamMember.attributes.photo.data.attributes.url}
+            memberName={teamMember.attributes.name}
+            memberTitle={teamMember.attributes.title}
             stickerTapeSrc="https://assets.website-files.com/62e852b3b3432f63a22b8844/62fcbcc5bc7fe93e7ca976b6_st-3.png"
           />
         )}
-      </div>
-
-      <div>
-        {data && (
-          <TeamMember
-            memberPhoto={data.data.attributes.teamMember2.photo.data.attributes.url}
-            memberName={data.data.attributes.teamMember2.name}
-            memberTitle={data.data.attributes.teamMember2.title}
-            stickerTapeSrc="https://assets.website-files.com/62e852b3b3432f63a22b8844/62fcbcc5bc7fe93e7ca976b6_st-3.png"
-          />
-        )}
-      </div>
     </div>
-    
   );
 };
 
