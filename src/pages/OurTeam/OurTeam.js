@@ -15,8 +15,6 @@ const OurTeam = () => {
     });
   }, [] );
 
-   console.log(data)
-
   return(
     <div className={styles.ourTeam}>
         {data && data.data.attributes.team_members.data.map((teamMember) => 
