@@ -19,7 +19,7 @@ const OurTeam = () => {
     <div className={styles.ourTeam}>
         {data && data.data.attributes.team_members.data.map((teamMember) => 
           <TeamMember
-            memberPhoto={teamMember.attributes.photo.data.attributes.url}
+            memberPhoto={teamMember.attributes.photo?.data?.attributes.url}
             memberName={teamMember.attributes.name}
             memberTitle={teamMember.attributes.title}
             stickerTapeSrc="https://assets.website-files.com/62e852b3b3432f63a22b8844/62fcbcc5bc7fe93e7ca976b6_st-3.png"
