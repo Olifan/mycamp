@@ -32,4 +32,24 @@ export default class ContentService {
 
     return this.api.get(`home-page?${query}`);
   }
+
+  getOurTeam() {
+    const query = stringify(
+      {
+        populate: {
+          team_members: {
+            fields: ["name", "title"],
+            populate: {
+              photo: "*",
+            },
+          },
+        },
+      },
+      {
+        encodeValuesOnly: true,
+      }
+    );
+
+    return this.api.get(`our-team?${query}`);
+  }
 }

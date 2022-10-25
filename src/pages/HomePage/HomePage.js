@@ -117,7 +117,7 @@ const HomePage = () => {
           srcImg="testPhoto.jpeg"
         />
         <CardNavigation
-          url="#"
+          url="/ourTeam"
           size="circle"
           linkTitle="Команда"
           linkDescription="Сім'я"
