@@ -4,6 +4,7 @@ import styles from './MemberPage.module.css';
 import OurTeam from '../OurTeam/OurTeam';
 import ContentService from '../../services/ContentService';
 import { useParams } from 'react-router-dom';
+import PageTitle from '../../components/PageTitle/PageTitle';
 
 
 const MemberPage = () => {
@@ -23,13 +24,24 @@ const MemberPage = () => {
 
   return(
     <div className={styles.memberPage}>
-      {
-        data && (
-          <div>
-            {member.attributes.name}
+      {data && (
+        <>
+          <div className={styles.header}>
+            <PageTitle
+              title={member.attributes.name}
+              description={member.attributes.title}
+            />
           </div>
-        )
-      }
+          <div className={styles.memberDetail}>
+            <div className={styles.memberPhotoContainer}>
+              <img className={styles.memberPhoto} src={member.attributes.photo?.data?.attributes.url} />
+            </div>
+            <div className={styles.memberDescription}>
+              <p>{member.attributes.description}</p>
+            </div>
+          </div>
+        </>
+      )}
   </div>
   );
   
