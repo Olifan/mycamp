@@ -16,12 +16,13 @@ import GalleryPrew from './components/GalleryPrew/GalleryPrew';
 import GalleryItem from './components/GalleryItem/GalleryItem';
 import HomePage from './pages/HomePage/HomePage';
 import OurTeam from './pages/OurTeam/OurTeam';
+import MemberPage from './pages/MemberPage/MemberPage';
 
 function App() {
   return (
-    <Router>
+    
       <div className="App">
-        
+        <Router>
         {/* <div>
           <PalaroidPhoto 
             caption="Summer 2022"
@@ -107,10 +108,24 @@ function App() {
         <Routes>
           <Route exact path='/' element={< HomePage />}></Route>
           <Route exact path='/ourTeam' element={<OurTeam/>}></Route>
+          <Route exact path='/memberPage/:memberId' element={<MemberPage/>}></Route>
         </Routes>
 
+        {/* <Switch>
+          <Route exact path='/'>
+            <HomePage/>
+          </Route>
+          <Route exact path='/ourTeam'>
+            <OurTeam/>
+          </Route>
+          <Route path='/memberPage/:memberId'>
+            <MemberPage/>
+          </Route>
+        </Switch> */}
+
+        </Router>
       </div>
-    </Router>
+    
   );
 }
 
