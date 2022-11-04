@@ -5,6 +5,7 @@ import OurTeam from '../OurTeam/OurTeam';
 import ContentService from '../../services/ContentService';
 import { useParams } from 'react-router-dom';
 import PageTitle from '../../components/PageTitle/PageTitle';
+import Footer from '../../components/Footer/Footer';
 
 
 const MemberPage = () => {
@@ -40,6 +41,7 @@ const MemberPage = () => {
               <p>{member.attributes.description}</p>
             </div>
           </div>
+          <Footer/>
         </>
       )}
   </div>

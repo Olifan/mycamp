@@ -4,6 +4,9 @@ import styles from './OurTeam.module.css';
 import ContentService from '../../services/ContentService';
 import TeamMember from '../../components/TeamMember/TeamMember';
 import { Link } from 'react-router-dom';
+import PageTitle from '../../components/PageTitle/PageTitle';
+import Footer from '../../components/Footer/Footer';
+import Registration from '../../components/Registration/Registration';
 
 const OurTeam = () => {
   const contentService = new ContentService();
@@ -18,6 +21,7 @@ const OurTeam = () => {
 
   const members = data && data.data.attributes.team_members.data.map(member => {
     return(
+      <>
       <div className={styles.ourTeam}>
         <Link to={`/memberPage/${member.id}`}>
           <TeamMember 
@@ -27,20 +31,31 @@ const OurTeam = () => {
             memberTitle={member.attributes.title}
             stickerTapeSrc="https://assets.website-files.com/62e852b3b3432f63a22b8844/62fcbcc5bc7fe93e7ca976b6_st-3.png"
             />
-        </Link>
-        
+        </Link> 
       </div>
+      </>
     )
   })
 
 
   return(
-    <div className={styles.ourTeam}>
-      <>
-      {members}
-      </>
-       
+    <>
+    <div className={styles.header}>
+      <PageTitle
+        title="Our team"
+        description="Today. Tomorrow. Allways."
+      />
     </div>
+    <div className={styles.ourTeam}>
+      {members}
+    </div>
+    <Registration
+      registrationDate="21-29 грудня"
+      registrationOpen="Реєстрація відкрита"
+      registrationSeason="Зима 2023"
+    />
+    <Footer/>
+    </>
   );
 };
 

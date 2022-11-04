@@ -3,7 +3,7 @@
 .header{
     position: relative;
     display: flex;
-    padding: 10vh 8% 5vh;
+    padding: 0vh 8% 5vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
