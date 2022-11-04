@@ -11,6 +11,7 @@
     animation: 1s rotateLogo;
     height: 3em;
     width: 3em;
+    margin-bottom: 1em;
 }
 
 @keyframes rotateLogo{
