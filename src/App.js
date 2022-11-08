@@ -17,6 +17,7 @@ import GalleryItem from './components/GalleryItem/GalleryItem';
 import HomePage from './pages/HomePage/HomePage';
 import OurTeam from './pages/OurTeam/OurTeam';
 import MemberPage from './pages/MemberPage/MemberPage';
+import RegistrationPage from './pages/RegistrationPage/RegistrationPage';
 
 function App() {
   return (
@@ -109,6 +110,7 @@ function App() {
           <Route exact path='/' element={< HomePage />}></Route>
           <Route exact path='/ourTeam' element={<OurTeam/>}></Route>
           <Route exact path='/memberPage/:memberId' element={<MemberPage/>}></Route>
+          <Route exact path='/registrationPage' element={<RegistrationPage/>}></Route>
         </Routes>
 
         {/* <Switch>
