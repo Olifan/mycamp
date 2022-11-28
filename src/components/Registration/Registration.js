@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Registration.module.css';
+import { Link } from 'react-router-dom';
 
 const Registration = ({registrationDate, registrationOpen, registrationSeason}) => (
   <div className={styles.registration}>
     <h5 className={styles.registrationDate}>
       {registrationDate}
     </h5>
-    <a className={styles.registrationButton}>
+    <Link to={'/registrationPage'} className={styles.registrationButton}>
       {registrationOpen}
-    </a>
+    </Link>
     <h5 className={styles.registrationDate}>
       {registrationSeason}
     </h5>

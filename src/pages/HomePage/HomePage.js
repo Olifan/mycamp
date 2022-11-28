@@ -54,13 +54,12 @@ const HomePage = () => {
         </div>
       </div>
 
-      <Link to={'/registrationPage'}>
         <Registration
           registrationDate="21-29 грудня"
           registrationOpen="Реєстрація відкрита"
           registrationSeason="Зима 2023"
         />
-      </Link>
+      
 
       <div className={styles.main}>
         {/* Row 1 */}
