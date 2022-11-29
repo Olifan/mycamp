@@ -58,7 +58,10 @@ export default class ContentService {
       {
         populate: {
           shifts: {
-            fields: ["title", "description", "startDate", "endDate", ],
+            fields: ["title", "description", "startDate", "endDate"],
+            populate: {
+              mainImage: "*",
+            },
           },
         },
       },

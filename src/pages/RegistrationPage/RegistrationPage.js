@@ -21,17 +21,12 @@ const RegistrationPage = () => {
 
   const {shiftId} = useParams();
   const shift = data && data.data.attributes.shifts.data.map(dataShift => {
+    console.log(dataShift);
     return (
       <>
-      
-      <CardWithText
-        key={dataShift.id}
-        text={dataShift.attributes.description}
-        title={dataShift.attributes.title}
-        />
         <div className={styles.shiftDetail}>
             <div className={styles.shiftPhotoContainer}>
-              <img className={styles.shiftCover} src={dataShift.attributes.photo?.data?.attributes.url} />
+              <img className={styles.shiftCover} src={dataShift.attributes.mainImage?.data?.attributes.url} />
             </div>
             <div className={styles.shiftDescription}>
               <h3>{dataShift.attributes.startDate} - {dataShift.attributes.endDate}</h3>
