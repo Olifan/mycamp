@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  font-family: Inter, sans-serif;
+  font-family: Sen;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f5f7f7;
@@ -18,7 +18,7 @@ code {
 
 @font-face {
   font-family: Inter;
-  src: url(./fonts/Inter-Regular.ttf);
+  src: url(./fonts/Sen-Regular.ttf);
 }
 
 a{
