@@ -7,6 +7,7 @@ import Registration from "../../components/Registration/Registration";
 import CardNavigation from "../../components/CardNavigation/CardNavigation";
 import Footer from "../../components/Footer/Footer";
 import ContentService from "../../services/ContentService";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const contentService = new ContentService();
@@ -53,11 +54,12 @@ const HomePage = () => {
         </div>
       </div>
 
-      <Registration
-        registrationDate="21-29 грудня"
-        registrationOpen="Реєстрація відкрита"
-        registrationSeason="Зима 2023"
-      />
+        <Registration
+          registrationDate="21-29 грудня"
+          registrationOpen="Реєстрація відкрита"
+          registrationSeason="Зима 2023"
+        />
+      
 
       <div className={styles.main}>
         {/* Row 1 */}

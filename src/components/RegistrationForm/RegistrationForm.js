@@ -16,7 +16,7 @@ const RegistrationForm = () => (
             <label for="email">Email</label>
             <input id="email" className={styles.input} type="email" name="email" maxLength="256" data-name="Email" placeholder=''/>
           </div>
-          <input className={styles.button} type="submit"/>
+          <input className={styles.button} type="submit" value="Відправити запит"/>
         </form>
      </div>
   </div>

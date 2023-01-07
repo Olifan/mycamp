@@ -52,4 +52,23 @@ export default class ContentService {
 
     return this.api.get(`our-team?${query}`);
   }
+
+  getShift() {
+    const query = stringify(
+      {
+        populate: {
+          shifts: {
+            fields: ["title", "description", "startDate", "endDate"],
+            populate: {
+              mainImage: "*",
+            },
+          },
+        },
+      },
+      {
+        encodeValuesOnly: true,
+      }
+    );
+    return this.api.get(`registration-page?${query}`);
+  }
 }
