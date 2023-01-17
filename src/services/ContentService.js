@@ -71,4 +71,20 @@ export default class ContentService {
     );
     return this.api.get(`registration-page?${query}`);
   }
+
+  postRequest(data) {
+    // const query = stringify(
+    //   {
+    //     populate: {
+    //       requests: {
+    //         fields: ["name", "email", "telephone", "shift"]
+    //       },
+    //     },
+    //   },
+    //   {
+    //     encodeValuesOnly: true,
+    //   }
+    // );
+    return this.api.post(`requests?`, data);
+  }
 }
