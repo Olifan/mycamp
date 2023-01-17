@@ -16,6 +16,11 @@ const RegistrationForm = () => {
     e.preventDefault();
     
     contentService.postRequest({name, email, phone, shift})  
+
+    setName('');
+    setEmail('');
+    setPhone('');
+    setShift('');
   };
 
   return(
