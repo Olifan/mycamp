@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './RegistrationForm.module.css';
 import ContentService from '../../services/ContentService';
 
@@ -12,15 +12,26 @@ const RegistrationForm = () => {
   const [phone, setPhone] = useState('');
   const [shift, setShift] = useState('');
 
+  const [shifts, setShifts] = useState('');
+
+  useEffect( () => {
+    contentService.getShift().then((response) => {
+      setShifts(response);
+    });
+  }, [] );
+
+
+
   const handleSubmit = async(e) => {
     e.preventDefault();
+    console.log(shift)
     
     contentService.postRequest({name, email, phone, shift})  
 
     setName('');
     setEmail('');
     setPhone('');
-    setShift('');
+    // setShift('');
   };
 
   return(
@@ -38,12 +49,20 @@ const RegistrationForm = () => {
             <input id="email" value={email} onChange={(e) => setEmail(e.target.value)} className={styles.input} type="email" name="email" maxLength="256" data-name="Email" placeholder=''/>
           </div>
           <div>
-            <label for="email">Phone number</label>
-            <input id="email" value={phone} onChange={(e) => setPhone(e.target.value)} className={styles.input} type="phone" name="phone" maxLength="256" data-name="Phone" placeholder=''/>
+            <label for="phone">Phone number</label>
+            <input id="phone" value={phone} onChange={(e) => {setPhone(e.target.value)}} className={styles.input} type="phone" name="phone" maxLength="256" data-name="Phone" placeholder=''/>
           </div>
           <div>
-            <label for="email">Shift</label>
-            <input id="email" value={shift} onChange={(e) => setShift(e.target.value)} className={styles.input} type="text" name="shift" maxLength="256" data-name="Shift" placeholder=''/>
+            <label for="shift">Shift</label>
+            <select id="shift" value={shift} 
+            onChange={(e) => setShift(e.target.value)} 
+            className={styles.input} type="text" name="shift" maxLength="256" data-name="Shift" placeholder=''>
+              {
+                shifts && shifts.data.attributes.shifts.data.map((dataShift) => (
+                  <option value={dataShift.id}>{dataShift.attributes.title}</option>
+                ))
+              }
+            </select>
           </div>
           <input className={styles.button} type="submit" value="Відправити запит"/>
         </form>
