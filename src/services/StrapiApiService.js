@@ -8,4 +8,10 @@ export default class StrapiApiService {
       .get(`${this.baseUrl}${url}`, params)
       .then((response) => response.data);
   }
+
+  post(url, data){
+    return axios
+      .post(`${this.baseUrl}${url}`, {data})
+      .then((response) => response.data);
+  }
 }
