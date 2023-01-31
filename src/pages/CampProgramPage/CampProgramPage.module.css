@@ -1,1 +1,15 @@
-.CampProgramPage {}
+.CampProgramPage {
+
+}
+
+.schedule{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+}
+
+h4{
+    margin-bottom: 0em;
+    margin-left: 0em;
+}

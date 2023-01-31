@@ -39,7 +39,7 @@ const CampProgramPage = () => {
           description="Today. Tomorrow. Allways."
         />
       </div>
-      <div>
+      <div className={styles.schedule}>
         {programs}
       </div>
       <Registration
