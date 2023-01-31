@@ -63,13 +63,15 @@ const HomePage = () => {
 
       <div className={styles.main}>
         {/* Row 1 */}
-        <CardNavigation
-          url="#"
-          size="wide"
-          linkTitle="Програма табору"
-          linkDescription="З ранку до ночі"
-          linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8ea7a1e7c87282c7450b6_streamlinehq-interface-content-book-open-interface-essential-250.SVG"
-        />
+        <Link to = "/campProgramPage">
+          <CardNavigation
+            size="wide"
+            linkTitle="Програма табору"
+            linkDescription="З ранку до ночі"
+            linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8ea7a1e7c87282c7450b6_streamlinehq-interface-content-book-open-interface-essential-250.SVG"
+          />
+        </Link>
+        
         <PalaroidPhoto
           caption="Summer 2022"
           turn="turnRight"
