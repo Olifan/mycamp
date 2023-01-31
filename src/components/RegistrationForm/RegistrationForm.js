@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import PhoneInput from 'react-phone-input-2';
+// import 'react-phone-input-2/lib/style.css'
 import styles from './RegistrationForm.module.css';
 import ContentService from '../../services/ContentService';
 
@@ -24,7 +26,6 @@ const RegistrationForm = () => {
 
   const handleSubmit = async(e) => {
     e.preventDefault();
-    console.log(shift)
     
     contentService.postRequest({name, email, phone, shift})  
 
@@ -50,7 +51,10 @@ const RegistrationForm = () => {
           </div>
           <div>
             <label for="phone">Phone number</label>
-            <input id="phone" value={phone} onChange={(e) => {setPhone(e.target.value)}} className={styles.input} type="phone" name="phone" maxLength="256" data-name="Phone" placeholder=''/>
+            <PhoneInput country={'ua'} inputClass = {styles.input} specialLabel='' 
+            id="phone" value={phone} onChange={(value, country, e, formattedValue) => setPhone(formattedValue)} 
+            masks = {{ua: '(...) ...-..-..'}} preferredCountries = {['ua']} disableCountryCode = {true}
+            type="phone" name="phone" maxLength="256" data-name="Phone" placeholder=''/>
           </div>
           <div>
             <label for="shift">Shift</label>
