@@ -109,10 +109,10 @@ function App() {
 
         <Routes>
           <Route exact path='/' element={< HomePage />}></Route>
-          <Route exact path='/ourTeam' element={<OurTeam/>}></Route>
-          <Route exact path='/memberPage/:memberId' element={<MemberPage/>}></Route>
-          <Route exact path='/registrationPage' element={<RegistrationPage/>}></Route>
-          <Route exact path='/campProgramPage' element={<CampProgramPage/>}></Route>
+          <Route exact path='/our-team' element={<OurTeam/>}></Route>
+          <Route exact path='/member-page/:memberId' element={<MemberPage/>}></Route>
+          <Route exact path='/registration-page' element={<RegistrationPage/>}></Route>
+          <Route exact path='/camp-program-page' element={<CampProgramPage/>}></Route>
         </Routes>
 
         {/* <Switch>

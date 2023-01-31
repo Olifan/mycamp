@@ -23,7 +23,7 @@ const OurTeam = () => {
     return(
       <>
       <div className={styles.ourTeam}>
-        <Link to={`/memberPage/${member.id}`}>
+        <Link to={`/member-page/${member.id}`}>
           <TeamMember 
             key={member.id}
             memberPhoto={member.attributes.photo?.data?.attributes.url}
