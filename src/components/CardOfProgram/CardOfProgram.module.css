@@ -28,9 +28,11 @@
 
 .programTitle{
     min-width: 5em;
+    font-weight: 600;
 }
 
 .programDescription{
     color: #777;
     font-size: 0.6em;
+
 }

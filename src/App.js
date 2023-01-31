@@ -18,6 +18,7 @@ import HomePage from './pages/HomePage/HomePage';
 import OurTeam from './pages/OurTeam/OurTeam';
 import MemberPage from './pages/MemberPage/MemberPage';
 import RegistrationPage from './pages/RegistrationPage/RegistrationPage';
+import CampProgramPage from './pages/CampProgramPage/CampProgramPage';
 
 function App() {
   return (
@@ -108,9 +109,10 @@ function App() {
 
         <Routes>
           <Route exact path='/' element={< HomePage />}></Route>
-          <Route exact path='/ourTeam' element={<OurTeam/>}></Route>
-          <Route exact path='/memberPage/:memberId' element={<MemberPage/>}></Route>
-          <Route exact path='/registrationPage' element={<RegistrationPage/>}></Route>
+          <Route exact path='/our-team' element={<OurTeam/>}></Route>
+          <Route exact path='/member-page/:memberId' element={<MemberPage/>}></Route>
+          <Route exact path='/registration-page' element={<RegistrationPage/>}></Route>
+          <Route exact path='/camp-program-page' element={<CampProgramPage/>}></Route>
         </Routes>
 
         {/* <Switch>

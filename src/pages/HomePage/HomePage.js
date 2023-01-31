@@ -63,13 +63,15 @@ const HomePage = () => {
 
       <div className={styles.main}>
         {/* Row 1 */}
-        <CardNavigation
-          url="#"
-          size="wide"
-          linkTitle="Програма табору"
-          linkDescription="З ранку до ночі"
-          linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8ea7a1e7c87282c7450b6_streamlinehq-interface-content-book-open-interface-essential-250.SVG"
-        />
+        <Link to = "/camp-program-page">
+          <CardNavigation
+            size="wide"
+            linkTitle="Програма табору"
+            linkDescription="З ранку до ночі"
+            linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8ea7a1e7c87282c7450b6_streamlinehq-interface-content-book-open-interface-essential-250.SVG"
+          />
+        </Link>
+        
         <PalaroidPhoto
           caption="Summer 2022"
           turn="turnRight"
@@ -78,7 +80,6 @@ const HomePage = () => {
         />
         <CardNavigation
           className={styles.iconRight}
-          url="#"
           linkTitle="Про табір"
           linkDescription="Наша місія"
           iconLocation="iconRight"
@@ -92,7 +93,6 @@ const HomePage = () => {
           srcImg="testPhoto.jpeg"
         />
         <CardNavigation
-          url="#"
           size="large"
           linkTitle="Що брати з собою?"
           linkDescription="і що не брати"
@@ -106,7 +106,6 @@ const HomePage = () => {
         />
         {/* Row 3 */}
         <CardNavigation
-          url="#"
           linkTitle="Розташування"
           linkDescription="In the middle of..."
           iconLocation="iconLeft"
@@ -118,13 +117,15 @@ const HomePage = () => {
           size="middleImg"
           srcImg="testPhoto.jpeg"
         />
-        <CardNavigation
-          url="/ourTeam"
-          size="circle"
-          linkTitle="Команда"
-          linkDescription="Сім'я"
-          linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8fa9930bdfe5c8b4ef6ad_streamlinehq-interface-user-multiple-interface-essential-250.SVG"
-        />
+        <Link to = "/our-team">
+          <CardNavigation
+            size="circle"
+            linkTitle="Команда"
+            linkDescription="Сім'я"
+            linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8fa9930bdfe5c8b4ef6ad_streamlinehq-interface-user-multiple-interface-essential-250.SVG"
+          />
+        </Link>
+        
         {/* Row 4 */}
         <PalaroidPhoto
           caption="Summer 2022"
@@ -133,7 +134,6 @@ const HomePage = () => {
           srcImg="testPhoto.jpeg"
         />
         <CardNavigation
-          url="#"
           size="large"
           linkTitle="Фото"
           linkDescription="Цікаві моменти"
@@ -147,7 +147,6 @@ const HomePage = () => {
         />
         {/* Row 5 */}
         <CardNavigation
-          url="#"
           size="wide"
           linkTitle="Контакти"
           linkDescription="Майже цілодобово"
@@ -160,7 +159,6 @@ const HomePage = () => {
           srcImg="testPhoto.jpeg"
         />
         <CardNavigation
-          url="#"
           linkTitle="Партнерам"
           linkDescription="Допомога і підтримка"
           iconLocation="iconRight"

@@ -3,7 +3,6 @@
     flex-direction: row;
     justify-content: center;
     padding: 10vh 8% 5vh;
-    font-family: Inter;
 }
 
 .logo{
@@ -27,7 +26,6 @@
     font-size: 1.8em;
     margin-top: 0em;
     margin-bottom: 0em;
-    font-weight: 400;
 }
 
 .description{

@@ -72,6 +72,22 @@ export default class ContentService {
     return this.api.get(`registration-page?${query}`);
   }
 
+  getProgram() {
+    const query = stringify(
+      {
+        populate: {
+          camp_programs: {
+            fields: ["programTime", "programTitle", "programDescription"]
+          },
+        },
+      },
+      {
+        encodeValuesOnly: true,
+      }
+    );
+    return this.api.get(`camp-programs?${query}`);
+  }
+
   postRequest(data) {
     // const query = stringify(
     //   {
