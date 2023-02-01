@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PhoneInput from 'react-phone-input-2';
-// import 'react-phone-input-2/lib/style.css'
+// import 'react-phone-input-2/lib/bootstrap.css'
 import styles from './RegistrationForm.module.css';
 import ContentService from '../../services/ContentService';
 
@@ -53,14 +53,15 @@ const RegistrationForm = () => {
             <label for="phone">Phone number</label>
             <PhoneInput country={'ua'} inputClass = {styles.input} specialLabel='' 
             id="phone" value={phone} onChange={(value, country, e, formattedValue) => setPhone(formattedValue)} 
-            masks = {{ua: '(...) ...-..-..'}} preferredCountries = {['ua']} disableCountryCode = {true}
+            masks = {{ua: '(...) ...-..-..'}} preferredCountries = {['ua']} disableCountryCode = {true} 
             type="phone" name="phone" maxLength="256" data-name="Phone" placeholder=''/>
           </div>
           <div>
             <label for="shift">Shift</label>
-            <select id="shift" value={shift} 
+            <select id="shift" value={shift}
             onChange={(e) => setShift(e.target.value)} 
             className={styles.input} type="text" name="shift" maxLength="256" data-name="Shift" placeholder=''>
+              <option hidden></option>
               {
                 shifts && shifts.data.attributes.shifts.data.map((dataShift) => (
                   <option value={dataShift.id}>{dataShift.attributes.title}</option>
