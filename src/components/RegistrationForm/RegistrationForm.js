@@ -3,7 +3,7 @@ import PhoneInput from 'react-phone-input-2';
 // import 'react-phone-input-2/lib/bootstrap.css'
 import styles from './RegistrationForm.module.css';
 import ContentService from '../../services/ContentService';
-import { useForm } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
 
 
 const RegistrationForm = () => {
@@ -16,15 +16,13 @@ const RegistrationForm = () => {
   const [shift, setShift] = useState('');
   const [shifts, setShifts] = useState('');
 
-  const {register, handleSubmit, formState: { errors }} = useForm();
+  const {register, handleSubmit, control, formState: { errors }} = useForm({mode: "onChange",});
 
   useEffect( () => {
     contentService.getShift().then((response) => {
       setShifts(response);
     });
   }, [] );
-
-
 
   const onSubmit = async(e) => {
     // e.preventDefault();
@@ -45,25 +43,32 @@ const RegistrationForm = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
           <div>
             <label for="name">Name</label>
-            <input id="name" value={name} onChange={(e) => setName(e.target.value)} className={styles.input} type="text" name='name' maxLength="256" data-name="Name" placeholder=''/>
+            <input id="name" {...register("name", {required: true, minLength: 2, pattern: /[А-Яа-я]/})}
+              value={name} onChange={(e) => setName(e.target.value)} 
+              className={styles.input} type="text" name='name' data-name="Name" placeholder=''/>
+              {errors.name && <p className={styles.errorMessage}>⚠ Щось не так</p>}
           </div>
           <div>
             <label for="email">Email</label>
-            <input id="email" {...register("email", {required: true, pattern: {value: /^\S+@\S+\.\S+$/, message: "Invalid"}})} value={email} onChange={(e) => setEmail(e.target.value)} className={styles.input} type="text" name="email" maxLength="256" data-name="Email" placeholder=''/>
-            {errors.email && <p>Invalid</p>}
+            <input id="email" {...register("email", {required: true, pattern: /^\S+@\S+\.\S+$/})} 
+              value={email} onChange={(e) => setEmail(e.target.value)} 
+              className={styles.input} type="text" name="email" data-name="Email" placeholder=''/>
+            {errors.email && <p className={styles.errorMessage}>⚠ Щось не так</p>}
           </div>
           <div>
             <label for="phone">Phone number</label>
-            <PhoneInput country={'ua'} inputClass = {styles.input} specialLabel='' 
-            id="phone" value={phone} onChange={(value, country, e, formattedValue) => setPhone(formattedValue)} 
-            masks = {{ua: '(...) ...-..-..'}} preferredCountries = {['ua']} disableCountryCode = {true} 
-            type="phone" name="phone" maxLength="256" data-name="Phone" placeholder=''/>
+              <PhoneInput inputProps={{name: "phone"}} {...register("phone", {required: true, minLength: 10, pattern: /(0|91)?[6-9][0-9]{9}/})} country={'ua'} 
+                inputClass = {styles.input} specialLabel='' 
+                id="phone" value={phone} onChange={(value, country, e, formattedValue) => setPhone(formattedValue)} 
+                masks = {{ua: '(...) ...-..-..'}} disableCountryCode = {true} 
+                type="text" data-name="Phone" placeholder=''/>
+              {errors.phone && <p className={styles.errorMessage}>⚠ Щось не так</p>}
           </div>
           <div>
             <label for="shift">Shift</label>
-            <select id="shift" value={shift}
-            onChange={(e) => setShift(e.target.value)} 
-            className={styles.input} type="text" name="shift" maxLength="256" data-name="Shift" placeholder=''>
+            <select id="shift" value={shift} {...register("shift", {required: true})}
+              onChange={(e) => setShift(e.target.value)} 
+              className={styles.input} type="text" data-name="Shift" placeholder=''>
               <option hidden></option>
               {
                 shifts && shifts.data.attributes.shifts.data.map((dataShift) => (
@@ -71,6 +76,7 @@ const RegistrationForm = () => {
                 ))
               }
             </select>
+            {errors.shift && <p className={styles.errorMessage}>⚠ Щось не так</p>}
           </div>
           <input className={styles.button} type="submit" value="Відправити запит"/>
         </form>
