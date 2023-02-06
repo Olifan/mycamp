@@ -62,8 +62,7 @@ const RegistrationForm = () => {
             )}
           </div>
           <div>
-            <label for="phone">Email</label>
-
+            <label for="email">Email</label>
             <input
               id="email"
               {...register("email", {
@@ -87,22 +86,24 @@ const RegistrationForm = () => {
               control={control}
               rules={{
                 required: true,
+                minLength: 15
               }}
               render={({ field: { onChange, value } }) => (
                 <PhoneInput
                   value={value}
                   onChange={(value, country, e, formattedValue) => onChange(formattedValue)}
                   country={"ua"}
-                  masks={{ ua: "(...) ...-..-.." }}
+                  masks={{ ua: "(...) ... .. .." }}
                   placeholder=''
+                  specialLabel=""
                   disableCountryCode={true}
                   id="phone"
                   inputClass={styles.input}
                 />
               )}
             />
-            {errors.phone && (
-              <p className={styles.errorMessage}>⚠ Щось не так</p>
+            { errors.phone && (
+              <p className={styles.errorMessage}>⚠ Введіть номер телефону</p>
             )}
           </div>
           <div>
