@@ -147,8 +147,8 @@ const RegistrationForm = () => {
           close = {toggleModal}
           content = {
             <>
-              <h4>Дякуємо</h4>
-              <h5>З Вами зв'яжуться</h5>
+              <h4>Дякуємо!</h4>
+              <p>З Вами зв'яжуться.</p>
             </>
           }
         />          

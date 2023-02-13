@@ -34,7 +34,6 @@
   }
 
   .modal .modalContent > h4 {
-    margin: 20px 0 40px;
     text-align: center;
   }
 
@@ -43,7 +42,6 @@
     right: 10px;
     top: 10px;
     cursor: pointer;
-    font-size: 18px;
     opacity: 0.5;
     background: none;
     border: none;
@@ -52,4 +50,11 @@
 
   .modal .closeModalButton:hover {
     opacity: 0.9;
+  }
+
+  .logo{
+    border-radius: 50%;
+    animation: 1s rotateLogo;
+    height: 2em;
+    width: 2em;
   }
