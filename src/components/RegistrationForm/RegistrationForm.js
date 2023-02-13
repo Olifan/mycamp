@@ -1,14 +1,21 @@
 import React, { useState, useEffect } from "react";
 import PhoneInput from "react-phone-input-2";
-// import 'react-phone-input-2/lib/bootstrap.css'
 import styles from "./RegistrationForm.module.css";
 import ContentService from "../../services/ContentService";
 import { Controller, useForm } from "react-hook-form";
+import Modal from "../Modal/Modal";
 
 const RegistrationForm = () => {
+
   const contentService = new ContentService();
 
   const [shifts, setShifts] = useState("");
+
+  const [showModal, setShowModal] = useState(false);
+
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  }
 
   const {
     register,
@@ -29,6 +36,7 @@ const RegistrationForm = () => {
 
     contentService.postRequest(data);
     reset();
+    toggleModal();
   };
 
   return (
@@ -134,6 +142,16 @@ const RegistrationForm = () => {
             value="Відправити запит"
           />
         </form>
+        <Modal
+          show = {showModal}
+          close = {toggleModal}
+          content = {
+            <>
+              <h4>Дякуємо</h4>
+              <h5>З Вами зв'яжуться</h5>
+            </>
+          }
+        />          
       </div>
     </div>
   );
