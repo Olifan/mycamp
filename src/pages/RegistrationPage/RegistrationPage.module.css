@@ -37,3 +37,11 @@
     box-shadow: 0 10px 30px -30px rgba(0, 0, 0, 0.5);
     text-align: left;
 }
+
+.tabs {
+    display: flex;
+    margin-bottom: 2em;
+    justify-content: center;
+    align-items: center;
+    grid-column-gap: 1em;
+}

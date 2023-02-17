@@ -6,6 +6,7 @@ import RegistrationForm from '../../components/RegistrationForm/RegistrationForm
 import ContentService from '../../services/ContentService';
 import { useParams } from 'react-router-dom';
 import CardWithText from '../../components/CardWithText/CardWithText';
+import Tabs from '../../components/Tabs/Tabs';
 
 const RegistrationPage = () => {
 
@@ -37,6 +38,15 @@ const RegistrationPage = () => {
       </>
     )
   });
+
+  const tab = data && data.data.attributes.shifts.data.map( dataShift => {
+    return(
+      <Tabs
+        key={dataShift.id}
+        tabData={dataShift.attributes.title}
+      />
+    )
+  })
   
   return(
     <div className={styles.registrationPage}>
@@ -47,6 +57,9 @@ const RegistrationPage = () => {
               title="Registration"
               description="Today. Tomorrow. Allways."
             />
+            <div className={styles.tabs}>
+              {tab}
+            </div>
             {shift}
             <RegistrationForm/>
           </>
