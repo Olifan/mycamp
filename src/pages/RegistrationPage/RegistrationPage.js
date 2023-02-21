@@ -13,41 +13,50 @@ const RegistrationPage = () => {
   const contentService = new ContentService();
 
   const [data, setData] = useState(null);
+  const [activeTab, setActiveTab] = useState(0);
+  const [activeShift, setActiveShift] = useState(null);
+
+  const handleTabClick = (index) => {
+    setActiveTab(index);
+    setActiveShift(index);
+  };
 
   useEffect( () => {
     contentService.getShift().then((response) => {
       setData(response);
+      setActiveShift(0);
     });
   }, [] );
 
-  const {shiftId} = useParams();
-  const shift = data && data.data.attributes.shifts.data.map(dataShift => {
-    console.log(dataShift);
-    return (
-      <>
-        <div className={styles.shiftDetail}>
-            <div className={styles.shiftPhotoContainer}>
-              <img className={styles.shiftCover} src={dataShift.attributes.mainImage?.data?.attributes.url} />
-            </div>
-            <div className={styles.shiftDescription}>
-              <h3>{dataShift.attributes.startDate} - {dataShift.attributes.endDate}</h3>
-              <h2>{dataShift.attributes.title}</h2>
-              <p>{dataShift.attributes.description}</p>
-            </div>
-          </div>
-      </>
-    )
-  });
-
-  const tab = data && data.data.attributes.shifts.data.map( dataShift => {
+  const tab = data && data.data.attributes.shifts.data.map( (dataShift, index) => {
     return(
       <Tabs
         key={dataShift.id}
         tabData={dataShift.attributes.title}
+        isActive = {index === activeTab}
+        onClick = {() => handleTabClick(index)}
       />
     )
-  })
+  });
+
+  const shift = data && activeShift !== null && data.data.attributes.shifts.data[activeShift] && (
+    
+    <>
+      <div className={styles.shiftDetail}>
+        <div className={styles.shiftPhotoContainer}>
+          <img className={styles.shiftCover} src={data.data.attributes.shifts.data[activeShift].attributes.mainImage?.data?.attributes.url} />
+        </div>
+        <div className={styles.shiftDescription}>
+          <h3>{data.data.attributes.shifts.data[activeShift].attributes.startDate} - {data.data.attributes.shifts.data[activeShift].attributes.endDate}</h3>
+          <h2>{data.data.attributes.shifts.data[activeShift].attributes.title}</h2>
+          <p>{data.data.attributes.shifts.data[activeShift].attributes.description}</p>
+        </div>
+      </div>
+    </>
+  );
+
   
+
   return(
     <div className={styles.registrationPage}>
       {

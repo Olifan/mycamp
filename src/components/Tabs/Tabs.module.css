@@ -13,6 +13,12 @@
     border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.15);
     border-radius: 10em;
     font-size: 0.9em;
+    color: #154de7;
     line-height: 1;
     letter-spacing: -0.03em;
+}
+
+.active{
+    background-color: #154de7;
+    color: #e4eafc;
 }
