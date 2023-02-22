@@ -5,7 +5,7 @@ import ContentService from "../../services/ContentService";
 import { Controller, useForm } from "react-hook-form";
 import Modal from "../Modal/Modal";
 
-const RegistrationForm = () => {
+const RegistrationForm = ({activeShiftTitle, activeShiftId}) => {
 
   const contentService = new ContentService();
 
@@ -16,6 +16,7 @@ const RegistrationForm = () => {
   const toggleModal = () => {
     setShowModal(!showModal);
   }
+  console.log(activeShiftId + activeShiftTitle);
 
   const {
     register,
@@ -116,7 +117,7 @@ const RegistrationForm = () => {
           </div>
           <div>
             <label for="shift">Shift</label>
-            <select
+            {/* <select
               id="shift"
               {...register("shift", { required: true })}
               className={styles.input}
@@ -131,10 +132,17 @@ const RegistrationForm = () => {
                     {dataShift.attributes.title}
                   </option>
                 ))}
-            </select>
-            {errors.shift && (
+            </select> */}
+
+            <div className={styles.input}
+              {...register("shift", {value: activeShiftId})}
+            >
+              {activeShiftTitle}            
+            </div>
+
+            {/* {errors.shift && (
               <p className={styles.errorMessage}>⚠ Щось не так</p>
-            )}
+            )} */}
           </div>
           <input
             className={styles.button}

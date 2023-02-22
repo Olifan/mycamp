@@ -4,8 +4,6 @@ import styles from './RegistrationPage.module.css';
 import PageTitle from '../../components/PageTitle/PageTitle';
 import RegistrationForm from '../../components/RegistrationForm/RegistrationForm';
 import ContentService from '../../services/ContentService';
-import { useParams } from 'react-router-dom';
-import CardWithText from '../../components/CardWithText/CardWithText';
 import Tabs from '../../components/Tabs/Tabs';
 
 const RegistrationPage = () => {
@@ -16,11 +14,15 @@ const RegistrationPage = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [activeShift, setActiveShift] = useState(null);
   const [activeShiftTab, setActiveShiftTab] = useState(0);
+  const [activeShiftTitle, setActiveShiftTitle] = useState(null);
+  const [activeShiftId, setActiveShiftId] = useState(null);
+  
 
   const handleTabClick = (index) => {
     setActiveTab(index);
     setActiveShift(index);
-   
+    setActiveShiftTitle(data.data.attributes.shifts.data[index].attributes.title);
+    setActiveShiftId(data.data.attributes.shifts.data[index].id)
   };
 
   const handleShiftTabClick = (index) => {
@@ -32,6 +34,8 @@ const RegistrationPage = () => {
       setData(response);
       setActiveShift(0);
       setActiveShiftTab(0);
+      setActiveShiftTitle(response?.data?.attributes?.shifts?.data[0]?.attributes?.title || null);
+      setActiveShiftId(response?.data?.attributes?.shifts?.data[0]?.id || null)
     });
   }, [] );
 
@@ -84,8 +88,8 @@ const RegistrationPage = () => {
             <div className={styles.tabs}>
               {tab}
             </div>
-            {shift}
-            <RegistrationForm/>
+            {shift}           
+              <RegistrationForm activeShiftTitle={activeShiftTitle} activeShiftId={activeShiftId}/>            
           </>
         )
       } 
