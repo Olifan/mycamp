@@ -15,16 +15,23 @@ const RegistrationPage = () => {
   const [data, setData] = useState(null);
   const [activeTab, setActiveTab] = useState(0);
   const [activeShift, setActiveShift] = useState(null);
+  const [activeShiftTab, setActiveShiftTab] = useState(0);
 
   const handleTabClick = (index) => {
     setActiveTab(index);
     setActiveShift(index);
+   
   };
+
+  const handleShiftTabClick = (index) => {
+    setActiveShiftTab(index);
+  }
 
   useEffect( () => {
     contentService.getShift().then((response) => {
       setData(response);
       setActiveShift(0);
+      setActiveShiftTab(0);
     });
   }, [] );
 
@@ -47,15 +54,23 @@ const RegistrationPage = () => {
           <img className={styles.shiftCover} src={data.data.attributes.shifts.data[activeShift].attributes.mainImage?.data?.attributes.url} />
         </div>
         <div className={styles.shiftDescription}>
-          <h3>{data.data.attributes.shifts.data[activeShift].attributes.startDate} - {data.data.attributes.shifts.data[activeShift].attributes.endDate}</h3>
-          <h2>{data.data.attributes.shifts.data[activeShift].attributes.title}</h2>
-          <p>{data.data.attributes.shifts.data[activeShift].attributes.description}</p>
+          <div className={styles.tabs}>
+          {data.data.attributes.shifts.data[activeShift].attributes.shiftTab.map ((dataShift, index) => (                         
+            <Tabs
+              key={dataShift.id}
+              tabData={dataShift.title}
+              isActive={index === activeShiftTab}
+              onClick={() => handleShiftTabClick(index)}
+            />           
+          ))}
+          </div>
+          
+          <p>{data.data.attributes.shifts.data[activeShift].attributes.shiftTab[activeShiftTab]?.content}</p>
+          
         </div>
       </div>
     </>
   );
-
-  
 
   return(
     <div className={styles.registrationPage}>
