@@ -54,7 +54,7 @@ const RegistrationPage = () => {
           <img className={styles.shiftCover} src={data.data.attributes.shifts.data[activeShift].attributes.mainImage?.data?.attributes.url} />
         </div>
         <div className={styles.shiftDescription}>
-          <div className={styles.tabs}>
+          <div className={`${styles.tabs} ${styles.shiftTab}`}>
           {data.data.attributes.shifts.data[activeShift].attributes.shiftTab.map ((dataShift, index) => (                         
             <Tabs
               key={dataShift.id}
