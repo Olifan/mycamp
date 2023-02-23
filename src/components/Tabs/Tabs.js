@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Tabs.module.css';
 
@@ -14,7 +14,11 @@ const Tabs = ({tabData, isActive, onClick}) => {
 
 };
 
-Tabs.propTypes = {};
+Tabs.propTypes = {
+  tabData: PropTypes.string.isRequired,
+  isActive: PropTypes.bool.isRequired,
+  onClick: PropTypes.func.isRequired,
+};
 
 Tabs.defaultProps = {};
 

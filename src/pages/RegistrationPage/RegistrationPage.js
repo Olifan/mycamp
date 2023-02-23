@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-// import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import PropTypes from 'prop-types';
@@ -30,7 +29,6 @@ const RegistrationPage = () => {
 
   const handleShiftTabClick = (index) => {
     setActiveShiftTab(index);
-    console.log(index);
   }
 
   useEffect( () => {
@@ -54,8 +52,7 @@ const RegistrationPage = () => {
     )
   });
 
-  const shift = data && activeShift !== null && data.data.attributes.shifts.data[activeShift] && (
-    
+  const shift = data && activeShift !== null && data.data.attributes.shifts.data[activeShift] && (  
     <>
       <div className={styles.shiftDetail}>
         <div className={styles.shiftPhotoContainer}>
@@ -82,7 +79,7 @@ const RegistrationPage = () => {
   );
 
   return(
-    <div className={styles.registrationPage}>
+    <div>
       {
         data && (
           <>
