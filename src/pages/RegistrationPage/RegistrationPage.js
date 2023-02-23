@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react';
+// import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
+import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 import PropTypes from 'prop-types';
 import styles from './RegistrationPage.module.css';
 import PageTitle from '../../components/PageTitle/PageTitle';
@@ -70,7 +73,12 @@ const RegistrationPage = () => {
           ))}
           </div>
           
-          <p>{data.data.attributes.shifts.data[activeShift].attributes.shiftTab[activeShiftTab]?.content}</p>
+          <ReactMarkdown className={styles.markdown}
+            rehypePlugins={[rehypeRaw]}
+            children={data.data.attributes.shifts.data[activeShift].attributes.shiftTab[activeShiftTab]?.content}
+          />
+            
+          
           
         </div>
       </div>

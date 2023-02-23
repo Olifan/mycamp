@@ -50,3 +50,7 @@
 .shiftTab{
     font-size: 0.8em;
 }
+.markdown ul, ol{
+    text-align: left;
+    font-size: 0.6em;
+}
