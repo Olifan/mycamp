@@ -27,6 +27,7 @@ const RegistrationPage = () => {
 
   const handleShiftTabClick = (index) => {
     setActiveShiftTab(index);
+    console.log(index);
   }
 
   useEffect( () => {

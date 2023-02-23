@@ -24,7 +24,7 @@ const RegistrationForm = ({activeShiftTitle, activeShiftId}) => {
     control,
     formState: { errors },
     reset,
-  } = useForm({ mode: "onChange" });
+  } = useForm({ mode: "onChange", values: {shift: activeShiftId} });
 
   useEffect(() => {
     contentService.getShift().then((response) => {
@@ -135,7 +135,7 @@ const RegistrationForm = ({activeShiftTitle, activeShiftId}) => {
             </select> */}
 
             <div className={styles.input}
-              {...register("shift", {value: activeShiftId})}
+              {...register("shift")}
             >
               {activeShiftTitle}            
             </div>
