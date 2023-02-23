@@ -5,14 +5,14 @@ import ContentService from "../../services/ContentService";
 import { Controller, useForm } from "react-hook-form";
 import Modal from "../Modal/Modal";
 
-const RegistrationForm = () => {
+const RegistrationForm = ({activeShiftTitle, activeShiftId}) => {
 
   const contentService = new ContentService();
 
+  const errorMessage = "⚠ Щось не так";
+
   const [shifts, setShifts] = useState("");
-
   const [showModal, setShowModal] = useState(false);
-
   const toggleModal = () => {
     setShowModal(!showModal);
   }
@@ -23,7 +23,7 @@ const RegistrationForm = () => {
     control,
     formState: { errors },
     reset,
-  } = useForm({ mode: "onChange" });
+  } = useForm({ mode: "onChange", values: {shift: activeShiftId} });
 
   useEffect(() => {
     contentService.getShift().then((response) => {
@@ -32,7 +32,6 @@ const RegistrationForm = () => {
   }, []);
 
   const onSubmit = async (data) => {
-    console.log(data);
 
     contentService.postRequest(data);
     reset();
@@ -66,7 +65,7 @@ const RegistrationForm = () => {
               placeholder=""
             />
             {errors.name && (
-              <p className={styles.errorMessage}>⚠ Щось не так</p>
+              <p className={styles.errorMessage}>{errorMessage}</p>
             )}
           </div>
           <div>
@@ -84,7 +83,7 @@ const RegistrationForm = () => {
               placeholder=""
             />
             {errors.email && (
-              <p className={styles.errorMessage}>⚠ Щось не так</p>
+              <p className={styles.errorMessage}>{errorMessage}</p>
             )}
           </div>
           <div>
@@ -116,31 +115,17 @@ const RegistrationForm = () => {
           </div>
           <div>
             <label for="shift">Shift</label>
-            <select
-              id="shift"
-              {...register("shift", { required: true })}
-              className={styles.input}
-              type="text"
-              data-name="Shift"
-              placeholder=""
-            >
-              <option hidden></option>
-              {shifts &&
-                shifts.data.attributes.shifts.data.map((dataShift) => (
-                  <option value={dataShift.id}>
-                    {dataShift.attributes.title}
-                  </option>
-                ))}
-            </select>
-            {errors.shift && (
-              <p className={styles.errorMessage}>⚠ Щось не так</p>
-            )}
+              <div className={styles.input}
+                {...register("shift")}
+              >
+              {activeShiftTitle}            
+            </div>
           </div>
-          <input
-            className={styles.button}
-            type="submit"
-            value="Відправити запит"
-          />
+            <input
+              className={styles.button}
+              type="submit"
+              value="Відправити запит"
+            />
         </form>
         <Modal
           show = {showModal}

@@ -1,0 +1,17 @@
+.tab{
+    padding: 0.5em 1.2em;
+    margin-bottom: 1em;
+    border-style: solid;
+    border-width: 1px 1px 2px;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.15);
+    border-radius: 10em;
+    font-size: 0.9em;
+    color: #154de7;
+    line-height: 1;
+    letter-spacing: -0.03em;
+}
+
+.active{
+    background-color: #154de7;
+    color: #e4eafc;
+}

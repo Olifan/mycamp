@@ -20,10 +20,6 @@ const HomePage = () => {
     });
   }, []);
 
-  // const { loading, error, data } = useFetch(
-  //   `http://localhost:1337/api/home-page?${query}`
-  // );
-
   return (
     <div className={styles.homePage}>
       <div className={styles.header}>

@@ -1,4 +1,3 @@
-.registrationPage {}
 
 .shiftDetail{
     display: flex;
@@ -28,7 +27,7 @@
 .shiftDescription{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
     max-width: 20em;
     padding: 1.5em 2em;
@@ -36,4 +35,21 @@
     background-color: #fff;
     box-shadow: 0 10px 30px -30px rgba(0, 0, 0, 0.5);
     text-align: left;
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+    justify-content: center;
+    align-items: center;
+    grid-column-gap: 1em;
+}
+
+.shiftTab{
+    font-size: 0.8em;
+}
+.markdown ul, ol{
+    text-align: left;
+    font-size: 0.6em;
 }
