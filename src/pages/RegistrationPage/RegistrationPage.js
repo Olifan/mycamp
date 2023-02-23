@@ -94,7 +94,7 @@ const RegistrationPage = () => {
               {tab}
             </div>
             {shift}           
-              <RegistrationForm activeShiftTitle={activeShiftTitle} activeShiftId={activeShiftId}/>            
+            <RegistrationForm activeShiftTitle={activeShiftTitle} activeShiftId={activeShiftId}/>            
           </>
         )
       } 
