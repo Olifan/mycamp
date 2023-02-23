@@ -89,19 +89,7 @@ export default class ContentService {
     return this.api.get(`camp-programs?${query}`);
   }
 
-  postRequest(data) {
-    // const query = stringify(
-    //   {
-    //     populate: {
-    //       requests: {
-    //         fields: ["name", "email", "telephone", "shift"]
-    //       },
-    //     },
-    //   },
-    //   {
-    //     encodeValuesOnly: true,
-    //   }
-    // );
+  postRequest(data) { 
     return this.api.post(`requests?`, data);
   }
 }
