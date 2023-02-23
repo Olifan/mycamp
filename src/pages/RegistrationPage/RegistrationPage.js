@@ -63,23 +63,19 @@ const RegistrationPage = () => {
         </div>
         <div className={styles.shiftDescription}>
           <div className={`${styles.tabs} ${styles.shiftTab}`}>
-          {data.data.attributes.shifts.data[activeShift].attributes.shiftTab.map ((dataShift, index) => (                         
-            <Tabs
-              key={dataShift.id}
-              tabData={dataShift.title}
-              isActive={index === activeShiftTab}
-              onClick={() => handleShiftTabClick(index)}
-            />           
-          ))}
-          </div>
-          
+            {data.data.attributes.shifts.data[activeShift].attributes.shiftTab.map ((dataShift, index) => (                         
+              <Tabs
+                key={dataShift.id}
+                tabData={dataShift.title}
+                isActive={index === activeShiftTab}
+                onClick={() => handleShiftTabClick(index)}
+              />           
+            ))}
+          </div>        
           <ReactMarkdown className={styles.markdown}
             rehypePlugins={[rehypeRaw]}
             children={data.data.attributes.shifts.data[activeShift].attributes.shiftTab[activeShiftTab]?.content}
-          />
-            
-          
-          
+          />       
         </div>
       </div>
     </>
