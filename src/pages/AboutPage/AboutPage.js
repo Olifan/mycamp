@@ -8,6 +8,7 @@ import CardWithText from '../../components/CardWithText/CardWithText';
 import ContentService from '../../services/ContentService';
 import PalaroidPhoto from '../../components/PalaroidPhoto/PalaroidPhoto';
 import Registration from '../../components/Registration/Registration';
+import Footer from '../../components/Footer/Footer';
 
 const AboutPage = () => {
 
@@ -76,7 +77,12 @@ const AboutPage = () => {
           icon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62ea61cb131e422cf017262d_streamlinehq-shopping-business-target-money-shopping-250.SVG"
         />
       </div>
-      <Registration/>
+      <Registration
+        registrationDate="21-29 грудня"
+        registrationOpen="Реєстрація відкрита"
+        registrationSeason="Зима 2023"
+      />
+      <Footer/>
     </div>
   )
   
