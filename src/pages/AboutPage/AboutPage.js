@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 import PropTypes from 'prop-types';
 import styles from './AboutPage.module.css';
 import PageTitle from '../../components/PageTitle/PageTitle';
 import CardWithText from '../../components/CardWithText/CardWithText';
 import ContentService from '../../services/ContentService';
 import PalaroidPhoto from '../../components/PalaroidPhoto/PalaroidPhoto';
+import Registration from '../../components/Registration/Registration';
 
 const AboutPage = () => {
 
@@ -66,10 +69,14 @@ const AboutPage = () => {
         />
         <CardWithText
           title={data && data.data.attributes.RestWithUs.title}
-          text={data && data.data.attributes.RestWithUs.description}
+          text={<ReactMarkdown 
+            rehypePlugins={[rehypeRaw]}
+            children={data && data.data.attributes.RestWithUs.description}
+          />}
           icon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62ea61cb131e422cf017262d_streamlinehq-shopping-business-target-money-shopping-250.SVG"
         />
       </div>
+      <Registration/>
     </div>
   )
   
