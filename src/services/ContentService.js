@@ -89,6 +89,68 @@ export default class ContentService {
     return this.api.get(`camp-programs?${query}`);
   }
 
+  getAboutPage(){
+    const query = stringify(
+      {
+        populate: {
+          OurMission: {
+            fields: ["title", "description"],
+            populate: {
+              icon: "*",
+            },
+          },
+          OurMissionPhoto: {
+            fields: ["title",],
+            populate: {
+              photo: "*",
+            },
+          },
+          AboutCamp: {
+            fields: ["title", "description"],
+            populate: {
+              icon: "*",
+            },
+          },
+          AboutCampPhoto: {
+            fields: ["title",],
+            populate: {
+              photo: "*",
+            },
+          },
+          MedicalCare: {
+            fields: ["title", "description"],
+            populate: {
+              icon: "*",
+            },
+          },
+          MedicalCarePhoto: {
+            fields: ["title",],
+            populate: {
+              photo: "*",
+            },
+          },
+          RestWithUs: {
+            fields: ["title", "description"],
+            populate: {
+              icon: "*",
+            },
+          },
+          RestWithUsPhoto: {
+            fields: ["title",],
+            populate: {
+              photo: "*",
+            },
+          },
+        }
+      },
+      {
+        encodeValuesOnly: true,
+      }
+    );
+
+    return this.api.get(`about-page?${query}`);
+  }
+
   postRequest(data) { 
     return this.api.post(`requests?`, data);
   }
