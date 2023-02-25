@@ -141,6 +141,12 @@ export default class ContentService {
               photo: "*",
             },
           },
+          Questions: {
+            fields: ["title", "description"],
+            populate: {
+              icon: "*",
+            },
+          },
         }
       },
       {

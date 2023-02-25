@@ -77,6 +77,16 @@ const AboutPage = () => {
           />}
           icon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62ea61cb131e422cf017262d_streamlinehq-shopping-business-target-money-shopping-250.SVG"
         />
+        
+        <CardWithText
+          className={styles.wideCard}
+          title={data && data.data.attributes.Questions.title}
+          text={<ReactMarkdown 
+            rehypePlugins={[rehypeRaw]}
+            children={data && data.data.attributes.Questions.description}
+          />}
+          icon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62ea61cb131e422cf017262d_streamlinehq-shopping-business-target-money-shopping-250.SVG"
+        />
       </div>
       <Registration
         registrationDate="21-29 грудня"
