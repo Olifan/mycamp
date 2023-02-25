@@ -20,6 +20,7 @@ const AboutPage = () => {
     contentService.getAboutPage().then((response) => {
       setData(response);
     });
+    window.scrollTo(0, 0);
   }, []);
 
   return(
