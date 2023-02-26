@@ -1,0 +1,27 @@
+.aboutPage {}
+
+.aboutPageContent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    grid-column-gap: 2.5em;
+    grid-row-gap: 2.5em;
+    padding: 3vh 8% 8vh;
+}
+
+.wideCard{
+
+    padding: 1.25em 1.5em;
+    width: 100%;
+    border-radius: 0.5em;
+    background-color: #fff;
+    box-shadow: 0 10px 30px -30px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    max-width: 100%;
+}
+
+.wideCard p{
+    font-size: 0.8em;
+}

@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './CardWithText.module.css';
 
-const CardWithText = ({icon, title, text}) => (
-  <div className={styles.cardWithText}>
+const CardWithText = ({icon, title, text, className}) => (
+  <div className={` ${className}`}>
     <img className={styles.icon} src={icon} loading="lazy" alt='icon'/>
     <div className={styles.textBlock}>
       <h2>{title}</h2>
@@ -12,8 +12,12 @@ const CardWithText = ({icon, title, text}) => (
   </div>
 );
 
-CardWithText.propTypes = {};
+CardWithText.propTypes = {
+  className: PropTypes.string,
+};
 
-CardWithText.defaultProps = {};
+CardWithText.defaultProps = {
+  className: `${styles.cardWithText}`
+};
 
 export default CardWithText;

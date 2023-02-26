@@ -74,13 +74,17 @@ const HomePage = () => {
           size="middleImg"
           srcImg="testPhoto.jpeg"
         />
-        <CardNavigation
-          className={styles.iconRight}
-          linkTitle="Про табір"
-          linkDescription="Наша місія"
-          iconLocation="iconRight"
-          linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8f1219bd3c443f28ba3f7_streamlinehq-interface-lighting-light-bulb-on-interface-essential-250-3.SVG"
-        />
+
+        <Link to = "/about-page">
+          <CardNavigation
+            className={styles.iconRight}
+            linkTitle="Про табір"
+            linkDescription="Наша місія"
+            iconLocation="iconRight"
+            linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8f1219bd3c443f28ba3f7_streamlinehq-interface-lighting-light-bulb-on-interface-essential-250-3.SVG"
+          />
+        </Link>
+        
         {/* Row 2 */}
         <PalaroidPhoto
           caption="Summer 2022"
