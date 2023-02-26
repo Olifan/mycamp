@@ -21,3 +21,7 @@
     text-align: left;
     max-width: 100%;
 }
+
+.wideCard p{
+    font-size: 0.8em;
+}
