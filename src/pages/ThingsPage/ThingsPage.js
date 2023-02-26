@@ -21,6 +21,7 @@ const ThingsPage = () => {
     contentService.getThingsPage().then((response) => {
       setData(response);
     });
+    window.scrollTo(0, 0);
   }, []);
 
   const thingToTake = data && data.data.attributes.thing_to_takes.data.map(toTake => {
