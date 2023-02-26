@@ -32,3 +32,26 @@
     margin-bottom: 1em;
     text-align: center;
 }
+
+.importantNote{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.markDownStyle p {
+    font-size: 0.9em;
+}
+
+.notePhotoLeft{
+    margin-top: 5em;
+    margin-right: 1em;
+}
+
+.notePhotoRight{
+    margin-bottom: 5em;
+    margin-left: 1em;
+}

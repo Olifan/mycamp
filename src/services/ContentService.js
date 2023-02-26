@@ -167,6 +167,24 @@ export default class ContentService {
           thing_not_takes: {
             fields: ["title"]
           },
+          importantNote: {
+            fields: ["title", "description"],
+            populate: {
+              icon: "*",
+            },
+          },
+          leftNotePhoto: {
+            fields: ["title",],
+            populate: {
+              photo: "*",
+            },
+          },
+          rightNotePhoto: {
+            fields: ["title",],
+            populate: {
+              photo: "*",
+            },
+          },
         },
       },
       {
