@@ -1,1 +1,13 @@
 .thingsPage {}
+
+.thingsPageContent{
+    position: relative;
+    display: flex;
+    padding-top: 3hv;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    grid-column-gap: 1em;
+    grid-row-gap: 2em;
+}
