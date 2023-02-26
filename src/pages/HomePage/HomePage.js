@@ -86,24 +86,30 @@ const HomePage = () => {
         </Link>
         
         {/* Row 2 */}
+        
         <PalaroidPhoto
           caption="Summer 2022"
           turn="turnRight"
           size="middleImg"
           srcImg="testPhoto.jpeg"
         />
-        <CardNavigation
-          size="large"
-          linkTitle="Що брати з собою?"
-          linkDescription="і що не брати"
-          linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8fb91f9a283de58e0318d_streamlinehq-travel-airport-baggage-maps-travel-250-2.SVG"
-        />
+
+        <Link to = "/things-page">
+          <CardNavigation
+            size="large"
+            linkTitle="Що брати з собою?"
+            linkDescription="і що не брати"
+            linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8fb91f9a283de58e0318d_streamlinehq-travel-airport-baggage-maps-travel-250-2.SVG"
+          />
+        </Link>
+        
         <PalaroidPhoto
           caption="Summer 2022"
           turn="turnRight"
           size="middleImg"
           srcImg="testPhoto.jpeg"
         />
+
         {/* Row 3 */}
         <CardNavigation
           linkTitle="Розташування"

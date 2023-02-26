@@ -7,6 +7,7 @@ import MemberPage from './pages/MemberPage/MemberPage';
 import RegistrationPage from './pages/RegistrationPage/RegistrationPage';
 import CampProgramPage from './pages/CampProgramPage/CampProgramPage';
 import AboutPage from './pages/AboutPage/AboutPage';
+import ThingsPage from './pages/ThingsPage/ThingsPage';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route exact path='/registration-page' element={<RegistrationPage/>}></Route>
           <Route exact path='/camp-program-page' element={<CampProgramPage/>}></Route>
           <Route exact path='/about-page' element={<AboutPage/>}></Route>
+          <Route exact path='/things-page' element={<ThingsPage/>}></Route>
         </Routes>
       </Router>
     </div>   
