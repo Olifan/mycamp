@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import styles from './ThingsPage.module.css';
 import ContentService from '../../services/ContentService';
 import CardTakeNotTake from '../../components/CardTakeNotTake/CardTakeNotTake';
+import PageTitle from '../../components/PageTitle/PageTitle';
+import Registration from '../../components/Registration/Registration';
+import Footer from '../../components/Footer/Footer';
 
 const ThingsPage = () => {
 
@@ -38,15 +41,26 @@ const ThingsPage = () => {
 
   return(
     <div className={styles.thingsPage}>
+      <PageTitle
+        title={'Що брати?'}
+        description="Today. Tomorrow. Allways."
+      />
       <div className={styles.thingsPageContent}>
         <div className={styles.thingToTake}>
+          <h2 className={styles.thingToTakeTitle}>Що треба взяти:</h2>
           {thingToTake}
         </div>
-        <div className={styles.thingNotTake}>
+        <div className={`${styles.thingToTake} ${styles.thingNotTake}`}>
+          <h2 className={styles.thingToTakeTitle}>Що брати не треба:</h2>
           {thingNotTake}
         </div>
       </div>
-      
+      <Registration
+        registrationDate="21-29 грудня"
+        registrationOpen="Реєстрація відкрита"
+        registrationSeason="Зима 2023"
+      />
+      <Footer/> 
     </div>
   )
 };
