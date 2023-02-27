@@ -59,7 +59,7 @@ const HomePage = () => {
 
       <div className={styles.main}>
         {/* Row 1 */}
-        <Link to = "/camp-program-page">
+        <Link to = "/camp-program">
           <CardNavigation
             size="wide"
             linkTitle="Програма табору"
@@ -75,7 +75,7 @@ const HomePage = () => {
           srcImg="testPhoto.jpeg"
         />
 
-        <Link to = "/about-page">
+        <Link to = "/about">
           <CardNavigation
             className={styles.iconRight}
             linkTitle="Про табір"
@@ -94,7 +94,7 @@ const HomePage = () => {
           srcImg="testPhoto.jpeg"
         />
 
-        <Link to = "/things-page">
+        <Link to = "/things">
           <CardNavigation
             size="large"
             linkTitle="Що брати з собою?"

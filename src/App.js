@@ -17,10 +17,10 @@ function App() {
           <Route exact path='/' element={< HomePage />}></Route>
           <Route exact path='/our-team' element={<OurTeam/>}></Route>
           <Route exact path='/member-page/:memberId' element={<MemberPage/>}></Route>
-          <Route exact path='/registration-page' element={<RegistrationPage/>}></Route>
-          <Route exact path='/camp-program-page' element={<CampProgramPage/>}></Route>
-          <Route exact path='/about-page' element={<AboutPage/>}></Route>
-          <Route exact path='/things-page' element={<ThingsPage/>}></Route>
+          <Route exact path='/registration' element={<RegistrationPage/>}></Route>
+          <Route exact path='/camp-program' element={<CampProgramPage/>}></Route>
+          <Route exact path='/about' element={<AboutPage/>}></Route>
+          <Route exact path='/things' element={<ThingsPage/>}></Route>
         </Routes>
       </Router>
     </div>   
