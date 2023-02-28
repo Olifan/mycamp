@@ -8,7 +8,7 @@ const Registration = ({registrationDate, registrationOpen, registrationSeason}) 
     <h5 className={styles.registrationDate}>
       {registrationDate}
     </h5>
-    <Link to={'/registration-page'} className={styles.registrationButton}>
+    <Link to={'/registration'} className={styles.registrationButton}>
       {registrationOpen}
     </Link>
     <h5 className={styles.registrationDate}>

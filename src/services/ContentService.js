@@ -157,6 +157,43 @@ export default class ContentService {
     return this.api.get(`about-page?${query}`);
   }
 
+  getThingsPage(){
+    const query = stringify(
+      {
+        populate: {
+          thing_to_takes: {
+            fields: ["title"]
+          },
+          thing_not_takes: {
+            fields: ["title"]
+          },
+          importantNote: {
+            fields: ["title", "description"],
+            populate: {
+              icon: "*",
+            },
+          },
+          leftNotePhoto: {
+            fields: ["title",],
+            populate: {
+              photo: "*",
+            },
+          },
+          rightNotePhoto: {
+            fields: ["title",],
+            populate: {
+              photo: "*",
+            },
+          },
+        },
+      },
+      {
+        encodeValuesOnly: true,
+      }
+    );
+    return this.api.get(`things-page?${query}`);
+  }
+
   postRequest(data) { 
     return this.api.post(`requests?`, data);
   }

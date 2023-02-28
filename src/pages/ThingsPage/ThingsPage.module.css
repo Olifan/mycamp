@@ -1,0 +1,57 @@
+.thingsPage {}
+
+.thingsPageContent{
+    position: relative;
+    display: flex;
+    padding: 3vh 8% 8vh;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    grid-column-gap: 1em;
+    grid-row-gap: 2em;
+}
+
+.thingToTake{
+    display: flex;
+    width: 23em;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    grid-column-gap: 0.5em;
+    grid-row-gap: 0.5em;
+}
+
+.thingNotTake{
+    width: 16em;
+}
+
+.thingToTakeTitle{
+    width: 100%;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.importantNote{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.markDownStyle p {
+    font-size: 0.9em;
+}
+
+.notePhotoLeft{
+    margin-top: 5em;
+    margin-right: 1em;
+}
+
+.notePhotoRight{
+    margin-bottom: 5em;
+    margin-left: 1em;
+}
