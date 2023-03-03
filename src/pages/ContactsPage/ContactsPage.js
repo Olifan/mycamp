@@ -8,16 +8,16 @@ import CardWithText from '../../components/CardWithText/CardWithText';
 
 const ContactsPage = () => {
   return(
-    <div className={styles.ContactsPage}>
+    <div className={styles.сontactsPage}>
       <div>
         <PageTitle
           title="Контакти"
           description="Today. Tomorrow. Allways."
         />
       </div>
-      <div>
+      <div className={styles.contactsContent}>
       <CardWithText
-          title="Контакти"
+          title="Питання"
           text="Текст риба"
           icon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62ea61cb131e422cf017262d_streamlinehq-shopping-business-target-money-shopping-250.SVG"
         />
