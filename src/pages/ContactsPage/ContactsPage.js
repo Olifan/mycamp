@@ -4,6 +4,7 @@ import styles from './ContactsPage.module.css';
 import PageTitle from '../../components/PageTitle/PageTitle';
 import Registration from '../../components/Registration/Registration';
 import Footer from '../../components/Footer/Footer';
+import CardWithText from '../../components/CardWithText/CardWithText';
 
 const ContactsPage = () => {
   return(

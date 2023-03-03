@@ -8,6 +8,7 @@ import RegistrationPage from './pages/RegistrationPage/RegistrationPage';
 import CampProgramPage from './pages/CampProgramPage/CampProgramPage';
 import AboutPage from './pages/AboutPage/AboutPage';
 import ThingsPage from './pages/ThingsPage/ThingsPage';
+import ContactsPage from './pages/ContactsPage/ContactsPage';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route exact path='/camp-program' element={<CampProgramPage/>}></Route>
           <Route exact path='/about' element={<AboutPage/>}></Route>
           <Route exact path='/things' element={<ThingsPage/>}></Route>
+          <Route exact path='/contacts' element={<ContactsPage/>}></Route>
         </Routes>
       </Router>
     </div>   
