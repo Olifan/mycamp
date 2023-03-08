@@ -10,3 +10,18 @@
     grid-row-gap: 2em;
     padding: 3vh 8% 8vh;
 }
+
+.cardWithTextMod{
+    max-width: 24em;
+    padding: 1.25em 1.5em;
+    width: 100%;
+    border-radius: 0.5em;
+    background-color: #fff;
+    box-shadow: 0 10px 30px -30px rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+.contactsBlock{
+    max-width: 16em;
+    width: 100%;
+}
