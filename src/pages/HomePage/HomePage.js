@@ -152,12 +152,15 @@ const HomePage = () => {
           srcImg="testPhoto.jpeg"
         />
         {/* Row 5 */}
-        <CardNavigation
-          size="wide"
-          linkTitle="Контакти"
-          linkDescription="Майже цілодобово"
-          linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e9862e0dcf927adce2de5c_streamlinehq-phone-telephone-ringing-phone-250.SVG"
-        />
+        <Link to = "/contacts">
+          <CardNavigation
+            size="wide"
+            linkTitle="Контакти"
+            linkDescription="Майже цілодобово"
+            linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e9862e0dcf927adce2de5c_streamlinehq-phone-telephone-ringing-phone-250.SVG"
+          />
+        </Link>
+        
         <PalaroidPhoto
           caption="Summer 2022"
           turn="turnRight"

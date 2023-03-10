@@ -194,6 +194,31 @@ export default class ContentService {
     return this.api.get(`things-page?${query}`);
   }
 
+  getContactsPage(){
+    const query = stringify(
+      {
+        populate:{
+          commonQuestions:{
+            fields: ["title", "description"],
+            populate: {
+              icon: "*",
+            },
+          },
+          contacts: {
+            fields: ["title", "description"],
+            populate: {
+              icon: "*",
+            },
+          }
+        }
+      },
+      {
+        encodeValuesOnly: true,
+      }
+    );
+    return this.api.get(`contacts-page?${query}`);
+  }
+
   postRequest(data) { 
     return this.api.post(`requests?`, data);
   }

@@ -1,0 +1,56 @@
+.сontactsPage {}
+
+.contactsContent{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
+    padding: 3vh 8% 8vh;
+}
+
+.cardWithTextMod{
+    max-width: 24em;
+    padding: 1.25em 1.5em;
+    width: 100%;
+    border-radius: 0.5em;
+    background-color: #fff;
+    box-shadow: 0 10px 30px -30px rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+.cardWithTextMod p {
+    font-size: 0.8em;
+}
+
+.contactsBlock{
+    max-width: 16em;
+    width: 100%;
+}
+
+.contactsBlock p {
+    font-size: 0.8em;
+}
+
+.contactsBlock a{
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    padding: 0.7em 1.8em;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #154de7;
+    border-radius: 10em;
+    font-size: 0.9em;
+    color: #154de7;
+    margin: 3% 3%;
+}
+
+.contactsBlock a:hover{
+    color: #fff;
+    background-color: #154de7;
+    transition: color 300ms ease, background-color 300ms ease;
+}
