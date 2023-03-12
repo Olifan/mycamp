@@ -28,14 +28,40 @@ const PhotoPage = () => {
     console.log(data);
   }
 
+  const photoAlbums = data && data.data.attributes.photo_albums.data.map(photoAlbum => {
+    return(
+      <>
+        <div  className={styles.photoPageContent}>
+          <div onClick = {handleClick}>
+            <GalleryPrew
+              title={photoAlbum.attributes.title}
+              coverImg={photoAlbum.attributes.coverPhoto.data.attributes.url}
+              miniPrewItems={photoAlbum.attributes.prewThumb.data.map(prewThumb => {
+                return(prewThumb.attributes.url)
+              })}
+            />
+          </div>
+        
+          <FsLightbox
+            toggler = {showSlider}
+            sources = {photoAlbum.attributes.photos.data.map(photos => {
+              return(photos.attributes.url)
+            })}
+          />
+        </div>
+      </>
+    )
+  })
+
   return(
     <div className={styles.photoPage}>
       <PageTitle
         title="Фото"
         description="Today. Tomorrow. Allways."
       />
+      {photoAlbums}
       
-      <div  className={styles.photoPageContent}>
+      {/* <div  className={styles.photoPageContent}>
         <div onClick = {handleClick}>
           <GalleryPrew
             title="Summer"
@@ -51,13 +77,13 @@ const PhotoPage = () => {
         />
         <FsLightbox
           toggler = {showSlider}
-          sources = {data && data.data.attributes.photo_summer.data.attributes.photos.data.map(photo => {
+          sources = {data && data.data.attributes.photo_albums.data.map(photo => {
             return(
-              photo.attributes.url
+              photo.attributes.photos.data.attributes.url
             )
           })}
         />
-      </div>
+      </div> */}
 
     </div>
   );

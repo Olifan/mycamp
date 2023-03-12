@@ -223,9 +223,12 @@ export default class ContentService {
     const query = stringify(
       {
         populate:{
-          photo_summer:{
+          photo_albums:{
+            fields: ["title",],
             populate:{
               photos: "*",
+              prewThumb: "*",
+              coverPhoto: "*",
             },
           }
         }
