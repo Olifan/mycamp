@@ -219,6 +219,24 @@ export default class ContentService {
     return this.api.get(`contacts-page?${query}`);
   }
 
+  getPhotoPage(){
+    const query = stringify(
+      {
+        populate:{
+          photo_summer:{
+            populate:{
+              photos: "*",
+            },
+          }
+        }
+      },
+      {
+        encodeValuesOnly: true,
+      }
+    );
+    return this.api.get(`photo-page?${query}`);
+  }
+
   postRequest(data) { 
     return this.api.post(`requests?`, data);
   }
