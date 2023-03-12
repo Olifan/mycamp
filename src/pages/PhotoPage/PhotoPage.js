@@ -5,16 +5,17 @@ import PageTitle from '../../components/PageTitle/PageTitle';
 import GalleryPrew from '../../components/GalleryPrew/GalleryPrew';
 import FsLightbox from "fslightbox-react";
 import ContentService from '../../services/ContentService';
+import { useParams } from 'react-router-dom';
 
 
 const PhotoPage = () => {
 
   const contentService = new ContentService();
 
-  const toogle = false;
-
-  const [showSlider, setShowSlider] = useState(toogle);
+  const [showSlider, setShowSlider] = useState(false);
   const [data, setData] = useState();
+  const [currentAlbumId, setCurrentAlbumId] = useState(null);
+
 
   useEffect(() => {
     contentService.getPhotoPage().then((response) => {
@@ -23,31 +24,41 @@ const PhotoPage = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const handleClick = () => {
-    setShowSlider(!showSlider);
-    console.log(data);
-  }
+  useEffect(() => {
+    setShowSlider();
+  }, [currentAlbumId]);
+  
+
+  const handleClick = (albumId) => {
+    
+    setCurrentAlbumId(albumId);
+    setShowSlider( !showSlider);
+    console.log(currentAlbumId)
+  };
 
   const photoAlbums = data && data.data.attributes.photo_albums.data.map(photoAlbum => {
     return(
       <>
-        <div  className={styles.photoPageContent}>
-          <div onClick = {handleClick}>
+        <div key={photoAlbum.id}>
+          <div onClick={() => handleClick(photoAlbum.id)}>
             <GalleryPrew
               title={photoAlbum.attributes.title}
               coverImg={photoAlbum.attributes.coverPhoto.data.attributes.url}
               miniPrewItems={photoAlbum.attributes.prewThumb.data.map(prewThumb => {
-                return(prewThumb.attributes.url)
+                return(prewThumb.attributes.url);
               })}
             />
           </div>
         
-          <FsLightbox
+          {currentAlbumId === photoAlbum.id && (
+            <FsLightbox
             toggler = {showSlider}
             sources = {photoAlbum.attributes.photos.data.map(photos => {
               return(photos.attributes.url)
             })}
           />
+          )}
+          
         </div>
       </>
     )
@@ -55,35 +66,15 @@ const PhotoPage = () => {
 
   return(
     <div className={styles.photoPage}>
+
       <PageTitle
         title="Фото"
         description="Today. Tomorrow. Allways."
       />
-      {photoAlbums}
-      
-      {/* <div  className={styles.photoPageContent}>
-        <div onClick = {handleClick}>
-          <GalleryPrew
-            title="Summer"
-            coverImg="testPhoto.jpeg"
-            miniPrewItems={["testPhoto.jpeg", "testPhoto.jpeg", "testPhoto.jpeg"]}
-          />
-        </div>
-        
-        <GalleryPrew
-          title="Winter"
-          coverImg="testPhoto.jpeg"
-          miniPrewItems={["testPhoto.jpeg", "testPhoto.jpeg", "testPhoto.jpeg"]}
-        />
-        <FsLightbox
-          toggler = {showSlider}
-          sources = {data && data.data.attributes.photo_albums.data.map(photo => {
-            return(
-              photo.attributes.photos.data.attributes.url
-            )
-          })}
-        />
-      </div> */}
+
+      <div className={styles.photoPageContent}>
+        {photoAlbums}
+      </div>
 
     </div>
   );
