@@ -5,8 +5,8 @@ import PageTitle from '../../components/PageTitle/PageTitle';
 import GalleryPrew from '../../components/GalleryPrew/GalleryPrew';
 import FsLightbox from "fslightbox-react";
 import ContentService from '../../services/ContentService';
-import { useParams } from 'react-router-dom';
-
+import Registration from '../../components/Registration/Registration';
+import Footer from '../../components/Footer/Footer';
 
 const PhotoPage = () => {
 
@@ -75,6 +75,13 @@ const PhotoPage = () => {
       <div className={styles.photoPageContent}>
         {photoAlbums}
       </div>
+
+      <Registration
+        registrationDate="21-29 грудня"
+        registrationOpen="Реєстрація відкрита"
+        registrationSeason="Зима 2023"
+      />
+      <Footer/>
 
     </div>
   );
