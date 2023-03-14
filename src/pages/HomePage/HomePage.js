@@ -139,12 +139,15 @@ const HomePage = () => {
           size="middleImg"
           srcImg="testPhoto.jpeg"
         />
-        <CardNavigation
-          size="large"
-          linkTitle="Фото"
-          linkDescription="Цікаві моменти"
-          linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8f4544af443508a817eac_streamlinehq-image-camera-1-images-photography-250.SVG"
-        />
+        <Link to = "/photo">
+          <CardNavigation
+            size="large"
+            linkTitle="Фото"
+            linkDescription="Цікаві моменти"
+            linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8f4544af443508a817eac_streamlinehq-image-camera-1-images-photography-250.SVG"
+          />
+        </Link>
+        
         <PalaroidPhoto
           caption="Summer 2022"
           turn="turnRight"
