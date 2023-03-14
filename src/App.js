@@ -10,6 +10,7 @@ import AboutPage from './pages/AboutPage/AboutPage';
 import ThingsPage from './pages/ThingsPage/ThingsPage';
 import ContactsPage from './pages/ContactsPage/ContactsPage';
 import PhotoPage from './pages/PhotoPage/PhotoPage';
+import LocationPage from './pages/LocationPage/LocationPage';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route exact path='/things' element={<ThingsPage/>}></Route>
           <Route exact path='/contacts' element={<ContactsPage/>}></Route>
           <Route exact path='/photo' element={<PhotoPage/>}></Route>
+          <Route exact path='/location' element={<LocationPage/>}></Route>
         </Routes>
       </Router>
     </div>   

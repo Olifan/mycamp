@@ -111,12 +111,16 @@ const HomePage = () => {
         />
 
         {/* Row 3 */}
-        <CardNavigation
-          linkTitle="Розташування"
-          linkDescription="In the middle of..."
-          iconLocation="iconLeft"
-          linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e90516682d7c1ce06ca27b_streamlinehq-travel-map-maps-travel-250-3.SVG"
-        />
+
+        <Link to = "/location">
+          <CardNavigation
+            linkTitle="Розташування"
+            linkDescription="In the middle of..."
+            iconLocation="iconLeft"
+            linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e90516682d7c1ce06ca27b_streamlinehq-travel-map-maps-travel-250-3.SVG"
+          />
+        </Link>
+       
         <PalaroidPhoto
           caption="Summer 2022"
           turn="turnRight"
