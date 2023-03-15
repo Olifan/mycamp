@@ -240,25 +240,29 @@ export default class ContentService {
 		return this.api.get(`photo-page?${query}`);
 	}
 
-  getLocationPage(){
-    const query = stringify(
-      {
-        populate: {
-          locations: {
-            fields: ["title", "accommodation", "food"],
-            populate: {
-              accommodationPhoto: "*",
-              foodPhoto: "*",
-            },
-          },
-        },
-      },
-      {
-        encodeValuesOnly: true,
-      }
-    );
-    return this.api.get(`location-page?${query}`);
-  }
+	getLocationPage() {
+		const query = stringify(
+			{
+				populate: {
+					locations: {
+						fields: ["title", "territory", "rooms", "food"],
+						populate: {
+							territoryPhoto: "*",
+							territoryCover: "*",
+							foodPhoto: "*",
+              foodCover: "*",
+              roomsPhoto: "*",
+              roomsCover: "*",
+						},
+					},
+				},
+			},
+			{
+				encodeValuesOnly: true,
+			}
+		);
+		return this.api.get(`location-page?${query}`);
+	}
 
 	postRequest(data) {
 		return this.api.post(`requests?`, data);
