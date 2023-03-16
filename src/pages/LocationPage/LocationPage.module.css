@@ -16,20 +16,13 @@
 
 .accommodation {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: center;
     grid-column-gap: 2em;
 }
 
 .accommodationPhoto{
     padding-top: 2em;
-}
-
-.food{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    grid-column-gap: 2em;
 }
 
 p, li{

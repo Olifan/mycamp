@@ -28,14 +28,16 @@ const LocationPage = () => {
 		data.data?.attributes?.locations?.data?.map((location) => {
 			return (
 				<div className={styles.locationContent}>
-					<div className={styles.locationTitle}>{location.attributes.title}</div>
+					<div className={styles.locationTitle}>{location?.attributes?.headTitle}</div>
 
 					{/* Territory */}
 
 					<div className={styles.accommodation}>
 						<CardWithText
-							title="Територія"
-							text={<ReactMarkdown rehypePlugins={[rehypeRaw]} children={location?.attributes?.territory} />}
+							title={location?.attributes?.territory?.title}
+							text={
+								<ReactMarkdown rehypePlugins={[rehypeRaw]} children={location?.attributes?.territory?.description} />
+							}
 						/>
 						<div className={styles.accommodationPhoto}>
 							<PalaroidPhoto
@@ -57,8 +59,8 @@ const LocationPage = () => {
 							/>
 						</div>
 						<CardWithText
-							title="Номери"
-							text={<ReactMarkdown rehypePlugins={[rehypeRaw]} children={location?.attributes?.rooms} />}
+							title={location?.attributes?.rooms?.title}
+							text={<ReactMarkdown rehypePlugins={[rehypeRaw]} children={location?.attributes?.rooms?.description} />}
 						/>
 					</div>
 
@@ -66,8 +68,8 @@ const LocationPage = () => {
 
 					<div className={styles.accommodation}>
 						<CardWithText
-							title="Харчування"
-							text={<ReactMarkdown rehypePlugins={[rehypeRaw]} children={location?.attributes?.food} />}
+							title={location?.attributes?.food?.title}
+							text={<ReactMarkdown rehypePlugins={[rehypeRaw]} children={location?.attributes?.food?.description} />}
 						/>
 						<div className={styles.accommodationPhoto}>
 							<PalaroidPhoto

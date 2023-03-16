@@ -245,16 +245,54 @@ export default class ContentService {
 			{
 				populate: {
 					locations: {
-						fields: ["title", "territory", "rooms", "food"],
+						fields: ["headTitle"],
 						populate: {
-							territoryPhoto: "*",
+							territory: {
+								fields: ["title", "description"],
+								populate: {
+									icon: "*",
+								},
+							},
+							rooms: {
+								fields: ["title", "description"],
+								populate: {
+									icon: "*",
+								},
+							},
+							food: {
+								fields: ["title" , "description"],
+								populate: {
+									icon: "*",
+								},
+							},
 							territoryCover: "*",
+							territoryPhoto: "*",
 							foodPhoto: "*",
-              foodCover: "*",
-              roomsPhoto: "*",
-              roomsCover: "*",
+							foodCover: "*",
+							roomsPhoto: "*",
+							roomsCover: "*",
 						},
 					},
+					// locations: {
+					// 	fields: ["headtitle"],
+					// 	populate: {
+					// 		territory: {
+					// 			fields: ["title", "description"],
+					// 			populate: {
+					// 				icon: "*",
+					// 			},
+					// 		},
+					// 	},
+
+					// 	// populate: {
+					// 	// 	territoryPhoto: "*",
+					// 	// 	territoryCover: "*",
+					// 	// 	foodPhoto: "*",
+					// 	// 	foodCover: "*",
+					// 	// 	roomsPhoto: "*",
+					// 	// 	roomsCover: "*",
+					// 	// },
+					// },
 				},
 			},
 			{
