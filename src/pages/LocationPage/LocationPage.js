@@ -14,11 +14,11 @@ import FsLightbox from "fslightbox-react";
 const LocationPage = () => {
 	const contentService = new ContentService();
 
-	const [showSliderTerritory, setShowSliderTerritory] = useState(false);
-	const [showSliderFood, setShowSliderFood] = useState(false);
-	const [showSliderRooms, setShowSliderRooms] = useState(false);
-
-	const [currentLocationsId, setCurrentLocationsId] = useState(null);
+	const [lightboxController, setLightboxController] = useState({
+		toggler: false,
+		slide: 1,
+		sources: [],
+	});
 
 	const [data, setData] = useState();
 
@@ -28,33 +28,29 @@ const LocationPage = () => {
 		});
 		window.scrollTo(0, 0);
 	}, []);
-
-	useEffect(() => {
-		setShowSliderTerritory();
-		setShowSliderFood();
-		setShowSliderRooms();
-	}, [currentLocationsId]);
-
-	const handleClickTerritory = (locationsId) => {
-		setShowSliderTerritory(!showSliderTerritory);
-		setCurrentLocationsId(locationsId);
+	
+	const openLightbox = (sourceIndex, rawSources) => {
+		const sources = rawSources.data.map((source) => source.attributes.url);
+		setLightboxController({
+			toggler: !lightboxController.toggler,
+			slide: sourceIndex + 1,
+			sources: sources,
+		});
 	};
 
-	const handleClickFood = (locationsId) => {
-		setShowSliderFood(!showSliderFood);
-		setCurrentLocationsId(locationsId);
-	};
-
-	const handleClickRooms = (locationsId) => {
-		setShowSliderRooms(!showSliderRooms);
-		setCurrentLocationsId(locationsId);
+	const closeLightbox = () => {
+		setLightboxController({
+			toggler: !lightboxController.toggler,
+			slide: 1,
+			sources: [],
+		});
 	};
 
 	const locations =
 		data &&
-		data.data?.attributes?.locations?.data?.map((location) => {
+		data.data?.attributes?.locations?.data?.map((location, index) => {
 			return (
-				<div className={styles.locationContent}>
+				<div className={styles.locationContent} key={index}>
 					<div className={styles.locationTitle}>{location?.attributes?.headTitle}</div>
 
 					{/* Territory */}
@@ -66,7 +62,7 @@ const LocationPage = () => {
 								<ReactMarkdown rehypePlugins={[rehypeRaw]} children={location?.attributes?.territory?.description} />
 							}
 						/>
-						<div className={styles.accommodationPhoto} onClick={() => handleClickTerritory(location.id)}>
+						<div className={styles.accommodationPhoto} onClick={() => openLightbox(0, location?.attributes?.foodPhoto)}>
 							<PalaroidPhoto
 								srcImg={location?.attributes?.territoryCover?.data?.attributes?.url}
 								size="largeImg"
@@ -75,19 +71,10 @@ const LocationPage = () => {
 						</div>
 					</div>
 
-					{currentLocationsId === location.id && (
-						<FsLightbox
-							toggler={showSliderTerritory}
-							sources={location?.attributes?.territoryPhoto?.data?.map((photos) => {
-								return photos?.attributes?.url;
-							})}
-						/>
-					)}
-
 					{/* Rooms */}
 
 					<div className={styles.accommodation}>
-						<div className={styles.accommodationPhoto} onClick={() => handleClickRooms(location.id)}>
+						<div className={styles.accommodationPhoto} onClick={() => openLightbox(0, location?.attributes?.roomsPhoto)}>
 							<PalaroidPhoto
 								srcImg={location?.attributes?.roomsCover?.data?.attributes?.url}
 								size="largeImg"
@@ -100,15 +87,6 @@ const LocationPage = () => {
 						/>
 					</div>
 
-					{currentLocationsId === location.id && (
-						<FsLightbox
-							toggler={showSliderRooms}
-							sources={location?.attributes?.roomsPhoto?.data?.map((photos) => {
-								return photos.attributes.url;
-							})}
-						/>
-					)}
-
 					{/* Food */}
 
 					<div className={styles.accommodation}>
@@ -116,7 +94,7 @@ const LocationPage = () => {
 							title={location?.attributes?.food?.title}
 							text={<ReactMarkdown rehypePlugins={[rehypeRaw]} children={location?.attributes?.food?.description} />}
 						/>
-						<div className={styles.accommodationPhoto} onClick={() => handleClickFood(location.id)}>
+						<div className={styles.accommodationPhoto} onClick={() => openLightbox(0, location?.attributes?.territoryPhoto)}>
 							<PalaroidPhoto
 								srcImg={location?.attributes?.foodCover?.data?.attributes?.url}
 								size="largeImg"
@@ -125,14 +103,6 @@ const LocationPage = () => {
 						</div>
 					</div>
 
-					{currentLocationsId === location.id && (
-						<FsLightbox
-							toggler={showSliderFood}
-							sources={location?.attributes?.foodPhoto?.data?.map((photos) => {
-								return photos.attributes.url;
-							})}
-						/>
-					)}
 				</div>
 			);
 		});
@@ -142,6 +112,13 @@ const LocationPage = () => {
 			<PageTitle title="Розташування" description="Місце проведення табору" />
 
 			{locations}
+
+			<FsLightbox
+				toggler={lightboxController.toggler}
+				sources={lightboxController.sources}
+				slide={lightboxController.slide}
+				onClose={closeLightbox}
+			/>
 
 			<Registration
 				registrationDate="21-29 грудня"
