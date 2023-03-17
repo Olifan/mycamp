@@ -4,7 +4,7 @@ import styles from './CardWithText.module.css';
 
 const CardWithText = ({icon, title, text, className}) => (
   <div className={` ${className}`}>
-    <img className={styles.icon} src={icon} loading="lazy" alt='icon'/>
+    <img className={styles.icon} src={icon} loading="lazy" alt=''/>
     <div className={styles.textBlock}>
       <h2>{title}</h2>
       <p>{text}</p>

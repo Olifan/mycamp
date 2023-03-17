@@ -1,0 +1,30 @@
+.locationPage {}
+
+.locationTitle{
+    width: 100%;
+}
+
+.locationContent{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3vh 8% 8vh;
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
+}
+
+.accommodation {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    grid-column-gap: 2em;
+}
+
+.accommodationPhoto{
+    padding-top: 2em;
+}
+
+p, li{
+    font-size: 0.7em;
+}
