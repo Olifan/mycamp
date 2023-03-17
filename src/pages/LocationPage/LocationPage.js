@@ -18,6 +18,8 @@ const LocationPage = () => {
 	const [showSliderFood, setShowSliderFood] = useState(false);
 	const [showSliderRooms, setShowSliderRooms] = useState(false);
 
+	const [currentLocationsId, setCurrentLocationsId] = useState(null);
+
 	const [data, setData] = useState();
 
 	useEffect(() => {
@@ -27,16 +29,25 @@ const LocationPage = () => {
 		window.scrollTo(0, 0);
 	}, []);
 
-	const handleClickTerritory = () => {
+	useEffect(() => {
+		setShowSliderTerritory();
+		setShowSliderFood();
+		setShowSliderRooms();
+	}, [currentLocationsId]);
+
+	const handleClickTerritory = (locationsId) => {
 		setShowSliderTerritory(!showSliderTerritory);
+		setCurrentLocationsId(locationsId);
 	};
 
-	const handleClickFood = () => {
+	const handleClickFood = (locationsId) => {
 		setShowSliderFood(!showSliderFood);
+		setCurrentLocationsId(locationsId);
 	};
 
-	const handleClickRooms = () => {
+	const handleClickRooms = (locationsId) => {
 		setShowSliderRooms(!showSliderRooms);
+		setCurrentLocationsId(locationsId);
 	};
 
 	const locations =
@@ -55,7 +66,7 @@ const LocationPage = () => {
 								<ReactMarkdown rehypePlugins={[rehypeRaw]} children={location?.attributes?.territory?.description} />
 							}
 						/>
-						<div className={styles.accommodationPhoto} onClick={() => handleClickTerritory()}>
+						<div className={styles.accommodationPhoto} onClick={() => handleClickTerritory(location.id)}>
 							<PalaroidPhoto
 								srcImg={location?.attributes?.territoryCover?.data?.attributes?.url}
 								size="largeImg"
@@ -64,17 +75,19 @@ const LocationPage = () => {
 						</div>
 					</div>
 
-					<FsLightbox 
-						toggler = {showSliderTerritory}
-						sources = {location?.attributes?.territoryPhoto?.data?.map(photos => {
-							return(photos.attributes.url)
-						})}
-					/>
+					{currentLocationsId === location.id && (
+						<FsLightbox
+							toggler={showSliderTerritory}
+							sources={location?.attributes?.territoryPhoto?.data?.map((photos) => {
+								return photos?.attributes?.url;
+							})}
+						/>
+					)}
 
 					{/* Rooms */}
 
 					<div className={styles.accommodation}>
-						<div className={styles.accommodationPhoto} onClick = {() => handleClickRooms()}>
+						<div className={styles.accommodationPhoto} onClick={() => handleClickRooms(location.id)}>
 							<PalaroidPhoto
 								srcImg={location?.attributes?.roomsCover?.data?.attributes?.url}
 								size="largeImg"
@@ -87,12 +100,14 @@ const LocationPage = () => {
 						/>
 					</div>
 
-					<FsLightbox 
-						toggler = {showSliderRooms}
-						sources = {location?.attributes?.roomsPhoto?.data?.map(photos => {
-							return(photos.attributes.url)
-						})}
-					/>
+					{currentLocationsId === location.id && (
+						<FsLightbox
+							toggler={showSliderRooms}
+							sources={location?.attributes?.roomsPhoto?.data?.map((photos) => {
+								return photos.attributes.url;
+							})}
+						/>
+					)}
 
 					{/* Food */}
 
@@ -101,7 +116,7 @@ const LocationPage = () => {
 							title={location?.attributes?.food?.title}
 							text={<ReactMarkdown rehypePlugins={[rehypeRaw]} children={location?.attributes?.food?.description} />}
 						/>
-						<div className={styles.accommodationPhoto} onClick = {() => handleClickFood()}>
+						<div className={styles.accommodationPhoto} onClick={() => handleClickFood(location.id)}>
 							<PalaroidPhoto
 								srcImg={location?.attributes?.foodCover?.data?.attributes?.url}
 								size="largeImg"
@@ -110,12 +125,14 @@ const LocationPage = () => {
 						</div>
 					</div>
 
-					<FsLightbox 
-						toggler = {showSliderFood}
-						sources = {location?.attributes?.foodPhoto?.data?.map(photos => {
-							return(photos.attributes.url)
-						})}
-					/>
+					{currentLocationsId === location.id && (
+						<FsLightbox
+							toggler={showSliderFood}
+							sources={location?.attributes?.foodPhoto?.data?.map((photos) => {
+								return photos.attributes.url;
+							})}
+						/>
+					)}
 				</div>
 			);
 		});
