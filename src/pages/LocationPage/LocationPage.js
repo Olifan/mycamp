@@ -36,16 +36,22 @@ const LocationPage = () => {
 	}, [currentLocationsId]);
 
 	const handleClickTerritory = (locationsId) => {
+		setShowSliderFood(false);
+		setShowSliderRooms(false);
 		setShowSliderTerritory(!showSliderTerritory);
 		setCurrentLocationsId(locationsId);
 	};
 
 	const handleClickFood = (locationsId) => {
+		setShowSliderRooms(false);
+		setShowSliderTerritory(false);
 		setShowSliderFood(!showSliderFood);
 		setCurrentLocationsId(locationsId);
 	};
 
 	const handleClickRooms = (locationsId) => {
+		setShowSliderFood(false);
+		setShowSliderTerritory(false);
 		setShowSliderRooms(!showSliderRooms);
 		setCurrentLocationsId(locationsId);
 	};
