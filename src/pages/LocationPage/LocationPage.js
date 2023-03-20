@@ -30,28 +30,30 @@ const LocationPage = () => {
 	}, []);
 
 	useEffect(() => {
-		setShowSliderTerritory();
-		setShowSliderFood();
-		setShowSliderRooms();
+		setShowSliderTerritory(false);
+		setShowSliderFood(false);
+		setShowSliderRooms(false);
+		console.log(currentLocationsId);
 	}, [currentLocationsId]);
 
 	const handleClickTerritory = (locationsId) => {
-		setShowSliderFood(false);
-		setShowSliderRooms(false);
+		setShowSliderFood(showSliderFood);
+		setShowSliderRooms(showSliderRooms);
 		setShowSliderTerritory(!showSliderTerritory);
 		setCurrentLocationsId(locationsId);
+		console.log(showSliderTerritory);
 	};
 
 	const handleClickFood = (locationsId) => {
-		setShowSliderRooms(false);
-		setShowSliderTerritory(false);
+		setShowSliderRooms(showSliderRooms);
+		setShowSliderTerritory(showSliderTerritory);
 		setShowSliderFood(!showSliderFood);
 		setCurrentLocationsId(locationsId);
 	};
 
 	const handleClickRooms = (locationsId) => {
-		setShowSliderFood(false);
-		setShowSliderTerritory(false);
+		setShowSliderFood(showSliderFood);
+		setShowSliderTerritory(showSliderTerritory);
 		setShowSliderRooms(!showSliderRooms);
 		setCurrentLocationsId(locationsId);
 	};
@@ -110,7 +112,7 @@ const LocationPage = () => {
 						<FsLightbox
 							toggler={showSliderRooms}
 							sources={location?.attributes?.roomsPhoto?.data?.map((photos) => {
-								return photos.attributes.url;
+								return photos?.attributes?.url;
 							})}
 						/>
 					)}
@@ -135,7 +137,7 @@ const LocationPage = () => {
 						<FsLightbox
 							toggler={showSliderFood}
 							sources={location?.attributes?.foodPhoto?.data?.map((photos) => {
-								return photos.attributes.url;
+								return photos?.attributes?.url;
 							})}
 						/>
 					)}
