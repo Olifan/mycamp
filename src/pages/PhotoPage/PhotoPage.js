@@ -33,7 +33,6 @@ const PhotoPage = () => {
     
     setCurrentAlbumId(albumId);
     setShowSlider( !showSlider);
-    console.log(currentAlbumId)
   };
 
   const photoAlbums = data && data.data.attributes.photo_albums.data.map(photoAlbum => {
