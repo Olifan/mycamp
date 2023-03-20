@@ -1,1 +1,12 @@
-.ParentsPage {}
+.parentsPage {}
+
+.parentsContent{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
+    padding: 3vh 8% 8vh;
+}
