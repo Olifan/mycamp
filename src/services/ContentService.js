@@ -302,6 +302,25 @@ export default class ContentService {
 		return this.api.get(`location-page?${query}`);
 	}
 
+	getParentsPage() {
+		const query = stringify(
+			{
+				populate: {
+					for_parents: {
+						fields: ["title", "description"],
+						populate: {
+							icon: "*",
+						},
+					},
+				},
+			},
+			{
+				encodeValuesOnly: true,
+			}
+		);
+		return this.api.get(`parents-page?${query}`);
+	}
+
 	postRequest(data) {
 		return this.api.post(`requests?`, data);
 	}

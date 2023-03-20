@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import styles from "./ParentsPage.module.css";
 import PageTitle from "../../components/PageTitle/PageTitle";
@@ -7,8 +7,34 @@ import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import Registration from "../../components/Registration/Registration";
 import Footer from "../../components/Footer/Footer";
+import ContentService from "../../services/ContentService";
 
 const ParentsPage = () => {
+
+  const contentService = new ContentService();
+
+  const [data, setData] = useState();
+
+  useEffect(() => {
+    contentService.getParentsPage().then((response) => {
+      setData(response);
+    });
+    window.scrollTo(0, 0);
+  }, []);
+
+  const forParent = data && data.data.attributes.for_parents.data.map(forParents => {
+    return(
+      <CardWithText
+          title={forParents.attributes.title}
+          text={<ReactMarkdown
+            rehypePlugins={[rehypeRaw]}
+            children={forParents.attributes.description}
+          />}
+          icon={"icon"}
+        />
+    )
+  })
+
 	return (
     <div className={styles.parentsPage}>
 
@@ -18,22 +44,7 @@ const ParentsPage = () => {
       />
 
       <div className={styles.parentsContent}>
-        <CardWithText
-          title={""}
-          text={<ReactMarkdown
-            rehypePlugins={[rehypeRaw]}
-            children={""}
-          />}
-          icon={""}
-        />
-        <CardWithText
-          title={""}
-          text={<ReactMarkdown
-            rehypePlugins={[rehypeRaw]}
-            children={""}
-          />}
-          icon={""}
-        />
+        {forParent}
       </div>
 
       <Registration
