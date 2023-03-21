@@ -23,30 +23,19 @@ const HomePage = () => {
 	return (
 		<div className={styles.homePage}>
 			<div className={styles.header}>
-				<PageTitle
-					title="mycamp."
-					description="Дитячий табір в Карпатах та Європі"
-				/>
+				<PageTitle title="mycamp." description="Дитячий табір в Карпатах та Європі" />
 				<div className={`${styles.blockAbsolute} ${styles.photoLeft}`}>
 					{data && (
 						<PalaroidPhoto
 							caption={data.data.attributes.polaroidPhotoHeaderLeft.title}
 							turn="turnLeft"
 							size="middleImg"
-							srcImg={
-								data.data.attributes.polaroidPhotoHeaderLeft.photo.data
-									.attributes.url
-							}
+							srcImg={data.data.attributes.polaroidPhotoHeaderLeft.photo.data.attributes.url}
 						/>
 					)}
 				</div>
 				<div className={`${styles.blockAbsolute} ${styles.photoRight}`}>
-					<PalaroidPhoto
-						caption="Summer 2022"
-						turn="turnRight"
-						size="middleImg"
-						srcImg="testPhoto.jpeg"
-					/>
+					<PalaroidPhoto caption="Summer 2022" turn="turnRight" size="middleImg" srcImg="testPhoto.jpeg" />
 				</div>
 			</div>
 
@@ -67,12 +56,7 @@ const HomePage = () => {
 					/>
 				</Link>
 
-				<PalaroidPhoto
-					caption="Summer 2022"
-					turn="turnRight"
-					size="middleImg"
-					srcImg="testPhoto.jpeg"
-				/>
+				<PalaroidPhoto caption="Summer 2022" turn="turnRight" size="middleImg" srcImg="testPhoto.jpeg" />
 
 				<Link to="/about">
 					<CardNavigation
@@ -86,12 +70,7 @@ const HomePage = () => {
 
 				{/* Row 2 */}
 
-				<PalaroidPhoto
-					caption="Summer 2022"
-					turn="turnRight"
-					size="middleImg"
-					srcImg="testPhoto.jpeg"
-				/>
+				<PalaroidPhoto caption="Summer 2022" turn="turnRight" size="middleImg" srcImg="testPhoto.jpeg" />
 
 				<Link to="/things">
 					<CardNavigation
@@ -102,12 +81,7 @@ const HomePage = () => {
 					/>
 				</Link>
 
-				<PalaroidPhoto
-					caption="Summer 2022"
-					turn="turnRight"
-					size="middleImg"
-					srcImg="testPhoto.jpeg"
-				/>
+				<PalaroidPhoto caption="Summer 2022" turn="turnRight" size="middleImg" srcImg="testPhoto.jpeg" />
 
 				{/* Row 3 */}
 
@@ -120,12 +94,7 @@ const HomePage = () => {
 					/>
 				</Link>
 
-				<PalaroidPhoto
-					caption="Summer 2022"
-					turn="turnRight"
-					size="middleImg"
-					srcImg="testPhoto.jpeg"
-				/>
+				<PalaroidPhoto caption="Summer 2022" turn="turnRight" size="middleImg" srcImg="testPhoto.jpeg" />
 				<Link to="/our-team">
 					<CardNavigation
 						size="circle"
@@ -136,12 +105,7 @@ const HomePage = () => {
 				</Link>
 
 				{/* Row 4 */}
-				<PalaroidPhoto
-					caption="Summer 2022"
-					turn="turnRight"
-					size="middleImg"
-					srcImg="testPhoto.jpeg"
-				/>
+				<PalaroidPhoto caption="Summer 2022" turn="turnRight" size="middleImg" srcImg="testPhoto.jpeg" />
 				<Link to="/photo">
 					<CardNavigation
 						size="large"
@@ -151,12 +115,7 @@ const HomePage = () => {
 					/>
 				</Link>
 
-				<PalaroidPhoto
-					caption="Summer 2022"
-					turn="turnRight"
-					size="middleImg"
-					srcImg="testPhoto.jpeg"
-				/>
+				<PalaroidPhoto caption="Summer 2022" turn="turnRight" size="middleImg" srcImg="testPhoto.jpeg" />
 				{/* Row 5 */}
 				<Link to="/contacts">
 					<CardNavigation
@@ -167,18 +126,16 @@ const HomePage = () => {
 					/>
 				</Link>
 
-				<PalaroidPhoto
-					caption="Summer 2022"
-					turn="turnRight"
-					size="middleImg"
-					srcImg="testPhoto.jpeg"
-				/>
-				<CardNavigation
-					linkTitle="Партнерам"
-					linkDescription="Допомога і підтримка"
-					iconLocation="iconRight"
-					linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8f3a6fcf13cc3390a727e_streamlinehq-shopping-cloth-accessories-tall-hat-money-shopping-250.SVG"
-				/>
+				<PalaroidPhoto caption="Summer 2022" turn="turnRight" size="middleImg" srcImg="testPhoto.jpeg" />
+
+				<Link to="/for-parents">
+					<CardNavigation
+						linkTitle="Партнерам"
+						linkDescription="Допомога і підтримка"
+						iconLocation="iconRight"
+						linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8f3a6fcf13cc3390a727e_streamlinehq-shopping-cloth-accessories-tall-hat-money-shopping-250.SVG"
+					/>
+				</Link>
 			</div>
 
 			<Registration
