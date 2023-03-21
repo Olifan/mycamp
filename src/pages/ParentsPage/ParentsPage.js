@@ -30,7 +30,7 @@ const ParentsPage = () => {
             rehypePlugins={[rehypeRaw]}
             children={forParents.attributes.description}
           />}
-          icon={"icon"}
+          icon={forParents.attributes?.icon?.data?.attributes?.url}
         />
     )
   })
