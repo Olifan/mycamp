@@ -1,10 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styles from "./Navigation.module.css";
-import { Link } from "react-router-dom";
-import CardNavigation from "../CardNavigation/CardNavigation";
+import { Link, useLocation } from "react-router-dom";
 
 const Navigation = () => {
+  const location = useLocation();
+  const isActive = (path) => {
+    return location.pathname === path ? styles.active : "" ;
+  }
 	return (
 		<div className={styles.navPanel}>
 			<Link to="/">
@@ -19,7 +22,7 @@ const Navigation = () => {
 				</div>
 			</Link>
 
-			<Link to="/camp-program">
+			<Link to="/camp-program" className={isActive("/camp-program")}>
 				<div className={styles.navLink}>
 					<img
 						className={styles.icon}
@@ -91,7 +94,7 @@ const Navigation = () => {
 				</div>
 			</Link>
 
-			<Link to="/contacts">
+			<Link to="/contacts" className={isActive("/contacts")}>
 				<div className={styles.navLink}>
 					<img
 						className={styles.icon}
