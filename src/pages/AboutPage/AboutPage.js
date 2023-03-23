@@ -9,6 +9,7 @@ import ContentService from '../../services/ContentService';
 import PalaroidPhoto from '../../components/PalaroidPhoto/PalaroidPhoto';
 import Registration from '../../components/Registration/Registration';
 import Footer from '../../components/Footer/Footer';
+import Navigation from '../../components/Navigation/Navigation';
 
 const AboutPage = () => {
 
@@ -93,6 +94,7 @@ const AboutPage = () => {
         registrationOpen="Реєстрація відкрита"
         registrationSeason="Зима 2023"
       />
+      <Navigation/>
       <Footer/>
     </div>
   )

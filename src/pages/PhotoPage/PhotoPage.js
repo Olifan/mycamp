@@ -7,6 +7,7 @@ import FsLightbox from "fslightbox-react";
 import ContentService from '../../services/ContentService';
 import Registration from '../../components/Registration/Registration';
 import Footer from '../../components/Footer/Footer';
+import Navigation from '../../components/Navigation/Navigation';
 
 const PhotoPage = () => {
 
@@ -80,6 +81,7 @@ const PhotoPage = () => {
         registrationOpen="Реєстрація відкрита"
         registrationSeason="Зима 2023"
       />
+      <Navigation/>
       <Footer/>
 
     </div>

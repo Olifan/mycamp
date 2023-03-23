@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import PageTitle from '../../components/PageTitle/PageTitle';
 import Footer from '../../components/Footer/Footer';
 import Registration from '../../components/Registration/Registration';
+import Navigation from '../../components/Navigation/Navigation';
 
 const OurTeam = () => {
   const contentService = new ContentService();
@@ -54,6 +55,7 @@ const OurTeam = () => {
       registrationOpen="Реєстрація відкрита"
       registrationSeason="Зима 2023"
     />
+    <Navigation/>
     <Footer/>
     </>
   );

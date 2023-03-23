@@ -7,6 +7,8 @@ import PageTitle from '../../components/PageTitle/PageTitle';
 import RegistrationForm from '../../components/RegistrationForm/RegistrationForm';
 import ContentService from '../../services/ContentService';
 import Tabs from '../../components/Tabs/Tabs';
+import Navigation from '../../components/Navigation/Navigation';
+import Footer from '../../components/Footer/Footer';
 
 const RegistrationPage = () => {
 
@@ -91,7 +93,9 @@ const RegistrationPage = () => {
               {tab}
             </div>
             {shift}           
-            <RegistrationForm activeShiftTitle={activeShiftTitle} activeShiftId={activeShiftId}/>            
+            <RegistrationForm activeShiftTitle={activeShiftTitle} activeShiftId={activeShiftId}/> 
+            <Navigation/>
+            <Footer/>           
           </>
         )
       } 
