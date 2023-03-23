@@ -34,7 +34,7 @@ const Navigation = () => {
 				</div>
 			</Link>
 
-			<Link to="/about">
+			<Link to="/about" className={isActive("/about")}>
 				<div className={styles.navLink}>
 					<img
 						className={styles.icon}
@@ -46,7 +46,7 @@ const Navigation = () => {
 				</div>
 			</Link>
 
-			<Link to="/things">
+			<Link to="/things" className={isActive("/things")}>
 				<div className={styles.navLink}>
 					<img
 						className={styles.icon}
@@ -58,7 +58,7 @@ const Navigation = () => {
 				</div>
 			</Link>
 
-			<Link to="/location">
+			<Link to="/location" className={isActive("/location")}>
 				<div className={styles.navLink}>
 					<img
 						className={styles.icon}
@@ -70,7 +70,7 @@ const Navigation = () => {
 				</div>
 			</Link>
 
-			<Link to="/our-team">
+			<Link to="/our-team" className={isActive("/our-team")}>
 				<div className={styles.navLink}>
 					<img
 						className={styles.icon}
@@ -82,7 +82,7 @@ const Navigation = () => {
 				</div>
 			</Link>
 
-			<Link to="/photo">
+			<Link to="/photo" className={isActive("/photo")}>
 				<div className={styles.navLink}>
 					<img
 						className={styles.icon}
@@ -106,7 +106,7 @@ const Navigation = () => {
 				</div>
 			</Link>
 
-			<Link to="/for-parents">
+			<Link to="/for-parents" className={isActive("/for-parents")}>
 				<div className={styles.navLink}>
 					<img
 						className={styles.icon}

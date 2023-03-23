@@ -10,6 +10,7 @@ import PalaroidPhoto from "../../components/PalaroidPhoto/PalaroidPhoto";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import FsLightbox from "fslightbox-react";
+import Navigation from "../../components/Navigation/Navigation";
 
 const LocationPage = () => {
 	const contentService = new ContentService();
@@ -156,6 +157,8 @@ const LocationPage = () => {
 				registrationOpen="Реєстрація відкрита"
 				registrationSeason="Зима 2023"
 			/>
+
+			<Navigation/>
 
 			<Footer />
 		</div>

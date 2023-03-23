@@ -10,6 +10,7 @@ import Registration from '../../components/Registration/Registration';
 import Footer from '../../components/Footer/Footer';
 import CardWithText from '../../components/CardWithText/CardWithText';
 import PalaroidPhoto from '../../components/PalaroidPhoto/PalaroidPhoto';
+import Navigation from '../../components/Navigation/Navigation';
 
 const ThingsPage = () => {
 
@@ -92,6 +93,7 @@ const ThingsPage = () => {
         registrationOpen="Реєстрація відкрита"
         registrationSeason="Зима 2023"
       />
+      <Navigation/>
       <Footer/> 
     </div>
   )

@@ -6,6 +6,7 @@ import Registration from '../../components/Registration/Registration';
 import Footer from '../../components/Footer/Footer';
 import ContentService from '../../services/ContentService';
 import CardOfProgram from '../../components/CardOfProgram/CardOfProgram';
+import Navigation from '../../components/Navigation/Navigation';
 
 const CampProgramPage = () => {
   const contentService = new ContentService();
@@ -47,6 +48,7 @@ const CampProgramPage = () => {
         registrationOpen="Реєстрація відкрита"
         registrationSeason="Зима 2023"
       />
+      <Navigation/>
       <Footer/>
     </>
   )

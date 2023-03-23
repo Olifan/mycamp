@@ -8,6 +8,7 @@ import rehypeRaw from "rehype-raw";
 import Registration from "../../components/Registration/Registration";
 import Footer from "../../components/Footer/Footer";
 import ContentService from "../../services/ContentService";
+import Navigation from "../../components/Navigation/Navigation";
 
 const ParentsPage = () => {
 
@@ -52,6 +53,8 @@ const ParentsPage = () => {
 				registrationOpen="Реєстрація відкрита"
 				registrationSeason="Зима 2023"
 			/>
+
+      <Navigation/>
 
 			<Footer />
     </div>
