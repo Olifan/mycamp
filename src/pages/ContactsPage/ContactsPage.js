@@ -8,6 +8,7 @@ import Registration from "../../components/Registration/Registration";
 import Footer from "../../components/Footer/Footer";
 import CardWithText from "../../components/CardWithText/CardWithText";
 import ContentService from "../../services/ContentService";
+import Navigation from "../../components/Navigation/Navigation";
 
 const ContactsPage = () => {
 	const contentService = new ContentService();
@@ -56,6 +57,8 @@ const ContactsPage = () => {
 				registrationOpen="Реєстрація відкрита"
 				registrationSeason="Зима 2023"
 			/>
+
+			<Navigation/>
 
 			<Footer />
 		</div>

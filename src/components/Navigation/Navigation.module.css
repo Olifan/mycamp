@@ -1,4 +1,14 @@
-
+.navPanel{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: auto;
+    padding: 5vh 8% 8vh;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+}
 
 .navLink{
     display: flex;
@@ -9,7 +19,7 @@
     background-color: #fff;
     box-shadow: 0 10px 20px -20px rgba(0, 0, 0, 0.4);
     color: #555;
-    font-size: 0.7em;
+    font-size: 0.8em;
     padding: 0.4em 1.2em 0.4em 0.8em;
     max-width: 100%;
 }
