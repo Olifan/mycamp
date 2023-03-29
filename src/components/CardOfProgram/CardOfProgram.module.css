@@ -36,3 +36,9 @@
     font-size: 0.6em;
 
 }
+
+@media screen and (max-width: 479px){
+   .cardOfProgram{
+    width: 100%;
+   }
+  }

@@ -81,3 +81,9 @@ label{
     line-height: 1;
     font-weight: 500;
 }
+
+@media screen and (max-width: 479px){
+    form {
+      width: 100%;
+    }
+  }

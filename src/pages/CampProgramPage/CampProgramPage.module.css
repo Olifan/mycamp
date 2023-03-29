@@ -1,4 +1,4 @@
-.CampProgramPage {
+.campProgramPage {
 
 }
 
@@ -13,3 +13,9 @@ h4{
     margin-bottom: 0em;
     margin-left: 0em;
 }
+
+@media screen and (max-width: 479px){
+    .schedule {
+        padding: 0em 2em 0em;
+    }
+   }
