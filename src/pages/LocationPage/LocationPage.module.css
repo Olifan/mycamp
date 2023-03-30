@@ -2,6 +2,7 @@
 
 .locationTitle{
     width: 100%;
+    font-size: 2em;
 }
 
 .locationContent{
@@ -16,7 +17,6 @@
 
 .accommodation {
     display: flex;
-    /* flex-wrap: wrap; */
     justify-content: center;
     grid-column-gap: 2em;
 }
@@ -26,5 +26,11 @@
 }
 
 p, li{
-    font-size: 0.7em;
+    font-size: 0.8em;
 }
+
+@media screen and (max-width: 479px){
+        .accommodation{
+            flex-wrap: wrap;
+        }
+   }
