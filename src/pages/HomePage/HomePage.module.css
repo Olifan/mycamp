@@ -41,6 +41,7 @@
     .header{
         flex-wrap: wrap;
         flex-direction: unset;
+        padding: 0vh;
     }
 }
 
