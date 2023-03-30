@@ -8,7 +8,7 @@
     align-content: flex-start;
     grid-column-gap: 2em;
     grid-row-gap: 2em;
-    padding: 3vh 8% 8vh;
+    padding: 2em 8%;
 }
 
 .cardWithTextMod{
@@ -25,9 +25,14 @@
     font-size: 0.8em;
 }
 
-.contactsBlock{
+.cardWithTextContact{
     max-width: 16em;
+    padding: 1.25em 1.5em;
     width: 100%;
+    border-radius: 0.5em;
+    background-color: #fff;
+    box-shadow: 0 10px 30px -30px rgba(0, 0, 0, 0.5);
+    text-align: left;
 }
 
 .contactsBlock p {
@@ -54,3 +59,18 @@
     background-color: #154de7;
     transition: color 300ms ease, background-color 300ms ease;
 }
+
+@media screen and (max-width: 479px){
+    .contactsBlock{
+        max-width: 30em;
+    }
+    .cardWithTextContact{
+        max-width: 24em;
+        padding: 1.25em 1.5em;
+        width: 100%;
+        border-radius: 0.5em;
+        background-color: #fff;
+        box-shadow: 0 10px 30px -30px rgba(0, 0, 0, 0.5);
+        text-align: left;
+    }
+   }
