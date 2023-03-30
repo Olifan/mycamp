@@ -34,3 +34,13 @@
     padding: 3vh 7% 8vh;
 }
 
+@media screen and (max-width: 479px){
+    .blockAbsolute{
+        position: unset;
+    }
+    .header{
+        flex-wrap: wrap;
+        flex-direction: unset;
+    }
+}
+
