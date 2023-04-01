@@ -77,3 +77,14 @@
     grid-row-gap: 0.5em;
 
 }
+
+@media screen and (max-width: 479px){
+    .linkContent{
+        font-size: 1.8em;
+    }
+
+    .circle{
+        min-width: 11em;
+        min-height: 11em;
+    }
+}
