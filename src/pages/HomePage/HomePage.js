@@ -70,7 +70,7 @@ const HomePage = () => {
 
 				{/* Row 2 */}
 
-				<PalaroidPhoto caption="Summer 2022" turn="turnRight" size="middleImg" srcImg="testPhoto.jpeg" />
+				<PalaroidPhoto caption="Summer 2022" turn="turnLeft" size="middleImg" srcImg="testPhoto.jpeg" />
 
 				<Link to="/things">
 					<CardNavigation
@@ -105,7 +105,7 @@ const HomePage = () => {
 				</Link>
 
 				{/* Row 4 */}
-				<PalaroidPhoto caption="Summer 2022" turn="turnRight" size="middleImg" srcImg="testPhoto.jpeg" />
+				<PalaroidPhoto caption="Summer 2022" turn="turnLeft" size="middleImg" srcImg="testPhoto.jpeg" />
 				<Link to="/photo">
 					<CardNavigation
 						size="large"
