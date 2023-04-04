@@ -6,9 +6,9 @@ const TeamMember = ({memberPhoto, memberName, memberTitle, stickerTapeSrc}) => (
   <div className={styles.teamMember}>
     <img className={styles.memberPhoto} src={memberPhoto} loading="lazy" alt="Photo"/>
     <div className={styles.memberContent}>
-      <h4 className={styles.memberName}>
+      <h2 className={styles.memberName}>
         {memberName}
-      </h4>
+      </h2>
       <h5 className={styles.memberTitle}>
         {memberTitle}
       </h5>
