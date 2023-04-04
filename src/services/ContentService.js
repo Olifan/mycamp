@@ -265,34 +265,32 @@ export default class ContentService {
 									icon: "*",
 								},
 							},
-							territoryCover: "*",
+							territoryPalaroid:{
+								fields: ["title"],
+								populate: {
+									photo: "*",
+								},
+							},
+							roomsPalaroid:{
+								fields: ["title"],
+								populate: {
+									photo: "*",
+								},
+							},
+							foodPalaroid:{
+								fields: ["title"],
+								populate: {
+									photo: "*",
+								},
+							},
+							
 							territoryPhoto: "*",
 							foodPhoto: "*",
-							foodCover: "*",
+							
 							roomsPhoto: "*",
-							roomsCover: "*",
+							
 						},
 					},
-					// locations: {
-					// 	fields: ["headtitle"],
-					// 	populate: {
-					// 		territory: {
-					// 			fields: ["title", "description"],
-					// 			populate: {
-					// 				icon: "*",
-					// 			},
-					// 		},
-					// 	},
-
-					// 	// populate: {
-					// 	// 	territoryPhoto: "*",
-					// 	// 	territoryCover: "*",
-					// 	// 	foodPhoto: "*",
-					// 	// 	foodCover: "*",
-					// 	// 	roomsPhoto: "*",
-					// 	// 	roomsCover: "*",
-					// 	// },
-					// },
 				},
 			},
 			{
