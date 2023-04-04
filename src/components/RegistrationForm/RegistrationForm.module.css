@@ -89,4 +89,7 @@ label{
     .registrationForm{
         width: 80%;
     }
+    .errorMessage{
+        font-size: 0.7em;
+    }
   }
