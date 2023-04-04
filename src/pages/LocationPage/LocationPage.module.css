@@ -33,4 +33,7 @@ p, li{
         .accommodation{
             flex-wrap: wrap;
         }
+        p, li{
+            font-size: 0.9em;
+        }
    }

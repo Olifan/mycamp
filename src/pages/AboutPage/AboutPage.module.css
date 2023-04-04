@@ -25,3 +25,9 @@
 .wideCard p{
     font-size: 0.8em;
 }
+
+@media screen and (max-width: 479px){
+   .wideCard p{
+        font-size: 0.9em;
+   }
+}
