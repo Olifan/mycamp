@@ -56,3 +56,10 @@
     text-align: left;
     font-size: 0.6em;
 }
+
+@media screen and (max-width: 479px){
+    .shiftCover{
+        width: 20em;
+        height: 26em;
+    }
+}
