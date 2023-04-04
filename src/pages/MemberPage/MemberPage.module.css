@@ -47,3 +47,10 @@
     background-color: #fff;
     box-shadow: 0 10px 30px -30px rgba(0, 0, 0, 0.5);
 }
+
+@media screen and (max-width: 479px){
+    .memberPhoto{
+        width: 20em;
+        height: 26em;
+    }
+}
