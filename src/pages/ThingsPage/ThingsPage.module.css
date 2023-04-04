@@ -21,6 +21,7 @@
     align-content: flex-start;
     grid-column-gap: 0.5em;
     grid-row-gap: 0.5em;
+    margin-bottom: 2em;
 }
 
 .thingNotTake{
