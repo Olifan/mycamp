@@ -40,6 +40,9 @@ export default class ContentService {
 		const query = stringify(
 			{
 				populate: {
+					pageTitle: {
+						fields: ["title", "subtitle"],
+					},
 					team_members: {
 						fields: ["name", "title", "description"],
 						populate: {

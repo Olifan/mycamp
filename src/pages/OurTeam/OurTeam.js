@@ -43,7 +43,10 @@ const OurTeam = () => {
 	return (
 		<>
 			<div className={styles.header}>
-				<PageTitle title="Our team" description="Today. Tomorrow. Allways." />
+				<PageTitle
+					title={data?.data.attributes.pageTitle.title}
+					description={data?.data.attributes.pageTitle.subtitle}
+				/>
 			</div>
 			<div className={styles.ourTeam}>{members}</div>
 			<Registration />
