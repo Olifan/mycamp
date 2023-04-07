@@ -36,7 +36,7 @@ const ParentsPage = () => {
 
 	return (
 		<div className={styles.parentsPage}>
-			<PageTitle title="Для батьків" description="Today. Tomorrow. Allways." />
+			<PageTitle title={data?.data.attributes.pageTitle.title} description={data?.data.attributes.pageTitle.subtitle} />
 
 			<div className={styles.parentsContent}>{forParent}</div>
 
