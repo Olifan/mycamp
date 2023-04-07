@@ -17,25 +17,34 @@ const HomePage = () => {
 	useEffect(() => {
 		contentService.getHomePage().then((response) => {
 			setData(response);
+			console.log(data);
 		});
 	}, []);
 
 	return (
 		<div className={styles.homePage}>
 			<div className={styles.header}>
-				<PageTitle title="mycamp." description="Дитячий табір в Карпатах та Європі" />
+				<PageTitle
+					title={data?.data.attributes.pageTitle.title}
+					description={data?.data.attributes.pageTitle.subtitle}
+				/>
 				<div className={`${styles.blockAbsolute} ${styles.photoLeft}`}>
 					{data && (
 						<PalaroidPhoto
-							caption={data.data.attributes.polaroidPhotoHeaderLeft.title}
+							caption={data?.data.attributes.polaroidPhotoHeaderLeft.title}
 							turn="turnLeft"
 							size="middleImg"
-							srcImg={data.data.attributes.polaroidPhotoHeaderLeft.photo.data.attributes.url}
+							srcImg={data?.data.attributes.polaroidPhotoHeaderLeft.photo.data.attributes.url}
 						/>
 					)}
 				</div>
 				<div className={`${styles.blockAbsolute} ${styles.photoRight}`}>
-					<PalaroidPhoto caption="Summer 2022" turn="turnRight" size="middleImg" srcImg="testPhoto.jpeg" />
+					<PalaroidPhoto
+						caption={data?.data.attributes.polaroidPhotoHeaderRight.title}
+						turn="turnRight"
+						size="middleImg"
+						srcImg={data?.data.attributes.polaroidPhotoHeaderRight.photo.data.attributes.url}
+					/>
 				</div>
 			</div>
 
