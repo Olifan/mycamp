@@ -151,7 +151,7 @@ const LocationPage = () => {
 
 	return (
 		<div className={styles.locationPage}>
-			<PageTitle title="Розташування" description="Місце проведення табору" />
+			<PageTitle title={data?.data.attributes.pageTitle.title} description={data?.data.attributes.pageTitle.subtitle} />
 
 			{locations}
 
