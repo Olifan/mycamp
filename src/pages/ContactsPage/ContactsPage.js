@@ -25,7 +25,10 @@ const ContactsPage = () => {
 	return (
 		<div className={styles.сontactsPage}>
 			<div>
-				<PageTitle title="Контакти" description="Today. Tomorrow. Allways." />
+				<PageTitle
+					title={data?.data.attributes.pageTitle.title}
+					description={data?.data.attributes.pageTitle.subtitle}
+				/>
 			</div>
 
 			<div className={styles.contactsContent}>
