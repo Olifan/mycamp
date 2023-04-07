@@ -53,13 +53,9 @@ const ContactsPage = () => {
 				</div>
 			</div>
 
-			<Registration
-				registrationDate="21-29 грудня"
-				registrationOpen="Реєстрація відкрита"
-				registrationSeason="Зима 2023"
-			/>
+			<Registration />
 
-			<Navigation/>
+			<Navigation />
 
 			<Footer />
 		</div>

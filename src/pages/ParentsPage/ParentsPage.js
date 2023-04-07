@@ -11,54 +11,42 @@ import ContentService from "../../services/ContentService";
 import Navigation from "../../components/Navigation/Navigation";
 
 const ParentsPage = () => {
+	const contentService = new ContentService();
 
-  const contentService = new ContentService();
+	const [data, setData] = useState();
 
-  const [data, setData] = useState();
+	useEffect(() => {
+		contentService.getParentsPage().then((response) => {
+			setData(response);
+		});
+		window.scrollTo(0, 0);
+	}, []);
 
-  useEffect(() => {
-    contentService.getParentsPage().then((response) => {
-      setData(response);
-    });
-    window.scrollTo(0, 0);
-  }, []);
-
-  const forParent = data && data.data.attributes.for_parents.data.map(forParents => {
-    return(
-      <CardWithText
-          title={forParents.attributes.title}
-          text={<ReactMarkdown
-            rehypePlugins={[rehypeRaw]}
-            children={forParents.attributes.description}
-          />}
-          icon={forParents.attributes?.icon?.data?.attributes?.url}
-        />
-    )
-  })
+	const forParent =
+		data &&
+		data.data.attributes.for_parents.data.map((forParents) => {
+			return (
+				<CardWithText
+					title={forParents.attributes.title}
+					text={<ReactMarkdown rehypePlugins={[rehypeRaw]} children={forParents.attributes.description} />}
+					icon={forParents.attributes?.icon?.data?.attributes?.url}
+				/>
+			);
+		});
 
 	return (
-    <div className={styles.parentsPage}>
+		<div className={styles.parentsPage}>
+			<PageTitle title="Для батьків" description="Today. Tomorrow. Allways." />
 
-      <PageTitle
-        title="Для батьків"
-        description="Today. Tomorrow. Allways."
-      />
+			<div className={styles.parentsContent}>{forParent}</div>
 
-      <div className={styles.parentsContent}>
-        {forParent}
-      </div>
+			<Registration />
 
-      <Registration
-				registrationDate="21-29 грудня"
-				registrationOpen="Реєстрація відкрита"
-				registrationSeason="Зима 2023"
-			/>
-
-      <Navigation/>
+			<Navigation />
 
 			<Footer />
-    </div>
-  );
+		</div>
+	);
 };
 
 ParentsPage.propTypes = {};

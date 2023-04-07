@@ -23,6 +23,9 @@ export default class ContentService {
 					pageTitle: {
 						fields: ["title", "subtitle"],
 					},
+					registration: {
+						fields: ["registrationDate", "registrationSeason", "registrationOpen"],
+					}
 				},
 			},
 			{

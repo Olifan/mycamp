@@ -17,7 +17,6 @@ const HomePage = () => {
 	useEffect(() => {
 		contentService.getHomePage().then((response) => {
 			setData(response);
-			console.log(data);
 		});
 	}, []);
 
