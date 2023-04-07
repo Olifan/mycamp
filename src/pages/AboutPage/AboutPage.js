@@ -25,7 +25,7 @@ const AboutPage = () => {
 
 	return (
 		<div className={styles.aboutPage}>
-			<PageTitle title="Про нас" description="Today. Tomorrow. Allways." />
+			<PageTitle title={data?.data.attributes.pageTitle.title} description={data?.data.attributes.pageTitle.subtitle} />
 			<div className={styles.aboutPageContent}>
 				<CardWithText
 					title={data && data.data.attributes.OurMission.title}
