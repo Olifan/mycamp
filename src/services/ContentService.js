@@ -63,6 +63,9 @@ export default class ContentService {
 		const query = stringify(
 			{
 				populate: {
+					pageTitle: {
+						fields: ["title", "subtitle"],
+					},
 					shifts: {
 						fields: ["title", "description", "startDate", "endDate"],
 						populate: {

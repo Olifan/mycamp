@@ -86,8 +86,8 @@ const RegistrationPage = () => {
         data && (
           <>
             <PageTitle
-              title="Registration"
-              description="Today. Tomorrow. Allways."
+              title={data?.data.attributes.pageTitle.title}
+              description={data?.data.attributes.pageTitle.subtitle}
             />
             <div className={styles.tabs}>
               {tab}
