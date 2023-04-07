@@ -14,14 +14,14 @@ const CampProgramPage = () => {
 	const [data, setData] = useState(null);
 
 	useEffect(() => {
-		contentService.getProgram().then((response) => {
+		contentService.getProgramPage().then((response) => {
 			setData(response);
 		});
 	}, []);
 
 	const programs =
 		data &&
-		data.data.map((program) => {
+		data.data.attributes.camp_programs.data.map((program) => {
 			return (
 				<CardOfProgram
 					key={program.id}
@@ -35,7 +35,7 @@ const CampProgramPage = () => {
 	return (
 		<>
 			<div className={styles.header}>
-				<PageTitle title="Camp Program" description="Today. Tomorrow. Allways." />
+				<PageTitle title={data?.data.attributes.pageTitle.title} description={data?.data.attributes.pageTitle.subtitle} />
 			</div>
 			<div className={styles.schedule}>{programs}</div>
 			<Registration />
