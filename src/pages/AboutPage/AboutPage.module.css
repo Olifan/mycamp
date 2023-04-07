@@ -8,7 +8,7 @@
     align-content: flex-start;
     grid-column-gap: 2.5em;
     grid-row-gap: 2.5em;
-    padding: 3vh 8% 8vh;
+    padding: 2em 8%;
 }
 
 .wideCard{
@@ -24,4 +24,10 @@
 
 .wideCard p{
     font-size: 0.8em;
+}
+
+@media screen and (max-width: 479px){
+   .wideCard p{
+        font-size: 0.9em;
+   }
 }

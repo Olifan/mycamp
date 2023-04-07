@@ -4,6 +4,7 @@ import styles from './MemberPage.module.css';
 import ContentService from '../../services/ContentService';
 import { useParams } from 'react-router-dom';
 import PageTitle from '../../components/PageTitle/PageTitle';
+import Navigation from '../../components/Navigation/Navigation'
 import Footer from '../../components/Footer/Footer';
 
 
@@ -40,6 +41,7 @@ const MemberPage = () => {
               <p>{member.attributes.description}</p>
             </div>
           </div>
+          <Navigation/>
           <Footer/>
         </>
       )}

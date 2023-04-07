@@ -43,6 +43,7 @@ const ContactsPage = () => {
 
 				<div className={styles.contactsBlock}>
 					<CardWithText
+						className={styles.cardWithTextContact}
 						title={data && data.data.attributes.contacts.title}
 						text={
 							<ReactMarkdown rehypePlugins={[rehypeRaw]} children={data && data.data.attributes.contacts.description} />

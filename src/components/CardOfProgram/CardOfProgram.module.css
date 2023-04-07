@@ -19,6 +19,7 @@
     min-width: 3.6em;
     padding-top: 0.4em;
     padding-bottom: 0.4em;
+    margin-bottom: 0em;
     border-radius: 0.25em;
     background-color: #ecf1ff;
     color: #4b70d5;
@@ -29,6 +30,7 @@
 .programTitle{
     min-width: 5em;
     font-weight: 600;
+    margin-bottom: 0em;
 }
 
 .programDescription{
@@ -36,3 +38,13 @@
     font-size: 0.6em;
 
 }
+
+
+@media screen and (max-width: 479px){
+   .cardOfProgram{
+    width: 100%;
+   }
+   .programTitle{
+    font-weight: 500;
+   }
+  }

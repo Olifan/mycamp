@@ -24,3 +24,9 @@
 .textBlock p{
     margin-bottom: 1em;
 }
+
+@media screen and (max-width: 479px){
+    p, li{
+      font-size: 0.9em;
+    }
+  }

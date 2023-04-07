@@ -77,9 +77,10 @@ const LocationPage = () => {
 						/>
 						<div className={styles.accommodationPhoto} onClick={() => handleClickTerritory(location.id)}>
 							<PalaroidPhoto
-								srcImg={location?.attributes?.territoryCover?.data?.attributes?.url}
+								srcImg={location?.attributes?.territoryPalaroid?.photo?.data?.attributes?.url}
 								size="largeImg"
 								turn="turnRight"
+								caption={location?.attributes?.territoryPalaroid?.title}
 							/>
 						</div>
 					</div>
@@ -98,9 +99,10 @@ const LocationPage = () => {
 					<div className={styles.accommodation}>
 						<div className={styles.accommodationPhoto} onClick={() => handleClickRooms(location.id)}>
 							<PalaroidPhoto
-								srcImg={location?.attributes?.roomsCover?.data?.attributes?.url}
+								srcImg={location?.attributes?.roomsPalaroid?.photo?.data?.attributes?.url}
 								size="largeImg"
-								turn="turnRight"
+								turn="turnLeft"
+								caption={location?.attributes?.roomsPalaroid?.title}
 							/>
 						</div>
 						<CardWithText
@@ -127,9 +129,10 @@ const LocationPage = () => {
 						/>
 						<div className={styles.accommodationPhoto} onClick={() => handleClickFood(location.id)}>
 							<PalaroidPhoto
-								srcImg={location?.attributes?.foodCover?.data?.attributes?.url}
+								srcImg={location?.attributes?.foodPalaroid?.photo?.data?.attributes?.url}
 								size="largeImg"
-								turn="turnLeft"
+								turn="turnRight"
+								caption={location?.attributes?.foodPalaroid?.title}
 							/>
 						</div>
 					</div>

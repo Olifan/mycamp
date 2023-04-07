@@ -3,7 +3,7 @@
 .thingsPageContent{
     position: relative;
     display: flex;
-    padding: 3vh 8% 8vh;
+    padding: 2em 8%;
     justify-content: center;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -21,6 +21,7 @@
     align-content: flex-start;
     grid-column-gap: 0.5em;
     grid-row-gap: 0.5em;
+    margin-bottom: 2em;
 }
 
 .thingNotTake{
@@ -55,3 +56,16 @@
     margin-bottom: 5em;
     margin-left: 1em;
 }
+
+@media screen and (max-width: 479px){
+    .notePhotoRight{
+        margin-bottom: 0em; 
+    }
+    .notePhotoLeft{
+        margin-top: 2em;
+    }
+
+    h2{
+        font-size: 1.4em;
+    }
+   }
