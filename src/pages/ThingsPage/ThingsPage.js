@@ -54,7 +54,7 @@ const ThingsPage = () => {
 
 	return (
 		<div className={styles.thingsPage}>
-			<PageTitle title={"Що брати?"} description="Today. Tomorrow. Allways." />
+			<PageTitle title={data?.data.attributes.pageTitle.title} description={data?.data.attributes.pageTitle.subtitle} />
 			<div className={styles.thingsPageContent}>
 				<div className={styles.thingToTake}>
 					<h2 className={styles.thingToTakeTitle}>Що треба взяти:</h2>
