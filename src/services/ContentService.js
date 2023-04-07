@@ -235,6 +235,9 @@ export default class ContentService {
 		const query = stringify(
 			{
 				populate: {
+					pageTitle: {
+						fields: ["title", "subtitle"],
+					},
 					photo_albums: {
 						fields: ["title"],
 						populate: {
