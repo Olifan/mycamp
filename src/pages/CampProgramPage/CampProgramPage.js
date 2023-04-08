@@ -17,6 +17,7 @@ const CampProgramPage = () => {
 		contentService.getProgramPage().then((response) => {
 			setData(response);
 		});
+		window.scrollTo(0, 0);
 	}, []);
 
 	const programs =

@@ -18,6 +18,7 @@ const HomePage = () => {
 		contentService.getHomePage().then((response) => {
 			setData(response);
 		});
+		window.scrollTo(0, 0);
 	}, []);
 
 	return (

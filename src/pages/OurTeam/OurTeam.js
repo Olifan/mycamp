@@ -18,6 +18,7 @@ const OurTeam = () => {
 		contentService.getOurTeam().then((response) => {
 			setData(response);
 		});
+		window.scrollTo(0, 0);
 	}, []);
 
 	const members =
