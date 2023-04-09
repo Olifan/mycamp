@@ -25,7 +25,13 @@ export default class ContentService {
 					},
 					registration: {
 						fields: ["registrationDate", "registrationSeason", "registrationOpen"],
-					}
+					},
+					campProgram: {
+						fields: ["title", "description"],
+						populate: {
+							icon: "*",
+						},
+					},
 				},
 			},
 			{

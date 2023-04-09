@@ -48,20 +48,16 @@ const HomePage = () => {
 				</div>
 			</div>
 
-			<Registration
-				registrationDate="21-29 грудня"
-				registrationOpen="Реєстрація відкрита"
-				registrationSeason="Зима 2023"
-			/>
+			<Registration/>
 
 			<div className={styles.main}>
 				{/* Row 1 */}
 				<Link to="/camp-program">
 					<CardNavigation
 						size="wide"
-						linkTitle="Програма табору"
-						linkDescription="З ранку до ночі"
-						linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8ea7a1e7c87282c7450b6_streamlinehq-interface-content-book-open-interface-essential-250.SVG"
+						linkTitle={data?.data.attributes.campProgram.title}
+						linkDescription={data?.data.attributes.campProgram.description}
+						linkIcon={data?.data.attributes.campProgram.icon.data.attributes.url}
 					/>
 				</Link>
 
@@ -147,11 +143,7 @@ const HomePage = () => {
 				</Link>
 			</div>
 
-			<Registration
-				registrationDate="21-29 грудня"
-				registrationOpen="Реєстрація відкрита"
-				registrationSeason="Зима 2023"
-			/>
+			<Registration/>
 
 			<Footer />
 		</div>
