@@ -48,7 +48,7 @@ const HomePage = () => {
 				</div>
 			</div>
 
-			<Registration/>
+			<Registration />
 
 			<div className={styles.main}>
 				{/* Row 1 */}
@@ -61,32 +61,47 @@ const HomePage = () => {
 					/>
 				</Link>
 
-				<PalaroidPhoto caption="Summer 2022" turn="turnRight" size="middleImg" srcImg="testPhoto.jpeg" />
+				<PalaroidPhoto
+					caption={data?.data.attributes.palaroidFirstRow.title}
+					turn="turnRight"
+					size="middleImg"
+					srcImg={data?.data.attributes.palaroidFirstRow.photo.data.attributes.url}
+				/>
 
 				<Link to="/about">
 					<CardNavigation
 						className={styles.iconRight}
-						linkTitle="Про табір"
-						linkDescription="Наша місія"
+						linkTitle={data?.data.attributes.about.title}
+						linkDescription={data?.data.attributes.about.description}
 						iconLocation="iconRight"
-						linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8f1219bd3c443f28ba3f7_streamlinehq-interface-lighting-light-bulb-on-interface-essential-250-3.SVG"
+						linkIcon={data?.data.attributes.about.icon.data.attributes.url}
 					/>
 				</Link>
 
 				{/* Row 2 */}
 
-				<PalaroidPhoto caption="Summer 2022" turn="turnLeft" size="middleImg" srcImg="testPhoto.jpeg" />
+				<PalaroidPhoto
+					caption={data?.data.attributes.palaroidSecondRowLeft.title}
+					turn="turnLeft"
+					size="middleImg"
+					srcImg={data?.data.attributes.palaroidSecondRowLeft.photo.data.attributes.url}
+				/>
 
 				<Link to="/things">
 					<CardNavigation
 						size="large"
-						linkTitle="Що брати з собою?"
-						linkDescription="і що не брати"
-						linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8fb91f9a283de58e0318d_streamlinehq-travel-airport-baggage-maps-travel-250-2.SVG"
+						linkTitle={data?.data.attributes.whatToTake.title}
+						linkDescription={data?.data.attributes.whatToTake.description}
+						linkIcon={data?.data.attributes.whatToTake.icon.data.attributes.url}
 					/>
 				</Link>
 
-				<PalaroidPhoto caption="Summer 2022" turn="turnRight" size="middleImg" srcImg="testPhoto.jpeg" />
+				<PalaroidPhoto
+					caption={data?.data.attributes.palaroidSecondRowRight.title}
+					turn="turnRight"
+					size="middleImg"
+					srcImg={data?.data.attributes.palaroidSecondRowRight.photo.data.attributes.url}
+				/>
 
 				{/* Row 3 */}
 
@@ -143,7 +158,7 @@ const HomePage = () => {
 				</Link>
 			</div>
 
-			<Registration/>
+			<Registration />
 
 			<Footer />
 		</div>

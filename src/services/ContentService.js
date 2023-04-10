@@ -26,12 +26,45 @@ export default class ContentService {
 					registration: {
 						fields: ["registrationDate", "registrationSeason", "registrationOpen"],
 					},
+					// Row 1
 					campProgram: {
 						fields: ["title", "description"],
 						populate: {
 							icon: "*",
 						},
 					},
+					palaroidFirstRow: {
+						fields: ["title"],
+						populate: {
+							photo: "*",
+						},
+					},
+					about: {
+						fields: ["title", "description"],
+						populate: {
+							icon: "*",
+						},
+					},
+					// Row 2
+					palaroidSecondRowLeft: {
+						fields: ["title"],
+						populate: {
+							photo: "*",
+						},
+					},
+					whatToTake: {
+						fields: ["title", "description"],
+						populate: {
+							icon: "*",
+						},
+					},
+					palaroidSecondRowRight: {
+						fields: ["title"],
+						populate: {
+							photo: "*",
+						},
+					},
+					// Row 3
 				},
 			},
 			{
@@ -293,35 +326,34 @@ export default class ContentService {
 								},
 							},
 							food: {
-								fields: ["title" , "description"],
+								fields: ["title", "description"],
 								populate: {
 									icon: "*",
 								},
 							},
-							territoryPalaroid:{
+							territoryPalaroid: {
 								fields: ["title"],
 								populate: {
 									photo: "*",
 								},
 							},
-							roomsPalaroid:{
+							roomsPalaroid: {
 								fields: ["title"],
 								populate: {
 									photo: "*",
 								},
 							},
-							foodPalaroid:{
+							foodPalaroid: {
 								fields: ["title"],
 								populate: {
 									photo: "*",
 								},
 							},
-							
+
 							territoryPhoto: "*",
 							foodPhoto: "*",
-							
+
 							roomsPhoto: "*",
-							
 						},
 					},
 				},
