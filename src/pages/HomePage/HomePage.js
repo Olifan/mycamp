@@ -52,6 +52,7 @@ const HomePage = () => {
 
 			<div className={styles.main}>
 				{/* Row 1 */}
+
 				<Link to="/camp-program">
 					<CardNavigation
 						size="wide"
@@ -107,53 +108,77 @@ const HomePage = () => {
 
 				<Link to="/location">
 					<CardNavigation
-						linkTitle="Розташування"
-						linkDescription="In the middle of..."
+						linkTitle={data?.data.attributes.location.title}
+						linkDescription={data?.data.attributes.location.description}
 						iconLocation="iconLeft"
-						linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e90516682d7c1ce06ca27b_streamlinehq-travel-map-maps-travel-250-3.SVG"
+						linkIcon={data?.data.attributes.location.icon.data.attributes.url}
 					/>
 				</Link>
 
-				<PalaroidPhoto caption="Summer 2022" turn="turnRight" size="middleImg" srcImg="testPhoto.jpeg" />
+				<PalaroidPhoto
+					caption={data?.data.attributes.palaroidThirdRow.title}
+					turn="turnRight"
+					size="middleImg"
+					srcImg={data?.data.attributes.palaroidThirdRow.photo.data.attributes.url}
+				/>
+
 				<Link to="/our-team">
 					<CardNavigation
 						size="circle"
-						linkTitle="Команда"
-						linkDescription="Сім'я"
-						linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8fa9930bdfe5c8b4ef6ad_streamlinehq-interface-user-multiple-interface-essential-250.SVG"
+						linkTitle={data?.data.attributes.team.title}
+						linkDescription={data?.data.attributes.team.description}
+						linkIcon={data?.data.attributes.team.icon.data.attributes.url}
 					/>
 				</Link>
 
 				{/* Row 4 */}
-				<PalaroidPhoto caption="Summer 2022" turn="turnLeft" size="middleImg" srcImg="testPhoto.jpeg" />
+
+				<PalaroidPhoto
+					caption={data?.data.attributes.palaroidFourthRowLeft.title}
+					turn="turnLeft"
+					size="middleImg"
+					srcImg={data?.data.attributes.palaroidFourthRowLeft.photo.data.attributes.url}
+				/>
 				<Link to="/photo">
 					<CardNavigation
 						size="large"
-						linkTitle="Фото"
-						linkDescription="Цікаві моменти"
-						linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8f4544af443508a817eac_streamlinehq-image-camera-1-images-photography-250.SVG"
+						linkTitle={data?.data.attributes.foto.title}
+						linkDescription={data?.data.attributes.foto.description}
+						linkIcon={data?.data.attributes.foto.icon.data.attributes.url}
 					/>
 				</Link>
 
-				<PalaroidPhoto caption="Summer 2022" turn="turnRight" size="middleImg" srcImg="testPhoto.jpeg" />
+				<PalaroidPhoto
+					caption={data?.data.attributes.palaroidFourthRowRight.title}
+					turn="turnRight"
+					size="middleImg"
+					srcImg={data?.data.attributes.palaroidFourthRowRight.photo.data.attributes.url}
+				/>
+
 				{/* Row 5 */}
+
 				<Link to="/contacts">
 					<CardNavigation
 						size="wide"
-						linkTitle="Контакти"
-						linkDescription="Майже цілодобово"
-						linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e9862e0dcf927adce2de5c_streamlinehq-phone-telephone-ringing-phone-250.SVG"
+						linkTitle={data?.data.attributes.contacts.title}
+						linkDescription={data?.data.attributes.contacts.description}
+						linkIcon={data?.data.attributes.contacts.icon.data.attributes.url}
 					/>
 				</Link>
 
-				<PalaroidPhoto caption="Summer 2022" turn="turnRight" size="middleImg" srcImg="testPhoto.jpeg" />
+				<PalaroidPhoto
+					caption={data?.data.attributes.palaroidFifthRow.title}
+					turn="turnRight"
+					size="middleImg"
+					srcImg={data?.data.attributes.palaroidFifthRow.photo.data.attributes.url}
+				/>
 
 				<Link to="/for-parents">
 					<CardNavigation
-						linkTitle="Партнерам"
-						linkDescription="Допомога і підтримка"
+						linkTitle={data?.data.attributes.forParents.title}
+						linkDescription={data?.data.attributes.forParents.description}
 						iconLocation="iconRight"
-						linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8f3a6fcf13cc3390a727e_streamlinehq-shopping-cloth-accessories-tall-hat-money-shopping-250.SVG"
+						linkIcon={data?.data.attributes.forParents.icon.data.attributes.url}
 					/>
 				</Link>
 			</div>

@@ -65,6 +65,62 @@ export default class ContentService {
 						},
 					},
 					// Row 3
+					location: {
+						fields: ["title", "description"],
+						populate: {
+							icon: "*",
+						},
+					},
+					palaroidThirdRow: {
+						fields: ["title"],
+						populate: {
+							photo: "*",
+						},
+					},
+					team: {
+						fields: ["title", "description"],
+						populate: {
+							icon: "*",
+						},
+					},
+					//Row 4
+					palaroidFourthRowLeft: {
+						fields: ["title"],
+						populate: {
+							photo: "*",
+						},
+					},
+					foto: {
+						fields: ["title", "description"],
+						populate: {
+							icon: "*",
+						},
+					},
+					palaroidFourthRowRight: {
+						fields: ["title"],
+						populate: {
+							photo: "*",
+						},
+					},
+					//Row 5
+					contacts: {
+						fields: ["title", "description"],
+						populate: {
+							icon: "*",
+						},
+					},
+					palaroidFifthRow: {
+						fields: ["title"],
+						populate: {
+							photo: "*",
+						},
+					},
+					forParents: {
+						fields: ["title", "description"],
+						populate: {
+							icon: "*",
+						},
+					},
 				},
 			},
 			{
