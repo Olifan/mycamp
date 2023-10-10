@@ -18,131 +18,172 @@ const HomePage = () => {
 		contentService.getHomePage().then((response) => {
 			setData(response);
 		});
+		window.scrollTo(0, 0);
 	}, []);
 
 	return (
 		<div className={styles.homePage}>
 			<div className={styles.header}>
-				<PageTitle title="mycamp." description="Дитячий табір в Карпатах та Європі" />
+				<PageTitle
+					title={data?.data.attributes.pageTitle.title}
+					description={data?.data.attributes.pageTitle.subtitle}
+				/>
 				<div className={`${styles.blockAbsolute} ${styles.photoLeft}`}>
 					{data && (
 						<PalaroidPhoto
-							caption={data.data.attributes.polaroidPhotoHeaderLeft.title}
+							caption={data?.data.attributes.polaroidPhotoHeaderLeft.title}
 							turn="turnLeft"
 							size="middleImg"
-							srcImg={data.data.attributes.polaroidPhotoHeaderLeft.photo.data.attributes.url}
+							srcImg={data?.data.attributes.polaroidPhotoHeaderLeft.photo.data.attributes.url}
 						/>
 					)}
 				</div>
 				<div className={`${styles.blockAbsolute} ${styles.photoRight}`}>
-					<PalaroidPhoto caption="Summer 2022" turn="turnRight" size="middleImg" srcImg="testPhoto.jpeg" />
+					<PalaroidPhoto
+						caption={data?.data.attributes.polaroidPhotoHeaderRight.title}
+						turn="turnRight"
+						size="middleImg"
+						srcImg={data?.data.attributes.polaroidPhotoHeaderRight.photo.data.attributes.url}
+					/>
 				</div>
 			</div>
 
-			<Registration
-				registrationDate="21-29 грудня"
-				registrationOpen="Реєстрація відкрита"
-				registrationSeason="Зима 2023"
-			/>
+			<Registration />
 
 			<div className={styles.main}>
 				{/* Row 1 */}
+
 				<Link to="/camp-program">
 					<CardNavigation
 						size="wide"
-						linkTitle="Програма табору"
-						linkDescription="З ранку до ночі"
-						linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8ea7a1e7c87282c7450b6_streamlinehq-interface-content-book-open-interface-essential-250.SVG"
+						linkTitle={data?.data.attributes.campProgram.title}
+						linkDescription={data?.data.attributes.campProgram.description}
+						linkIcon={data?.data.attributes.campProgram.icon.data.attributes.url}
 					/>
 				</Link>
 
-				<PalaroidPhoto caption="Summer 2022" turn="turnRight" size="middleImg" srcImg="testPhoto.jpeg" />
+				<PalaroidPhoto
+					caption={data?.data.attributes.palaroidFirstRow.title}
+					turn="turnRight"
+					size="middleImg"
+					srcImg={data?.data.attributes.palaroidFirstRow.photo.data.attributes.url}
+				/>
 
 				<Link to="/about">
 					<CardNavigation
 						className={styles.iconRight}
-						linkTitle="Про табір"
-						linkDescription="Наша місія"
+						linkTitle={data?.data.attributes.about.title}
+						linkDescription={data?.data.attributes.about.description}
 						iconLocation="iconRight"
-						linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8f1219bd3c443f28ba3f7_streamlinehq-interface-lighting-light-bulb-on-interface-essential-250-3.SVG"
+						linkIcon={data?.data.attributes.about.icon.data.attributes.url}
 					/>
 				</Link>
 
 				{/* Row 2 */}
 
-				<PalaroidPhoto caption="Summer 2022" turn="turnLeft" size="middleImg" srcImg="testPhoto.jpeg" />
+				<PalaroidPhoto
+					caption={data?.data.attributes.palaroidSecondRowLeft.title}
+					turn="turnLeft"
+					size="middleImg"
+					srcImg={data?.data.attributes.palaroidSecondRowLeft.photo.data.attributes.url}
+				/>
 
 				<Link to="/things">
 					<CardNavigation
 						size="large"
-						linkTitle="Що брати з собою?"
-						linkDescription="і що не брати"
-						linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8fb91f9a283de58e0318d_streamlinehq-travel-airport-baggage-maps-travel-250-2.SVG"
+						linkTitle={data?.data.attributes.whatToTake.title}
+						linkDescription={data?.data.attributes.whatToTake.description}
+						linkIcon={data?.data.attributes.whatToTake.icon.data.attributes.url}
 					/>
 				</Link>
 
-				<PalaroidPhoto caption="Summer 2022" turn="turnRight" size="middleImg" srcImg="testPhoto.jpeg" />
+				<PalaroidPhoto
+					caption={data?.data.attributes.palaroidSecondRowRight.title}
+					turn="turnRight"
+					size="middleImg"
+					srcImg={data?.data.attributes.palaroidSecondRowRight.photo.data.attributes.url}
+				/>
 
 				{/* Row 3 */}
 
 				<Link to="/location">
 					<CardNavigation
-						linkTitle="Розташування"
-						linkDescription="In the middle of..."
+						linkTitle={data?.data.attributes.location.title}
+						linkDescription={data?.data.attributes.location.description}
 						iconLocation="iconLeft"
-						linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e90516682d7c1ce06ca27b_streamlinehq-travel-map-maps-travel-250-3.SVG"
+						linkIcon={data?.data.attributes.location.icon.data.attributes.url}
 					/>
 				</Link>
 
-				<PalaroidPhoto caption="Summer 2022" turn="turnRight" size="middleImg" srcImg="testPhoto.jpeg" />
+				<PalaroidPhoto
+					caption={data?.data.attributes.palaroidThirdRow.title}
+					turn="turnRight"
+					size="middleImg"
+					srcImg={data?.data.attributes.palaroidThirdRow.photo.data.attributes.url}
+				/>
+
 				<Link to="/our-team">
 					<CardNavigation
 						size="circle"
-						linkTitle="Команда"
-						linkDescription="Сім'я"
-						linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8fa9930bdfe5c8b4ef6ad_streamlinehq-interface-user-multiple-interface-essential-250.SVG"
+						linkTitle={data?.data.attributes.team.title}
+						linkDescription={data?.data.attributes.team.description}
+						linkIcon={data?.data.attributes.team.icon.data.attributes.url}
 					/>
 				</Link>
 
 				{/* Row 4 */}
-				<PalaroidPhoto caption="Summer 2022" turn="turnLeft" size="middleImg" srcImg="testPhoto.jpeg" />
+
+				<PalaroidPhoto
+					caption={data?.data.attributes.palaroidFourthRowLeft.title}
+					turn="turnLeft"
+					size="middleImg"
+					srcImg={data?.data.attributes.palaroidFourthRowLeft.photo.data.attributes.url}
+				/>
 				<Link to="/photo">
 					<CardNavigation
 						size="large"
-						linkTitle="Фото"
-						linkDescription="Цікаві моменти"
-						linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8f4544af443508a817eac_streamlinehq-image-camera-1-images-photography-250.SVG"
+						linkTitle={data?.data.attributes.foto.title}
+						linkDescription={data?.data.attributes.foto.description}
+						linkIcon={data?.data.attributes.foto.icon.data.attributes.url}
 					/>
 				</Link>
 
-				<PalaroidPhoto caption="Summer 2022" turn="turnRight" size="middleImg" srcImg="testPhoto.jpeg" />
+				<PalaroidPhoto
+					caption={data?.data.attributes.palaroidFourthRowRight.title}
+					turn="turnRight"
+					size="middleImg"
+					srcImg={data?.data.attributes.palaroidFourthRowRight.photo.data.attributes.url}
+				/>
+
 				{/* Row 5 */}
+
 				<Link to="/contacts">
 					<CardNavigation
 						size="wide"
-						linkTitle="Контакти"
-						linkDescription="Майже цілодобово"
-						linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e9862e0dcf927adce2de5c_streamlinehq-phone-telephone-ringing-phone-250.SVG"
+						linkTitle={data?.data.attributes.contacts.title}
+						linkDescription={data?.data.attributes.contacts.description}
+						linkIcon={data?.data.attributes.contacts.icon.data.attributes.url}
 					/>
 				</Link>
 
-				<PalaroidPhoto caption="Summer 2022" turn="turnRight" size="middleImg" srcImg="testPhoto.jpeg" />
+				<PalaroidPhoto
+					caption={data?.data.attributes.palaroidFifthRow.title}
+					turn="turnRight"
+					size="middleImg"
+					srcImg={data?.data.attributes.palaroidFifthRow.photo.data.attributes.url}
+				/>
 
 				<Link to="/for-parents">
 					<CardNavigation
-						linkTitle="Партнерам"
-						linkDescription="Допомога і підтримка"
+						linkTitle={data?.data.attributes.forParents.title}
+						linkDescription={data?.data.attributes.forParents.description}
 						iconLocation="iconRight"
-						linkIcon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62e8f3a6fcf13cc3390a727e_streamlinehq-shopping-cloth-accessories-tall-hat-money-shopping-250.SVG"
+						linkIcon={data?.data.attributes.forParents.icon.data.attributes.url}
 					/>
 				</Link>
 			</div>
 
-			<Registration
-				registrationDate="21-29 грудня"
-				registrationOpen="Реєстрація відкрита"
-				registrationSeason="Зима 2023"
-			/>
+			<Registration />
 
 			<Footer />
 		</div>

@@ -151,17 +151,13 @@ const LocationPage = () => {
 
 	return (
 		<div className={styles.locationPage}>
-			<PageTitle title="Розташування" description="Місце проведення табору" />
+			<PageTitle title={data?.data.attributes.pageTitle.title} description={data?.data.attributes.pageTitle.subtitle} />
 
 			{locations}
 
-			<Registration
-				registrationDate="21-29 грудня"
-				registrationOpen="Реєстрація відкрита"
-				registrationSeason="Зима 2023"
-			/>
+			<Registration />
 
-			<Navigation/>
+			<Navigation />
 
 			<Footer />
 		</div>

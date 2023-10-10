@@ -23,6 +23,104 @@ export default class ContentService {
 					pageTitle: {
 						fields: ["title", "subtitle"],
 					},
+					registration: {
+						fields: ["registrationDate", "registrationSeason", "registrationOpen"],
+					},
+					// Row 1
+					campProgram: {
+						fields: ["title", "description"],
+						populate: {
+							icon: "*",
+						},
+					},
+					palaroidFirstRow: {
+						fields: ["title"],
+						populate: {
+							photo: "*",
+						},
+					},
+					about: {
+						fields: ["title", "description"],
+						populate: {
+							icon: "*",
+						},
+					},
+					// Row 2
+					palaroidSecondRowLeft: {
+						fields: ["title"],
+						populate: {
+							photo: "*",
+						},
+					},
+					whatToTake: {
+						fields: ["title", "description"],
+						populate: {
+							icon: "*",
+						},
+					},
+					palaroidSecondRowRight: {
+						fields: ["title"],
+						populate: {
+							photo: "*",
+						},
+					},
+					// Row 3
+					location: {
+						fields: ["title", "description"],
+						populate: {
+							icon: "*",
+						},
+					},
+					palaroidThirdRow: {
+						fields: ["title"],
+						populate: {
+							photo: "*",
+						},
+					},
+					team: {
+						fields: ["title", "description"],
+						populate: {
+							icon: "*",
+						},
+					},
+					//Row 4
+					palaroidFourthRowLeft: {
+						fields: ["title"],
+						populate: {
+							photo: "*",
+						},
+					},
+					foto: {
+						fields: ["title", "description"],
+						populate: {
+							icon: "*",
+						},
+					},
+					palaroidFourthRowRight: {
+						fields: ["title"],
+						populate: {
+							photo: "*",
+						},
+					},
+					//Row 5
+					contacts: {
+						fields: ["title", "description"],
+						populate: {
+							icon: "*",
+						},
+					},
+					palaroidFifthRow: {
+						fields: ["title"],
+						populate: {
+							photo: "*",
+						},
+					},
+					forParents: {
+						fields: ["title", "description"],
+						populate: {
+							icon: "*",
+						},
+					},
 				},
 			},
 			{
@@ -37,6 +135,9 @@ export default class ContentService {
 		const query = stringify(
 			{
 				populate: {
+					pageTitle: {
+						fields: ["title", "subtitle"],
+					},
 					team_members: {
 						fields: ["name", "title", "description"],
 						populate: {
@@ -57,6 +158,9 @@ export default class ContentService {
 		const query = stringify(
 			{
 				populate: {
+					pageTitle: {
+						fields: ["title", "subtitle"],
+					},
 					shifts: {
 						fields: ["title", "description", "startDate", "endDate"],
 						populate: {
@@ -73,10 +177,13 @@ export default class ContentService {
 		return this.api.get(`registration-page?${query}`);
 	}
 
-	getProgram() {
+	getProgramPage() {
 		const query = stringify(
 			{
 				populate: {
+					pageTitle: {
+						fields: ["title", "subtitle"],
+					},
 					camp_programs: {
 						fields: ["programTime", "programTitle", "programDescription"],
 					},
@@ -86,13 +193,16 @@ export default class ContentService {
 				encodeValuesOnly: true,
 			}
 		);
-		return this.api.get(`camp-programs?${query}`);
+		return this.api.get(`program-page?${query}`);
 	}
 
 	getAboutPage() {
 		const query = stringify(
 			{
 				populate: {
+					pageTitle: {
+						fields: ["title", "subtitle"],
+					},
 					OurMission: {
 						fields: ["title", "description"],
 						populate: {
@@ -161,6 +271,9 @@ export default class ContentService {
 		const query = stringify(
 			{
 				populate: {
+					pageTitle: {
+						fields: ["title", "subtitle"],
+					},
 					thing_to_takes: {
 						fields: ["title"],
 					},
@@ -198,6 +311,9 @@ export default class ContentService {
 		const query = stringify(
 			{
 				populate: {
+					pageTitle: {
+						fields: ["title", "subtitle"],
+					},
 					commonQuestions: {
 						fields: ["title", "description"],
 						populate: {
@@ -223,6 +339,9 @@ export default class ContentService {
 		const query = stringify(
 			{
 				populate: {
+					pageTitle: {
+						fields: ["title", "subtitle"],
+					},
 					photo_albums: {
 						fields: ["title"],
 						populate: {
@@ -244,6 +363,9 @@ export default class ContentService {
 		const query = stringify(
 			{
 				populate: {
+					pageTitle: {
+						fields: ["title", "subtitle"],
+					},
 					locations: {
 						fields: ["headTitle"],
 						populate: {
@@ -260,35 +382,34 @@ export default class ContentService {
 								},
 							},
 							food: {
-								fields: ["title" , "description"],
+								fields: ["title", "description"],
 								populate: {
 									icon: "*",
 								},
 							},
-							territoryPalaroid:{
+							territoryPalaroid: {
 								fields: ["title"],
 								populate: {
 									photo: "*",
 								},
 							},
-							roomsPalaroid:{
+							roomsPalaroid: {
 								fields: ["title"],
 								populate: {
 									photo: "*",
 								},
 							},
-							foodPalaroid:{
+							foodPalaroid: {
 								fields: ["title"],
 								populate: {
 									photo: "*",
 								},
 							},
-							
+
 							territoryPhoto: "*",
 							foodPhoto: "*",
-							
+
 							roomsPhoto: "*",
-							
 						},
 					},
 				},
@@ -304,6 +425,9 @@ export default class ContentService {
 		const query = stringify(
 			{
 				populate: {
+					pageTitle: {
+						fields: ["title", "subtitle"],
+					},
 					for_parents: {
 						fields: ["title", "description"],
 						populate: {

@@ -25,7 +25,10 @@ const ContactsPage = () => {
 	return (
 		<div className={styles.сontactsPage}>
 			<div>
-				<PageTitle title="Контакти" description="Today. Tomorrow. Allways." />
+				<PageTitle
+					title={data?.data.attributes.pageTitle.title}
+					description={data?.data.attributes.pageTitle.subtitle}
+				/>
 			</div>
 
 			<div className={styles.contactsContent}>
@@ -46,20 +49,16 @@ const ContactsPage = () => {
 						className={styles.cardWithTextContact}
 						title={data && data.data.attributes.contacts.title}
 						text={
-							<ReactMarkdown rehypePlugins={[rehypeRaw]} children={data && data.data.attributes.contacts.description} />
+							<ReactMarkdown rehypePlugins={[rehypeRaw]} linkTarget="_blank" children={data && data.data.attributes.contacts.description} />
 						}
 						icon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62ea61cb131e422cf017262d_streamlinehq-shopping-business-target-money-shopping-250.SVG"
 					/>
 				</div>
 			</div>
 
-			<Registration
-				registrationDate="21-29 грудня"
-				registrationOpen="Реєстрація відкрита"
-				registrationSeason="Зима 2023"
-			/>
+			<Registration />
 
-			<Navigation/>
+			<Navigation />
 
 			<Footer />
 		</div>

@@ -39,3 +39,10 @@
   .caption {
     text-align: center;
   }
+
+  @media screen and (max-width: 479px) {
+    .middleImg{
+      width: 12em;
+      height: 8em;
+    }
+  }

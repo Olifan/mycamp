@@ -41,6 +41,7 @@ const RegistrationPage = () => {
       setActiveShiftTitle(response?.data?.attributes?.shifts?.data[0]?.attributes?.title || null);
       setActiveShiftId(response?.data?.attributes?.shifts?.data[0]?.id || null)
     });
+    window.scrollTo(0, 0);
   }, [] );
 
   const tab = data && data.data.attributes.shifts.data.map( (dataShift, index) => {
@@ -86,8 +87,8 @@ const RegistrationPage = () => {
         data && (
           <>
             <PageTitle
-              title="Registration"
-              description="Today. Tomorrow. Allways."
+              title={data?.data.attributes.pageTitle.title}
+              description={data?.data.attributes.pageTitle.subtitle}
             />
             <div className={styles.tabs}>
               {tab}
