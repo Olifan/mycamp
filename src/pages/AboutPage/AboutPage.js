@@ -29,7 +29,9 @@ const AboutPage = () => {
 			<div className={styles.aboutPageContent}>
 				<CardWithText
 					title={data && data.data.attributes.OurMission.title}
-					text={data && data.data.attributes.OurMission.description}
+					text={
+						<ReactMarkdown rehypePlugins={[rehypeRaw]} children={data && data.data.attributes.OurMission.description} />
+					}
 					icon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62ea61cb131e422cf017262d_streamlinehq-shopping-business-target-money-shopping-250.SVG"
 				/>
 				<PalaroidPhoto
@@ -46,12 +48,19 @@ const AboutPage = () => {
 				/>
 				<CardWithText
 					title={data && data.data.attributes.AboutCamp.title}
-					text={data && data.data.attributes.AboutCamp.description}
+					text={
+						<ReactMarkdown rehypePlugins={[rehypeRaw]} children={data && data.data.attributes.AboutCamp.description} />
+					}
 					icon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62ea61cb131e422cf017262d_streamlinehq-shopping-business-target-money-shopping-250.SVG"
 				/>
 				<CardWithText
 					title={data && data.data.attributes.MedicalCare.title}
-					text={data && data.data.attributes.MedicalCare.description}
+					text={
+						<ReactMarkdown
+							rehypePlugins={[rehypeRaw]}
+							children={data && data.data.attributes.MedicalCare.description}
+						/>
+					}
 					icon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62ea61cb131e422cf017262d_streamlinehq-shopping-business-target-money-shopping-250.SVG"
 				/>
 				<PalaroidPhoto

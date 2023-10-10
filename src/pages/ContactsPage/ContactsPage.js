@@ -49,7 +49,7 @@ const ContactsPage = () => {
 						className={styles.cardWithTextContact}
 						title={data && data.data.attributes.contacts.title}
 						text={
-							<ReactMarkdown rehypePlugins={[rehypeRaw]} children={data && data.data.attributes.contacts.description} />
+							<ReactMarkdown rehypePlugins={[rehypeRaw]} linkTarget="_blank" children={data && data.data.attributes.contacts.description} />
 						}
 						icon="https://assets.website-files.com/62e852b3b3432f63a22b8844/62ea61cb131e422cf017262d_streamlinehq-shopping-business-target-money-shopping-250.SVG"
 					/>
