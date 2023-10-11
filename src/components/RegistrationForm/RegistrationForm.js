@@ -46,11 +46,11 @@ const RegistrationForm = ({activeShiftTitle, activeShiftId}) => {
         alt=""
         src="https://assets.website-files.com/62e852b3b3432f63a22b8844/62eb8e9bdc4b4d07b438002f_streamlinehq-interface-file-clipboard-text-interface-essential-250-2.SVG"
       />
-      <h2>Registration Form</h2>
+      <h2>Форма реєстрації</h2>
       <div className={styles.form}>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div>
-            <label for="name">Name</label>
+            <label for="name">Ім'я</label>
             <input
               id="name"
               {...register("name", {
@@ -87,7 +87,7 @@ const RegistrationForm = ({activeShiftTitle, activeShiftId}) => {
             )}
           </div>
           <div>
-            <label htmlFor="phone">Phone Number</label>
+            <label htmlFor="phone">Номер телефону</label>
             <Controller
               name="phone"
               control={control}
@@ -114,7 +114,7 @@ const RegistrationForm = ({activeShiftTitle, activeShiftId}) => {
             )}
           </div>
           <div>
-            <label for="shift">Shift</label>
+            <label for="shift">Куди бажаєте з нами?</label>
               <div className={styles.input}
                 {...register("shift")}
               >
